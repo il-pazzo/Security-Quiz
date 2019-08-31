@@ -1,0 +1,2384 @@
+{
+  "questions": [
+    {
+      "choices": [
+        "Exculpatory evidence", 
+        "Inculpatory evidence", 
+        "Demonstrative evidence", 
+        "Documentary evidence"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Documentary evidence directly supports or proves a definitive assertion.\n\nA, B, and C are incorrect. Exculpatory evidence proves innocence. Inculpatory evidence proves guilt. Demonstrative evidence, which can be in the form of charts, graphs, drawings, and so forth, is used to help nontechnical people, such as the members of a jury, understand an event.", 
+      "hint": "This evidence can either include or exclude the possibility of guilt.", 
+      "question": "What type of evidence in a computer forensics investigation directly supports a particular assertion?", 
+      "question_number": 1
+    }, 
+    {
+      "choices": [
+        "Tabletop exercise", 
+        "Documentation review", 
+        "Full-scale test", 
+        "Walkthrough test"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. In a full-scale test, all personnel are usually involved and may actually conduct activities as they would during a real incident. This type of test is more complex and normally requires extensive resources, such as people and equipment, so it is typically conducted infrequently.\n\nA, B, and D are incorrect. A tabletop exercise is a type of group review. The documentation review is the simplest form of test, in which the business continuity plan, disaster recovery plan, and associated documents are reviewed by relevant personnel including managers, recovery team members, and anyone else who may have responsibilities directly affecting plans. In a walkthrough test, team members go through the motions of fulfilling the responsibilities and conducting the activities required during an actual incident or disaster.", 
+      "hint": "Involves actually implementing disaster recovery plans.", 
+      "question": "Which of the following is the most comprehensive and expensive form of disaster recovery exercise?", 
+      "question_number": 2
+    }, 
+    {
+      "choices": [
+        "WPA", 
+        "HTTPS", 
+        "WEP", 
+        "WPA2"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. WPA2 (Wi-Fi Protected Access version 2) currently provides the strongest available encryption for wireless networks.\n\nA and C are incorrect because WPA and WEP are weaker protocols. B is incorrect because HTTPS is a secure protocol for connecting on the Web, but not within your own network.", 
+      "hint": "Remember which protocols allow the highest levels of security.", 
+      "question": "Which of the following 802.11 encryption protocols would you implement to provide the strongest encryption for communications across your wireless network?", 
+      "question_number": 3
+    }, 
+    {
+      "choices": [
+        "Plaintext", 
+        "Ciphertext", 
+        "Hash", 
+        "Message digest"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Plaintext is unencrypted text.\n\nB, C, and D are incorrect. Ciphertext is a result of the encryption process and is encrypted text. A hash, or message digest, is a cryptographic representation of variable length text, but it is not the text itself.", 
+      "hint": "This type of text is unencrypted.", 
+      "question": "Before information is converted to an unreadable state using cryptography, in what form is the information?", 
+      "question_number": 4
+    }, 
+    {
+      "choices": [
+        "Mean time between failures", 
+        "Mean time to recovery", 
+        "Mean time to failure", 
+        "Mean time to replace"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Mean time between failures (MTBF) represents the manufacturer\u2019s best guess (based on historical data) regarding how much time will pass between major failures of that component. This is assuming that more than one failure will occur, which means that the component will be repaired, rather than replaced.\n\nB, C, and D are incorrect. Mean time to recovery (MTTR) is the amount of time it takes for a hardware component to recover from a failure. The mean time to failure (MTTF) is the length of time a device is expected to last in operation. In MTTF, only a single, definitive failure will occur and will require that the device be replaced rather than repaired. Mean time to replace is not a valid term.", 
+      "hint": "This term relies on the manufacturer\u2019s honesty and reliability.", 
+      "question": "Which of the following terms represents the manufacturer\u2019s best guess (based on historical data) regarding how much time will pass between major failures of a component produced by that manufacturer?", 
+      "question_number": 5
+    }, 
+    {
+      "choices": [
+        "Preventative control", 
+        "Corrective control", 
+        "Deterrent control", 
+        "Compensating control"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. A preventative control keeps someone from performing a malicious act, provided that she doesn\u2019t know the control is there and is not aware of the consequences for violating it.\n\nB, C, and D are incorrect. A corrective control is used to correct a condition when there is either no control at all or the existing control is ineffective. Normally, a corrective control is temporary until a more permanent solution is put into place. The difference between a deterrent control and a preventive control is that a deterrent control requires the person to have knowledge of the control in order for it to work. Users do not have to have knowledge of a preventative control for it to function. A compensating control assists and mitigates the risk an existing control is unable to mitigate.", 
+      "hint": "In this case, the person does not understand that the control is there and that there are consequences for violating the control.", 
+      "question": "If a person does not know a control exists, and this control keeps her from performing a malicious act, what type of control would this be classified as?", 
+      "question_number": 6
+    }, 
+    {
+      "choices": [
+        "Power conditioner", 
+        "UPS", 
+        "Generator", 
+        "Battery backup"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. To provide continuous power, you will need a generator, often gas-powered, that can provide power continuously until electrical power is restored. Be sure that you have enough gas! For very critical systems, multiple generators (tested regularly) are a common control.\n\nA is incorrect because a power conditioner helps provide clean power that is less likely to harm systems; it has nothing to do with power outages. B and D are incorrect because they provide backup power for only a short period of time and are often used to allow a graceful shutdown of less critical systems.", 
+      "hint": "It\u2019s important that the solution allow power even when none is available by conventional means.", 
+      "question": "Which of the following power devices do you install to enable the constant availability of critical servers during a power outage?", 
+      "question_number": 7
+    }, 
+    {
+      "choices": [
+        "Containment, eradication, and recovery", 
+        "Preparation", 
+        "Post-incident activity", 
+        "Detection and analysis"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Containment, eradication, and recovery is the third step of the incident response lifecycle.\n\nB, C, and D are incorrect. In order, the steps of the incident response life cycle are preparation; detection and analysis; containment, eradication, and recovery; and post-incident activity.", 
+      "hint": "This happens after an incident has been realized.", 
+      "question": "What is the third step in the incident response life cycle?", 
+      "question_number": 8
+    }, 
+    {
+      "choices": [
+        "Allows logical segmentation of hosts by IP subnet", 
+        "Creates broadcast domains", 
+        "Allows different security policies to be applied to different hosts", 
+        "Allows physical segmentation of hosts by IP subnet"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. VLANS do not physically segment hosts; they logically segment them, and they allow different segments to receive different security policies.\n\nA, B, and C are incorrect. VLANS do not physically segment hosts; they logically segment them. VLANs help eliminate broadcast domains, not create them. VLANS allow different segments to receive different security policies.", 
+      "hint": "VLANs segment hosts by virtual IP subnetworks.", 
+      "question": "A virtual LAN (VLAN) does NOT offer which of the following security controls?", 
+      "question_number": 9
+    }, 
+    {
+      "choices": [
+        "Rule-based system", 
+        "Anomaly-based system", 
+        "Signature-based system", 
+        "Filter-based system"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Rule-based systems use predefined rule sets.\n\nB, C, and D are incorrect. An anomaly-based system detects unusual network traffic patterns based upon a baseline of normal network traffic. Signature-based systems use predefined traffic signatures, typically downloaded from a vendor. Filter-based systems, such as routers and firewalls, base detection on access control lists that specify traffic that is permitted and denied.", 
+      "hint": "Uses definitions to determine when attacks are occurring.", 
+      "question": "Which type of network intrusion detection system uses defined rule sets to determine when attacks may be occurring?", 
+      "question_number": 10
+    }, 
+    {
+      "choices": [
+        "Centralized", 
+        "SIEM", 
+        "Decentralized", 
+        "Syslog"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Syslog is a logging facility found in UNIX and Linux systems, which can be used on either a centralized or decentralized basis. \n\nA, B, and C are incorrect. Centralized log management involves collecting logs from across the network into on system and being able to review them as a group. Security Information Event Management (SIEM) is a centralized method of obtaining logs and other data from disparate devices across the network. Decentralized log management means that logs are managed and reviewed on a host-by-host basis, rather than as a centralized, consolidated group.", 
+      "hint": "Can be used on either a centralized or decentralized basis.", 
+      "question": "Which of the following is a logging facility found in UNIX and Linux systems?", 
+      "question_number": 11
+    }, 
+    {
+      "choices": [
+        "SMTP", 
+        "SNMP", 
+        "Syslog", 
+        "ACL"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. An access control list (ACL) resides on network devices and filters traffic coming into and out of the device.\n\nA, B, and C are incorrect. SMTP, the Simple Mail Transport Protocol, is responsible for sending e-mail. The Simple Network Management Protocol (SNMP) uses a Management Information Base, or MIB, specific to each device to obtain device information from. Syslog is a log server found in UNIX and Linux systems.", 
+      "hint": "Used to manage network devices.", 
+      "question": "Which of the following resides on network devices and filters traffic coming into and out of the device?", 
+      "question_number": 12
+    }, 
+    {
+      "choices": [
+        "ECDH", 
+        "RSA", 
+        "AES", 
+        "SHA-2"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. RSA (Rivest-Shamir-Adleman) is the most common public-private key generation algorithm used in public key cryptography. It is used to generate a public and private key pair.\n\nA, C, and D are incorrect. Elliptic Curve Diffie-Hellman (ECDH) is a key exchange protocol used in public key cryptography. It is used to negotiate, agree upon, and establish a secure session between two parties. AES is the Advanced Encryption Standard, which is not used in public key cryptography; it is a symmetric key cryptography algorithm. SHA-2 is the second iteration of the Secure Hashing Algorithm and is used to generate message digests for plaintext. It is not used in public key cryptography to exchange keys or establish secure sessions.", 
+      "hint": "This protocol is used to generate a public and private key pair.", 
+      "question": "Which is the most common public-private key generation algorithm used in public key cryptography?", 
+      "question_number": 13
+    }, 
+    {
+      "choices": [
+        "Key streaming", 
+        "Key repetition", 
+        "Key exchange", 
+        "Key stretching"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Key streaming involves sending individual characters of the key through an algorithm and using a mathematical XOR function to change the output.\n\nB, C, and D are incorrect. Key repetition is not a valid answer or term. Key exchange involves generating and exchanging an asymmetric key used for a particular communications session, or exchanging public keys in order to use them for public key cryptography. Key stretching is a technique used to change a weak key to a stronger key by feeding it into an algorithm to produce an enhanced key.", 
+      "hint": "No, no, no.", 
+      "question": "Which of the following methods involves sending individual characters of the key through an algorithm and using a mathematical XOR function to change the output?", 
+      "question_number": 14
+    }, 
+    {
+      "choices": [
+        "WPA2", 
+        "WEP", 
+        "WPA", 
+        "802.1X"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. WEP is a legacy wireless encryption protocol that has been determined to be very weak and easily broken. It uses the RC4 streaming protocol and weak initialization vectors (24-bit) to encrypt data on wireless networks.\n\nA, C, and D are incorrect. WPA2 is an advanced encryption protocol that uses AES. WPA was an interim protocol used to correct some of WEP\u2019s weaknesses. It uses the TKIP protocol. 802.1X is a port-based authentication method, not a wireless encryption protocol.", 
+      "hint": "This is a weak encryption protocol used in wireless networking.", 
+      "question": "Which of the following is a legacy wireless encryption protocol that uses the RC4 streaming protocol?", 
+      "question_number": 15
+    }, 
+    {
+      "choices": [
+        "Firewall", 
+        "Proxy", 
+        "Switch", 
+        "Router"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A proxy is typically not used as a traffic-filtering device based upon port or protocol, but it makes requests on behalf of internal clients.\n\nA, C, and D are incorrect. A firewall is a more complex device, most often seen placed behind the border router. A switch does not filter traffic based upon port or protocol, since it works at a lower level in the OSI model. A router should be used as a first-level filtering device, because it has the ability to filter on basic characteristics of traffic such as port and protocol.", 
+      "hint": "This device is not generally used as a traffic-filtering device.", 
+      "question": "Which of the following devices typically makes requests on behalf of internal clients?", 
+      "question_number": 16
+    }, 
+    {
+      "choices": [
+        "Use MAC address filtering.", 
+        "Disable SSID broadcasting.", 
+        "Change the transmitting frequencies.", 
+        "Add a VLAN."
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Disable Service Set Identifier (SSID) broadcasting if you\u2019re not actively broadcasting your network name. When this control is implemented, a user must know the name of the network before he or she can connect to it.\n\nA, C, and D are incorrect. None of these options will control access with regard to the SSID.", 
+      "hint": "It\u2019s always possible to scan for active wireless networks.", 
+      "question": "Which of the following security controls should be implemented to make sure that users require previous knowledge of the network identifier to join a network?", 
+      "question_number": 17
+    }, 
+    {
+      "choices": [
+        "NTP", 
+        "DNS", 
+        "ICMP", 
+        "SNMP"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. ICMP is the protocol used by the ping and traceroute utilities for network diagnostics, and it should be disabled unless it\u2019s being used for important purposes.\n\nA, B, and D are incorrect. NTP is used by time services, DNS is used for IP/host name resolution, and SNMP enables network monitoring.", 
+      "hint": "The ping and traceroute utilities use which protocol?", 
+      "question": "Disabling ________ will help prevent security issues caused by having ping and traceroute enabled.", 
+      "question_number": 18
+    }, 
+    {
+      "choices": [
+        "Antispam filter", 
+        "Content filter", 
+        "Caching proxy server", 
+        "Firewall"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Content filters can scan content as it leaves the network, checking for certain types of content that has been pre-specified within the software.\n\nA, C, and D are incorrect because those technologies will not content-filter messages. Antispam filters are used to catch and quarantine spam messages. Caching proxy servers are used to cache, or store, messages for speedy retrieval in the future. Firewalls help control and block (when necessary) network traffic at the ingress and egress points.", 
+      "hint": "Some solutions can scan e-mail and other activities.", 
+      "question": "Your organization is concerned that employees might e-mail proprietary information to themselves at their private addresses. Which of the following would be most effective at catching that particular effort?", 
+      "question_number": 19
+    }, 
+    {
+      "choices": [
+        "WEP encryption", 
+        "MAC address filtering", 
+        "Disabling SSID broadcast", 
+        "WPA2 encryption"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Filtering by the MAC address ensures that only specific systems can access the wireless network based on the MAC address generally presented by the network card. That address is added into a list of systems that can connect (or not).\n\nA and D are incorrect because encryption technologies cannot stop specific systems from entering the network on its own. C is incorrect because disabling the SSID broadcast cannot stop systems from connecting if they determine the SSID through other means.", 
+      "hint": "There are a number of ways to allow/prevent network access, but this is specific to hardware.", 
+      "question": "Which of the following security controls allows connectivity to a network based on the system\u2019s hardware address?", 
+      "question_number": 20
+    }, 
+    {
+      "choices": [
+        "NAT with a firewall", 
+        "Router", 
+        "DMZ", 
+        "DHCP server"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Using network address translation (NAT) in conjunction with a firewall enables you to share one external address with multiple internal hosts that require external addresses for their connectivity.\n\nB, C, and D are incorrect. A DMZ can contain servers behind a firewall, allowing public access, but it does not inherently offer NAT services. DHCP is used to allocate internal IP addresses, and a router still requires NAT to perform address translation.", 
+      "hint": "It is possible to use multiple internal IP addresses with one shared external address.", 
+      "question": "Which of the following is most appropriate if you have limited external public IP addresses available, but a requirement to share those IP addresses with internal hosts that must connect to the public Internet?", 
+      "question_number": 21
+    }, 
+    {
+      "choices": [
+        "RSA", 
+        "PGP", 
+        "DHE", 
+        "AES"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Pretty good privacy, or PGP, is commonly used between individuals or small groups of people, and it normally does not require a public key infrastructure. It uses a web of trust model, which means that each individual has to be able to trust every other individual who uses PGP to encrypt and decrypt data sent and received by them.\n\nA, C, and D are incorrect. RSA is the de-facto key generation protocol used in public key cryptography, and it is normally used in a public key infrastructure type of environment. Diffie-Hellman Exchange (DHE) is a key negotiation and agreement protocol that is used to exchange keys and establish a secure communications session. AES is a symmetric key protocol not used in public key cryptography.", 
+      "hint": "This method of public key encryption does not rely on a public key infrastructure.", 
+      "question": "Which of the following types of public key cryptography uses a web of trust model?", 
+      "question_number": 22
+    }, 
+    {
+      "choices": [
+        "UDP port 53", 
+        "TCP port 1701", 
+        "UDP port 123", 
+        "TCP port 443"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. L2TP aligns to TCP port 1701, allowing secure remote access to a system through a VPN connection.\n\nA, C, and D are incorrect: UDP port 53 aligns to the Domain Name Service (DNS), UDP port 123 is used by Network Time Protocol (NTP) services, and TCP port 443 is used by HTTP over SSL.", 
+      "hint": "Remembering the common ports and services is very important.", 
+      "question": "Which of the following ports would be most likely to allow secure remote access into a system within a data center?", 
+      "question_number": 23
+    }, 
+    {
+      "choices": [
+        "NAT", 
+        "Virtualization", 
+        "Subnetting", 
+        "Cloud services"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Cloud services can enable users to perform their work via a browser, from anywhere they have Internet connectivity. This can be configured either to allow a local copy along with the cloud copy of the data, or the data can be edited directly within the cloud.\n\nA, B, and C are incorrect. Virtualization allows multiple virtual machines to run on the same piece of hardware. Subnetting and network address translation (NAT) are important, but incorrect, security concepts.", 
+      "hint": "Services and data should be accessible via the Internet, no matter where the user is located.", 
+      "question": "Your company allows a number of employees to telecommute, and others travel extensively. You have been tasked with finding a centralized solution that will allow access to shared data over the Internet. Which of the following is best?", 
+      "question_number": 24
+    }, 
+    {
+      "choices": [
+        "Acceptable-use policy", 
+        "Due care", 
+        "Service level agreement", 
+        "Access control policies"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. An acceptable-use policy details what is (and is not) acceptable for users to do during their working hours, including personal use and unacceptable activities on the company network, such as gambling and pornography.\n\nB is incorrect; due care is an act performed by the company itself, and is not a user policy. C is incorrect because service level agreements are made between a company and a third party, such as a contractor or a supplier. D is incorrect because access control policies help protect against unauthorized access, both physical and logical, but they don\u2019t discuss how users can and cannot use systems.", 
+      "hint": "While many policies discuss improper use, one in particular discusses the proper use of company IT resources.", 
+      "question": "Your organization wants you to create and implement a policy that will detail proper use of its information systems during work hours. Which of the following is the best choice?", 
+      "question_number": 25
+    }, 
+    {
+      "choices": [
+        "Asset identification", 
+        "Threat of natural disasters", 
+        "Risk likelihood and impact", 
+        "Qualitative costs"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. The risk likelihood and impact should directly determine how much you budget for controls to prevent the occurrence of risk.\n\nA is incorrect, because asset identification does not require analysis of cost. B and D are incorrect because risk likelihood and impact are more accurate in determining how much a solution will actually cost.", 
+      "hint": "Remember which concepts have the most bearing on potential loss.", 
+      "question": "Which of the following concepts should be the most important consideration when determining how to budget properly for security controls?", 
+      "question_number": 26
+    }, 
+    {
+      "choices": [
+        "Control", 
+        "Accountability", 
+        "Responsibility", 
+        "Availability"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Availability is the most likely attribute gained through potential redundancy and continuity of operations planning that\u2019s (hopefully) inherent within the cloud environment. Cloud computing usually increases availability of data for users, since it is typically built on highly available, redundant infrastructures.\n\nA, B, and C are incorrect. Accountability and responsibility can be established through effective security controls and well-written service-level agreements. Users lose a large measure of control by moving to the cloud.", 
+      "hint": "The organization would most likely receive this as a result of moving to the cloud.", 
+      "question": "Which of the following desired attributes would make an organization most likely to move to a cloud provider?", 
+      "question_number": 27
+    }, 
+    {
+      "choices": [
+        "RMF", 
+        "Sarbanes-Oxley", 
+        "PCI", 
+        "HIPAA"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. HIPAA regulates the protection of patient data in the healthcare and health insurance industry.\n\nA, B, and C are incorrect because RMF covers the risk management of U.S. Department of Defense systems; Sarbanes-Oxley and PCI are involved with financial data.", 
+      "hint": "Think \"large.\"", 
+      "question": "Which of the following regulations would guide a healthcare organization to protect the confidentiality of stored patient data adequately?", 
+      "question_number": 28
+    }, 
+    {
+      "choices": [
+        "deny source all destination 192.168.21.0 tcp port 23", 
+        "permit source 192.168.13.0 destination 192.168.21.0 tcp port 80", 
+        "permit source all destination 192.168.21.0 tcp port 21", 
+        "deny source 0.0.0.0 destination 192.168.21.0 udp port 123"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. The ACL should deny all traffic using TCP port 23. \n\nB, C, and D are incorrect. Ports 80, 21, and 123 are not related to telnet. You should also note that we want to \u201cdeny source all,\u201d not permit traffic or deny source 0.0.0.0.", 
+      "hint": "This question isn't covered in the book exactly. Use your knowledge of IP and port numbers to figure this out.", 
+      "question": "Type the command to create an ACL entry that you would use to create an access rule on your router to prevent any telnet traffic from passing through to the destination network 192.168.21.0.", 
+      "question_number": 29
+    }, 
+    {
+      "choices": [
+        "Ensure the monitoring station is protected by a firewall.", 
+        "Close SNMP, TCP, and UDP port 161 on the client.", 
+        "Change the \u201cpublic\u201d community name.", 
+        "Disable ICMP."
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Changing the community name for SNMP is the single most important thing you can do to ensure that any user cannot access your SNMP device.\n\nA, B, and D are incorrect. A firewall will not help protect the clients. Disabling SNMP on the client will cripple the SNMP functionality, and ICMP is unrelated.", 
+      "hint": "SNMP can be secured past its default configuration.", 
+      "question": "Which of the following methods will help improve SNMP security?", 
+      "question_number": 30
+    }, 
+    {
+      "choices": [
+        "Poisoned DNS server", 
+        "Watering hole attack", 
+        "SQL injection", 
+        "Spoofing"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A watering hole attack is designed to compromise a site that certain users are likely to use, rewarding them with malware for their visit.\n\nA, C, and D are incorrect because they are not valid attacks in this situation.", 
+      "hint": "It might be easy for an attacker to target a site that your users would use commonly, such as news or banking.", 
+      "question": "You\u2019ve discovered that a number of systems within your network have become infected with malware; it\u2019s believed that all the affected users visited a common site during the previous week. What type of attack would this likely be?", 
+      "question_number": 31
+    }, 
+    {
+      "choices": [
+        "Monitor traffic from that specific computer with a protocol analyzer.", 
+        "Run a performance baseline test on the system.", 
+        "Check the antimalware logs.", 
+        "Run a port scan on your firewall."
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. A protocol analyzer can intercept, log, and allow analysis to be conducted on network traffic, to include source and destination of the traffic.\n\nB, C, and D are incorrect. None of these options will help track down the information that might be transmitted by a backdoor tool.", 
+      "hint": "You may need to get deep into your network to determine where and what is happening on the network.", 
+      "question": "Which of the following tools will help you track down a potential backdoor program allowing access into a host on your network?", 
+      "question_number": 32
+    }, 
+    {
+      "choices": [
+        "Spoofing attack", 
+        "Deauthentication attack", 
+        "Replay attack", 
+        "Initialization vector attack"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A deauthentication attack involves sending specially crafted traffic to a wireless client and an access point, in the hopes of causing them to deauthenticate with each other and disconnect.\n\nA, C, and D are incorrect. A spoofing attack involves impersonating a wireless client or access point through either its IP or its MAC address. A replay attack involves the reuse of intercepted non-secure credentials to gain access to a system or network. Initialization vector (IV) attacks involve attempting to break WEP keys by targeting their weak IVs.", 
+      "hint": "This is done in the hopes of causing them to deauthenticate with each other and disconnect.", 
+      "question": "Which attack involves sending specially-crafted traffic to a wireless client and an access point?", 
+      "question_number": 33
+    }, 
+    {
+      "choices": [
+        "802.11 wireless", 
+        "Bluetooth", 
+        "Near Field Communications (NFC)", 
+        "Infrared"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Infrared enables communications between devices using a beam of light.\n\nA, B, and C are incorrect. Neither 802.11 wireless nor Bluetooth technologies perform in this manner. Near Field Communication is a newer technology in which devices send very low power radio signals to each other by using a special chip implanted in the device. It requires that the devices be extremely close or touching and is used for a variety of applications, including payments through NFC-enabled smartphones.", 
+      "hint": "Does not use radio frequency technology.", 
+      "question": "Which of the following technologies enables communication between devices using a beam of light?", 
+      "question_number": 34
+    }, 
+    {
+      "choices": [
+        "HTTP request and response messages.", 
+        "An HTML file that comes attached to an e-mail.", 
+        "Small text files stored on a browser that contain information about the Web sites you visit.", 
+        "Objects that are particular to Web sites that use the Adobe Flash player for certain content."
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Small text files stored on a browser that contain information about the Web sites you visit are called cookies. In some cases, they are used to retain user preferences for the site, but they can contain sensitive information, such as user credentials or financial data (credit card information, for example) as well.\n\nA, B, and D are incorrect. HTTP request and response messages are sent back and forth between the Web application and the browser so the client can access content in the Web application. These HTTP requests and responses have headers that contain information such as commands, directives, and so on. An HTML file that comes attached to e-mail is an HTTP attachment. Locally shared objects (also called flash cookies) are objects that are particular to Web sites that use the Adobe Flash player for certain content.", 
+      "hint": "Depending on their persistence, can contain sensitive information.", 
+      "question": "Which of the following best describes cookies?", 
+      "question_number": 35
+    }, 
+    {
+      "choices": [
+        "Evil twin", 
+        "SSID cloaking", 
+        "MAC spoofing", 
+        "Jamming"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. An evil twin attack is a rogue wireless access point set up to be nearly identical to a legitimate access point.\n\nB, C, and D are incorrect. SSID cloaking is a weak security measure designed to hide the broadcasting of a wireless network\u2019s Service Set Identifier. MAC spoofing is an attempt to impersonate another host by using its MAC address. Jamming is an intentional interference with the signal of a wireless network. It is often part of a DoS attack.", 
+      "hint": "Twins are often alike, but can be different.", 
+      "question": "Which of the following is a rogue wireless access point set up to be nearly identical to a legitimate access point?", 
+      "question_number": 36
+    }, 
+    {
+      "choices": [
+        "An attack that exceeds the memory allocated to an application for a particular function, causing it to crash.", 
+        "An attack that uses unexpected numerical results from a mathematical operation to overflow a buffer.", 
+        "An attack on a database through vulnerabilities in the Web application, usually in user input fields.", 
+        "An attack that involves sending malicious XML content to a Web application, taking advantage of any lack of input validation and XML parsing."
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. An XML injection attack involves sending malicious XML content to a Web application, taking advantage of any lack of input validation and XML parsing.\n\nA, B, and C are incorrect. A buffer overflow attack exceeds the memory allocated to an application for a particular function, causing it to crash. Although similar to a buffer overflow attack, answer B describes an integer overflow attack, which uses unexpected numerical results from a mathematical operation to overflow a buffer. A SQL injection attacks a database through vulnerabilities in the Web application, usually in user input fields.", 
+      "hint": "Relates to a lack of input validation and proper parsing.", 
+      "question": "Which of the following statements best describes an XML injection attack?", 
+      "question_number": 37
+    }, 
+    {
+      "choices": [
+        "Cookies", 
+        "TLS", 
+        "Session lock", 
+        "Client-based code"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Cookies are saved and used by load balancers to maintain a connection between a specfic client and a specfic server, i.e. session affinity.\n\nB, C, and D are incorrect. TLS is an encryption method and session lock is an imaginary term. Client-based code could be used, but is not common.", 
+      "hint": "This form of data structure is used for many reasons other than load balancing.", 
+      "question": "In many cases a load balancer uses which of the following on a client's browser to maintain session affinity?", 
+      "question_number": 38
+    }, 
+    {
+      "choices": [
+        "SQL injection attack", 
+        "LDAP injection attack", 
+        "Directory traversal attack", 
+        "Integer overflow attack"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. A SQL injection attack targets relational databases that reside behind Web applications.\n\nB, C, and D are incorrect. An LDAP injection attack targets directory services databases, such as those used in X.500 implementations. A directory traversal attack targets non-secure directory structures on the host, such as folder structures. An integer overflow attack is similar to a buffer overflow attack and results in mathematical operations that the host or application cannot handle, causing them to fail.", 
+      "hint": "Think about the types of database software that you might attack.", 
+      "question": "Which of the following attacks targets relational databases that reside behind Web applications?", 
+      "question_number": 39
+    }, 
+    {
+      "choices": [
+        "SQL injection attack", 
+        "LDAP injection attack", 
+        "Directory traversal attack", 
+        "Integer overflow attack"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. An integer overflow attack is similar to a buffer overflow attack and results in mathematical operations that the host or application cannot handle, causing them to fail.\n\nA, B, and C are incorrect. A SQL injection attack targets relational databases that reside behind Web applications. An LDAP injection attack targets directory services databases, such as those used in X.500 implementations. A directory traversal attack targets non-secure directory structures on the host, such as folder structures.", 
+      "hint": "This attack is similar to a buffer overflow attack.", 
+      "question": "Which of the following attacks results in mathematical operations that the host or application cannot handle, causing them to fail?", 
+      "question_number": 40
+    }, 
+    {
+      "choices": [
+        "Operating system", 
+        "Virtual machine", 
+        "Hardware", 
+        "Interface"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Containerization is the process of virtualizing the operating system. Containers often use storage segmentation to separate senstitive and personal data.\n\nB, C, and D are incorrect. Virtual machines are not virtualized. Traditional virtualization, not containerization, virtualizes hardware; and while it can be argued that both traditional virtualization as well as containerization virtualize a sysytem's interface, that is not the best answer of the choices given.", 
+      "hint": "This isn't that hard.", 
+      "question": "Containerization is the process of virtualizing which of the following items?", 
+      "question_number": 41
+    }, 
+    {
+      "choices": [
+        "HSM", 
+        "TPM", 
+        "SAN", 
+        "NAS"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A Trusted Platform Module (TPM) is installed on an individual device, usually as a chip on the system motherboard.\n\nA, C, and D are incorrect. A hardware security module (HSM) is usually a hardware appliance or standalone device used to provide hardware encryption services for specific hosts. A SAN is a storage area network and is not typically a security device. A NAS, network attached storage, is not a security device.", 
+      "hint": "This device is not separate from the host and is generally installed as a component of a host.", 
+      "question": "Which of the following terms describes a security appliance that is usually installed on an individual device, usually as a chip on the system motherboard?", 
+      "question_number": 42
+    }, 
+    {
+      "choices": [
+        "Whitelisting", 
+        "Blacklisting", 
+        "Graylisting", 
+        "Filtering"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Applications that users are allowed to download, install, and execute are added to a whitelist by an administrator; whitelisting is the opposite of blacklisting.\n\nB, C, and D are incorrect. Blacklisting involves an administrator adding undesirable or restricted software or applications to a list on content filtering devices, in group policy, or through some other type of mechanisms. This ensures that users are not allowed to download, install, or execute these particular applications. There is no such term as graylisting. Filtering typically involves checking traffic on a network device, based upon specific characteristics. The term normally does not apply to software or applications.", 
+      "hint": "This method creates a list of applications that are not blocked or restricted from use.", 
+      "question": "Which of the following solutions allow applications that users can download, install, and execute to be added to a safe list?", 
+      "question_number": 43
+    }, 
+    {
+      "choices": [
+        "BYOD", 
+        "CYOD", 
+        "COBO", 
+        "COPE"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Company-issued, personally-enabled (COPE) devices are owned and controlled completely by the organization.\n\nA, B, and D are incorrect. Bring your own device (BYOD) means the employee owns the device. Choose your own device (CYOD) means the organization retains ownership, but employeess may install personal apps on the device. Company-issued, personally-enabled (COPE) is similar to CYOD, but employees are limited to installing only white-listed apps.", 
+      "hint": "Don't bother trying to bring your own.", 
+      "question": "Which mobile device management deployment model uses corporate-owned devices where the corporation dictates the software installation and maintenance actions?",
+      "question_number": 44
+    }, 
+    {
+      "choices": [
+        "Vulnerability assessment", 
+        "Threat assessment", 
+        "Risk assessment", 
+        "Penetration test"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A threat assessment looks at events that could exploit vulnerabilities.\n\nA, C, and D are incorrect. A vulnerability assessment looks for weaknesses in systems. A risk assessment is a combination of assessments and is designed to assess factors, including likelihood and impact that affect an asset. A penetration test attempts to exploit actual vulnerabilities found within the systems.", 
+      "hint": "This type of assessment does not look only at the weaknesses themselves.", 
+      "question": "Which type of assessment looks at events that could exploit vulnerabilities?", 
+      "question_number": 45
+    }, 
+    {
+      "choices": [
+        "Black box test", 
+        "Blind test", 
+        "Double-blind test", 
+        "Gray box test"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. In a black box test, the testers have no knowledge of details about the network configuration, but system defenders are aware of their presence. This type of test is also referred to as a blind test.\n\nC and D are incorrect. In a double-blind test, testers have no prior knowledge of the network they are testing, and network defenders also have no knowledge of the test and aren\u2019t aware of any attacks unless they can detect and defend against them. This test is designed to test the defenders\u2019 abilities to detect and respond to attacks, as much is it is to test and exploit vulnerabilities on the network. In a gray box test, the penetration tester may have some limited knowledge of the network or systems, gained from the organization that wants the test.", 
+      "hint": "Only one party is blind to details regarding the test.", 
+      "question": "During which type of assessment would penetration testers not have any knowledge about the network, while defenders are aware of their presence? (Choose two.)", 
+      "question_number": 46
+    }, 
+    {
+      "choices": [
+        "Whaling", 
+        "Spear phishing", 
+        "Vishing", 
+        "Pharming"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Spear phishing involves sending e-mail to a particular type of user, regardless of rank in the organization, and basing the attack on more detailed, in-depth information to convince the target that the phishing e-mail is actually valid.\n\nA, C, and D are incorrect. Whaling is a social engineering attack that targets people in high-value positions, such as senior executives. It is a form of a phishing attack. Vishing is a form of phishing attack that takes place over Voice-over-IP (VoIP) telephone systems. Pharming is a form of DNS attack.", 
+      "hint": "This attack typically targets particular types of users and includes targeted information.", 
+      "question": "Which of the following is a variant of a phishing attack that targets a particular type of user and includes specific information?", 
+      "question_number": 47
+    }, 
+    {
+      "choices": [
+        "Gray hat hacker", 
+        "Black box tester", 
+        "Black hat hacker", 
+        "White hat hacker"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. A black hat hacker is someone who uses her skills for malicious purposes and often shares that information with others.\n\nA, B, and D are incorrect. A gray hat hacker uses her skills for both altruistic and malicious purposes, breaking into and exploiting a system without permission, but without sharing that information with others. A black box tester is someone who tests a system without any prior knowledge of the network or infrastructure; this person tests the system with the owner\u2019s permission. A white hat hacker uses her skills to assist in securing systems; this type of hacker is usually a penetration testing professional or ethical hacker.", 
+      "hint": "This type of hacker does not use their abilities for the good of society.", 
+      "question": "Which of the following terms describes someone who hacks into a system for malicious purposes, without permission from the system\u2019s owner, and shares the system hacking information with others?", 
+      "question_number": 48
+    }, 
+    {
+      "choices": [
+        "Water", 
+        "Shalon", 
+        "Carbon dioxide", 
+        "FM-200"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. FM-200 generally replaced halon in data center fire suppression systems.\n\nA, B, and C are incorrect. Water is still used to combat certain classes of fires, but it did not replace halon. Shalon doesn't exist. Carbon dioxide is used to combat both liquid and electrical fires, but it did not replace halon.", 
+      "hint": "This chemical is generally not considered deadly to humans.", 
+      "question": "Which of the following fire suppression chemicals widely replaced halon in data center fire suppression systems?", 
+      "question_number": 49
+    }, 
+    {
+      "choices": [
+        "Mean time between failures", 
+        "Mean time to recovery", 
+        "Mean time to failure", 
+        "Mean time to replace"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Mean time to recovery (MTTR) is the amount of time it takes for a hardware component to recover from failure.\n\nA, C, and D are incorrect. Mean time between failures (MTBF) represents the manufacturer\u2019s best guess (based on historical data) regarding how much time will pass between major failures of that component. This is assuming that more than one failure will occur, which means that the component will be repaired, rather than replaced. The mean time to failure (MTTF) is the length of time a device is expected to last in operation. In MTTF, only a single, definitive failure will occur and will require that the device be replaced rather than repaired. Mean time to replace is not a valid term.", 
+      "hint": "This term attempts to determine the amount of time for component recovery.", 
+      "question": "Which of the following terms indicates the amount of time it takes for a hardware component to recover from failure?", 
+      "question_number": 50
+    }, 
+    {
+      "choices": [
+        "Organizational governance", 
+        "Statutory governance", 
+        "Industry governance", 
+        "Vendor governance"
+      ], 
+      "correct_answers": "BCD", 
+      "explanation": "B, C, and D are correct. All of these types of governance are developed externally and can encompass any number of laws, regulations, and best practices.\n\nA is incorrect. Organizational governance is developed internally and consists of policies, procedures, standards, and guidelines.", 
+      "hint": "Think of what would be developed internally versus externally.", 
+      "question": "Which of the following types of governance are developed externally? (Choose all that apply.)", 
+      "question_number": 51
+    }, 
+    {
+      "choices": [
+        "Control", 
+        "Accountability", 
+        "Responsibility", 
+        "Availability"
+      ], 
+      "correct_answers": "BC", 
+      "explanation": "B and C are correct. Accountability and responsibility can be established through effective security controls and well-written service-level agreements.\n\nA and D are incorrect. Lack of control over data and the infrastructure is probably the greatest risk to cloud computing and cannot be completely managed through agreements. Cloud computing usually increases availability of data for users, since it is typically built on highly available, redundant infrastructures.", 
+      "hint": "The organization does not give all of this to the provider, but it can establish metrics and guidelines.", 
+      "question": "Which of the following can be established in a cloud environment through effective security controls and well-written service-level agreements? (Choose two.)", 
+      "question_number": 52
+    }, 
+    {
+      "choices": [
+        "External", 
+        "Private", 
+        "Community", 
+        "Public"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A private cloud is for use by only one organization and is usually hosted by that organization\u2019s infrastructure.\n\nA, C, and D are incorrect. An external cloud is not a valid type of cloud and could be a public, private, or community cloud. A community cloud is for use by similar organizations or communities, such as universities or hospitals, that need to share common data. A public cloud is usually operated by a third-party provider that sells or rents \u201cpieces\u201d of the cloud to different entities, such as small businesses or large corporations.", 
+      "hint": "This type of cloud service is for use by one group only\u2014not the public.", 
+      "question": "Which type of cloud service is for use by only one organization and is usually hosted by that organization\u2019s infrastructure?", 
+      "question_number": 53
+    }, 
+    {
+      "choices": [
+        "SMTP", 
+        "POP3", 
+        "IMAPS", 
+        "IMAP4"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. POP3 is a non-secure client-side e-mail protocol that uses TCP port 110.\n\nA, C, and D are incorrect. SMTP is a server-side e-mail protocol and is not used over SSL or TLS. SMTP uses TCP port 25. IMAPS is a secure version of the IMAP4 protocol and is used over SSL or TLS connections on TCP port 993. IMAP4 is a non-secure client-side e-mail protocol that uses TCP port 143.", 
+      "hint": "It is a non-secure version of client-level e-mail protocol.", 
+      "question": "Which of the following is a non-secure client-side e-mail protocol that uses TCP port 110?", 
+      "question_number": 54
+    }, 
+    {
+      "choices": [
+        "FTPS", 
+        "FTP", 
+        "SCP", 
+        "SFTP"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. FTP is a non-secure protocol used to copy files to and from Internet-based hosts.\n\nA, C, and D are incorrect. FTPS is a secure version of the non-secure FTP protocol, which is used over SSL or TLS connections to ensure security when transferring files to or from an Internet-based host. SCP is a secure copy protocol used to copy files securely to and from a networked host, and it uses SSH. SFTP is a secure file transfer protocol used to copy files to and from an Internet-based host, and it uses SSH.", 
+      "hint": "This is a non-secure protocol can be upgraded with a secure protocol.", 
+      "question": "Which of the following is a non-secure protocol used to copy files to and from Internet-based hosts?", 
+      "question_number": 55
+    }, 
+    {
+      "choices": [
+        "Trend analysis", 
+        "Qualitative analysis", 
+        "Quantitative analysis", 
+        "Log analysis"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. A log analysis can\u2019t identify patterns alone and requires other data and event sources to identify trends and patterns.\n\nA, B, and C are incorrect. Trend analysis involves looking at data from various sources, including device logs, to identify patterns over a period of time. Both qualitative and quantitative analyses are risk assessment techniques.", 
+      "hint": "Ongoing analysis; it looks for patterns over a time period versus only one point in time.", 
+      "question": "Which of the following cannot identify patterns alone and requires other data and event sources to identify trends and patterns?", 
+      "question_number": 56
+    }, 
+    {
+      "choices": [
+        "Session hijacking attack", 
+        "ARP poisoning attack", 
+        "SYN flood", 
+        "Smurf attack"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. ARP poisoning is an attempt to send unsolicited ARP messages to a client to add false entries to its ARP cache.\n\nA, C, and D are incorrect. A session hijacking attack is an attempt to hijack a user\u2019s Web browsing session by stealing cookies or using other network attack methods. A SYN flood uses TCP SYN segments in its attack, not ICMP. A smurf attack uses ICMP.", 
+      "hint": "ARP is important; you should study it closely.", 
+      "question": "Which of the following attacks attempts to send unsolicited ARP messages to a client to add false entries to its ARP cache?", 
+      "question_number": 57
+    }, 
+    {
+      "choices": [
+        "Virus", 
+        "Trojan", 
+        "Logic bomb", 
+        "Adware"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Adware is the usually annoying advertisements that come in the form of pop-up messages in a user\u2019s browser.\n\nA, B, and C are incorrect. A virus is a piece of malicious software that must be propagated through a definite user action. A Trojan is a piece of software that seems to be of value to the user, but in reality is malware. A logic bomb is a script set to execute at a certain time, which is usually created by rogue administrators or disgruntled employees.", 
+      "hint": "These usually pop up trying to sell you something that you probably don't want.", 
+      "question": "Which of the following are usually annoying advertisements that come in the form of pop-up messages in a user\u2019s browser?", 
+      "question_number": 58
+    }, 
+    {
+      "choices": [
+        "Tabletop exercise", 
+        "Documentation review", 
+        "Full-scale test", 
+        "Walkthrough test"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. In a walkthrough test, team members go through the motions of fulfilling the responsibilities and conducting the activities required during an actual incident or disaster.\n\nA, B, and C are incorrect. A tabletop exercise is a type of group review. The documentation review is the simplest form of test, in which the business continuity plan, disaster recovery plan, and associated documents are reviewed by relevant personnel including managers, recovery team members, and anyone else who may have responsibilities directly affecting plans. In a full-scale test, all personnel are usually involved and may actually conduct activities as they would during a real incident. This type of test is more complex and normally requires extensive resources, such as people and equipment, so it is typically conducted infrequently.", 
+      "hint": "We go through the motions of conducting the activities and fulfilling the responsibilities.", 
+      "question": "Which of the following requires team members to go through the motions of fulfilling the responsibilities and conducting the activities required during an actual incident or disaster?", 
+      "question_number": 59
+    }, 
+    {
+      "choices": [
+        "Exculpatory evidence", 
+        "Inculpatory evidence", 
+        "Demonstrative evidence", 
+        "Documentary evidence"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Demonstrative evidence, which can be in the form of charts, graphs, drawings, and so forth, is used to help non-technical people, such as the members of a jury, understand an event.\n\nA, B, and D are incorrect. Exculpatory evidence proves innocence. Inculpatory evidence proves guilt. Documentary evidence directly supports or proves a definitive assertion.", 
+      "hint": "The jury is often non-technical.", 
+      "question": "What type of evidence is generally in the form of charts, graphs, or drawings to help non-technical people?", 
+      "question_number": 60
+    }, 
+    {
+      "choices": [
+        "Securing the scene", 
+        "Notifying and coordinating with senior management and law enforcement officials", 
+        "Determining the initial scope and impact of the incident", 
+        "Notifying the incident response team"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Notifying and coordinating with senior management and law enforcement officials is normally the job of a senior leader within the incident response team.\n\nA, C, and D are incorrect. The primary job of a first responder is to secure the scene. They are also responsible for notifying the incident response team and initially determining the scope, seriousness, and impact of the incident.", 
+      "hint": "This duty is not generally the responsibility of a first responder.", 
+      "question": "Which of the following is normally the job of a senior leader within the incident response team?", 
+      "question_number": 61
+    }, 
+    {
+      "choices": [
+        "Containment, eradication, and recovery", 
+        "Preparation", 
+        "Post-incident activity", 
+        "Detection and analysis"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Post-incident activity is the last step of the incident response life cycle.\n\nA, B, and D are incorrect. In order, the steps of the incident response life cycle are preparation; detection and analysis; containment, eradication, and recovery; and post-incident activity.", 
+      "hint": "This happens when an incident is wrapping up.", 
+      "question": "What is the last step in the incident response life cycle?", 
+      "question_number": 62
+    }, 
+    {
+      "choices": [
+        "Clean desk policies", 
+        "Protection of personally identifiable information on social media", 
+        "Information classification", 
+        "Data disposal"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Data disposal guidelines explain how different classifications of data should be properly disposed of to ensure that data is not later pieced together or recovered and exploited.\n\nA, B, and C are incorrect. Clean desk policies often dictate how sensitive information should be stored after hours and while uncleared visitors are near the area. Protection of personally identifiable information on social media would be part of an organization\u2019s social media policy. An organization\u2019s information classification policy not only outlines what level of security protections certain data receives, but it also serves to instruct employees on how to treat sensitive data.", 
+      "hint": "Determines where certain data goes when it is no longer needed.", 
+      "question": "For which of the following should employees receive training to establish how to handle end-of-life and unnecessary data?", 
+      "question_number": 63
+    }, 
+    {
+      "choices": [
+        "Preventative control", 
+        "Corrective control", 
+        "Deterrent control", 
+        "Compensating control"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. A compensating control assists and mitigates the risk an existing control is unable to mitigate.\n\nA, B, and C are incorrect. The difference between a deterrent control and a preventive control is that it is necessary to have knowledge of the deterrent control for it to work. Users do not need to have knowledge of a preventative control for it to function. A corrective control is used to correct a condition when there is either no control at all, or the existing control is ineffective. Normally, a corrective control is temporary until a more permanent solution is put into place. A deterrent control keeps someone from performing a malicious act, provided that they know the control is there and are aware of the consequences for violating it.", 
+      "hint": "In this situation, a control exists, but cannot fully mitigate the risk.", 
+      "question": "What type of control assists and mitigates the risk an existing control is unable to mitigate?", 
+      "question_number": 64
+    }, 
+    {
+      "choices": [
+        "Cookie", 
+        "Locally shared object", 
+        "HTML attachment", 
+        "Cross-site script"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Any form of attachment is a risk. An HTML attachment is basically an HTML file that comes attached to an e-mail message. When a user clicks this attachment, it automatically spawns a browser session and could connect to a malicious Web site. Once the user is connected to the site, malicious code can be downloaded onto the user\u2019s browser.\n\nA, B, and D are incorrect. Neither cookies, locally shared objects, nor cross-site scripts are attached to e-mail messages.", 
+      "hint": "Requires a user to click on it to execute.", 
+      "question": "What type of file, often sent with an e-mail message, can contain malicious code that can be downloaded and executed on a client\u2019s computer?", 
+      "question_number": 65
+    }, 
+    {
+      "choices": [
+        "Header manipulation", 
+        "Man-in-the-browser", 
+        "Clickjacking", 
+        "Buffer overflow"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Clickjacking is almost never seen anymore as it's easy to detect this type of attack.\n\nA, B, and D are incorrect. Header manipulation means to add malicious information to HTTP headers. A man-in-the-browser attack means to add malicious information or code, often by using a Trojan horse. Buffer overflows attempt to access privilege escalation by forcing a buffer to cause an error.", 
+      "hint": "Watch where your cursor hits the screen!", 
+      "question": "Which of the following is an older form of attack where a malicious/compromised Web site places invisible controls on a page, giving users the impression they are clicking some safe item that actually is an active control for something malicious?", 
+      "question_number": 66
+    }, 
+    {
+      "choices": [
+        "Evil twin", 
+        "SSID cloaking", 
+        "MAC spoofing", 
+        "Jamming"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Jamming is an intentional interference with the signal of a wireless network. It is often part of a DoS attack.\n\nA, B, and C are incorrect. An evil twin attack is a rogue wireless access point set up to be nearly identical to a legitimate access point. SSID cloaking is a weak security measure designed to hide the broadcasting of a wireless network\u2019s service set identifier. MAC spoofing is an attempt to impersonate another host by using its MAC address.", 
+      "hint": "Usually part of a denial-of-service (DoS) attack.", 
+      "question": "Which of the following is a form of intentional interference with a wireless network?", 
+      "question_number": 67
+    }, 
+    {
+      "choices": [
+        "Spoofing attack", 
+        "Deauthentication attack", 
+        "Replay attack", 
+        "Initialization vector attack"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A deauthentication attack involves sending specially-crafted traffic to both a wireless client and an access point, in the hopes of causing them to deauthenticate with each other and disconnect.\n\nA, C, and D are incorrect. A spoofing attack involves impersonating a wireless client or access point, either through its IP or MAC address. A replay attack involves the reuse of intercepted non-secure credentials to gain access to a system or network. Initialization vector (IV) attacks involve attempting to break WEP keys by targeting their weak IVs.", 
+      "hint": "Involves sending specially-crafted traffic to the client and the access point.", 
+      "question": "An attack in which an attacker attempts to disconnect a victim\u2019s wireless host from its access point is called a(n) __________.", 
+      "question_number": 68
+    }, 
+    {
+      "choices": [
+        "802.11 wireless", 
+        "Bluetooth", 
+        "Near-field communication (NFC)", 
+        "Infrared"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Near-field communication is enables devices to send very low-power radio signals to each other by using a special chip implanted in the device. This technology requires that the devices be extremely close or even touching each other. This technology is used for a wide variety of applications, including payments through NFC-enabled smartphones.\n\nA, B, and D are incorrect. Neither 802.11 wireless nor Bluetooth technologies are used in this manner. Infrared does not use radio frequency technology; it enables communications between devices using a beam of light.", 
+      "hint": "Used in consumer and business applications, including payment by smartphone.", 
+      "question": "Which of the following technologies allows devices to communicate with each other at very close range through radio signals by using a special chip implanted in the device, and may be vulnerable to eavesdropping and man-in-the-middle attacks?", 
+      "question_number": 69
+    }, 
+    {
+      "choices": [
+        "Shoulder surfing", 
+        "Tailgating", 
+        "Dumpster diving", 
+        "Coercion"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Coercion attacks generally require direct confrontation with the victim, so they are usually detected.\n\nA, B, and C are incorrect. All of these attacks may go undetected by the victim, because they may not require any direct interaction with the target and can be performed subtly by the attacker without the victim noticing.", 
+      "hint": "This attack usually requires direct confrontation with the victim.", 
+      "question": "All of the following types of social engineering attacks might go undetected by the victim, except:", 
+      "question_number": 70
+    }, 
+    {
+      "choices": [
+        "Shoulder surfing", 
+        "Tailgating", 
+        "Dumpster diving", 
+        "Impersonation"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A tailgating person might use some sort of creative pretext to convince someone to open the door and allow him or her to enter without proper identification.\n\nA, C, and D are incorrect. Neither shoulder surfing nor dumpster diving are attempts to enter a facility. Impersonation could be used to enter a facility, but it is not being used to do so in this case.", 
+      "hint": "This attack is used to enter a facility without authenticating to anyone.", 
+      "question": "Which of the following attacks might involve an attacker attempting to enter a facility with arms full of boxes, in an attempt to gain sympathy and have someone open the door for him or her?", 
+      "question_number": 71
+    }, 
+    {
+      "choices": [
+        "Whaling", 
+        "Spear phishing", 
+        "Vishing", 
+        "Pharming"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Whaling is a social engineering attack that targets people in high-value positions, such as senior executives. It is a form of a phishing attack.\n\nB, C, and D are incorrect. Spear phishing involves targeting a particular type of user, regardless of rank in the organization, and basing the attack on more detailed, in-depth information in order to convince the target that the phishing e-mail is actually valid. Vishing is a form of phishing attack that takes place over Voice-over-IP (VoIP) telephone systems. Pharming is a form of DNS attack.", 
+      "hint": "This attack typically targets senior executives and others in important positions.", 
+      "question": "Which of the following is a variant of a phishing attack, where a phishing e-mail is sent to a high-value target instead of on a mass scale to all employees?", 
+      "question_number": 72
+    }, 
+    {
+      "choices": [
+        "Gray hat hacker", 
+        "Black box tester", 
+        "Black hat hacker", 
+        "White hat hacker"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. White hat hackers use their skills to assist in securing systems. They are usually penetration testing professionals or ethical hackers.\n\nA, B, and C are incorrect. A gray hat hacker uses his or her skills for both good and evil purposes. A black box tester tests a system without any prior knowledge of the network or infrastructure. A black hat hacker uses his or her skills for malicious purposes.", 
+      "hint": "This type of hacker uses his or her abilities for good.", 
+      "question": "Which of the following terms describes someone who hacks into systems, with permission of the system\u2019s owner, to discover exploitable vulnerabilities and help secure the system?", 
+      "question_number": 73
+    }, 
+    {
+      "choices": [
+        "Vulnerability assessment", 
+        "Threat assessment", 
+        "Risk assessment", 
+        "Penetration test"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. A vulnerability assessment looks for weaknesses in systems.\n\nB, C, and D are incorrect. A threat assessment looks at events that could exploit vulnerabilities. A risk assessment is a combination of assessments and is designed to assess factors, including likelihood and impact, that affect an asset. A penetration test actually attempts to exploit any found weaknesses (usually after a vulnerability assessment) to gain access to systems.", 
+      "hint": "This type of assessment looks at weaknesses, not necessarily events that exploit weaknesses.", 
+      "question": "Which type of assessment is used to determine weaknesses within a system?", 
+      "question_number": 74
+    }, 
+    {
+      "choices": [
+        "Black box test", 
+        "Blind test", 
+        "Double-blind test", 
+        "Gray box test"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. In a double-blind test, testers have no prior knowledge of the network they are testing, and network defenders have no prior knowledge of the test and aren\u2019t aware of any attacks unless they can detect and defend against them. This test is designed to test the defenders\u2019 abilities to detect and respond to attacks and to test and exploit vulnerabilities on the network.\n\nA, B, and D are incorrect. In a black box test, only the testers have no knowledge of details about this network configuration. This type of test is also referred to as a blind test. In a gray box test, the penetration tester may have some limited knowledge of the network or systems, gained from the organization that wants the test.", 
+      "hint": "Both parties are blind to details regarding the test.", 
+      "question": "During which type of assessment would penetration testers not have any knowledge about the network and network defenders have no knowledge of the test itself?", 
+      "question_number": 75
+    }, 
+    {
+      "choices": [
+        "Windows 10", 
+        "Ubuntu Linux", 
+        "Windows Server", 
+        "SELinux"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. SELinux is the only example, from the answers given, of a trusted operating system.\n\nA, B, and C are incorrect. These operating systems are not considered trusted operating systems, although they can be hardened to varying degrees.", 
+      "hint": "This operating system is designed to be hardened out-of-the-box.", 
+      "question": "Which of the following is an example of a \u201ctrusted OS\u201d?", 
+      "question_number": 76
+    }, 
+    {
+      "choices": [
+        "Whitelisting", 
+        "Blacklisting", 
+        "Graylisting", 
+        "Filtering"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Blacklisting is a technique that involves an administrator adding undesirable or restricted software or applications to a list on content filtering devices, in group policy, or through some other type of mechanism. This ensures that users are not allowed to download, install, or execute these particular applications.\n\nA, C, and D are incorrect. Whitelisting is the opposite of blacklisting; applications that users are allowed to download, install, and execute are added to a whitelist. There is no such term as graylisting. Filtering typically involves checking traffic on a network device based upon specific characteristics. The term normally does not apply to software or applications.", 
+      "hint": "This method creates a list of applications that are typically blocked, or restricted, from use.", 
+      "question": "Which the following is a recognized way of restricting access to applications?", 
+      "question_number": 77
+    }, 
+    {
+      "choices": [
+        "Man-in-the-middle", 
+        "Version control", 
+        "Refactoring", 
+        "Shimming"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. A refactored driver will work correctly, but might also perform other, malicious actions.\n\nA, B, and D are incorrect. Man-in-the-middle might be a result of the refactor, but is not the threat itself. Version control refers to formally tracking different versions of the baseline configuration. Shimming is a library that responds to inputs that the original device driver isn\u2019t designed to handle and would require a separate file.", 
+      "hint": "Just because the drive looks like it's coming from the manufacturer is no guarantee that bad guys haven't messed with it.", 
+      "question": "Wissa is updating a printer driver on a Windows system. She downloads the latest driver from the manufacturer's Web site. When installing the driver, Windows warns that the driver is unsigned. To which of the following threats is Wissa exposing her system?", 
+      "question_number": 78
+    }, 
+    {
+      "choices": [
+        "ECB", 
+        "CBC", 
+        "OFB", 
+        "CTR"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. With ECB mode, a given piece of plaintext will always produce the same corresponding piece of ciphertext. This predicability makes it weak.\n\nB, C, and D are incorrect. While CBC, OFB, and CTR mode go about the processes in different ways, these modes lack ECB's predicability, adding strength to the underlying cryptosystem.", 
+      "hint": "This mode always makes the same ciphertext given the same plaintext", 
+      "question": "Which of the following DES/AES encryption modes is considered the weakest?", 
+      "question_number": 79
+    }, 
+    {
+      "choices": [
+        "Round robin", 
+        "Affinity", 
+        "On demand", 
+        "First come"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Round robin is a turn-based scheduling method where jobs are assigned to servers in sequential order.\n\nB, C, and D are incorrect. Affinity scheduling means that the load balancer keeps a client's sessions connected to the server that's keeping the session. On demand and First come are meaningless terms created from the depths of your test writer's mind.", 
+      "hint": "This device is separate from the host and is not installed as a component of a host.", 
+      "question": "Fabian's new load balancer has a number of scheduling options and he's trying to decide the one to use. He wants to schedule load balancing such that the load balancer assigns to each server in order, then returns to the first server. What is this form of scheduling?", 
+      "question_number": 80
+    }, 
+    {
+      "choices": [
+        "Signage should follow national and international standards for symbols and colors.", 
+        "Signage should be placed in well-lit areas and not obstructed by large objects.", 
+        "Signage should warn intruders away from restricted areas.", 
+        "Signage should indicate security checkpoints to report to in the event of an emergency requiring evacuation."
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Signage should indicate the location and route to emergency evacuation exits, not security checkpoints, in the event of an emergency requiring evacuation.\n\nA, B, and C are incorrect. All of these are valid characteristics of good signage.", 
+      "hint": "What should personnel do in the event of a fire?", 
+      "question": "Which of the following is not a characteristic of effective signage?", 
+      "question_number": 81
+    }, 
+    {
+      "choices": [
+        "Containment, eradication, and recovery", 
+        "Preparation", 
+        "Post-incident activity", 
+        "Detection and analysis"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Detection and analysis is the second step of the incident response life cycle.\n\nA, B, and C are incorrect. In order, the steps of the incident response life cycle are preparation; detection and analysis; containment, eradication, and recovery; and post-incident activity.", 
+      "hint": "This happens when an incident first occurs.", 
+      "question": "What is the second step in the incident response life cycle?", 
+      "question_number": 82
+    }, 
+    {
+      "choices": [
+        "Clean desk policies", 
+        "Protection of personally identifiable information on social media", 
+        "Information classification", 
+        "Data disposal"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. An organization\u2019s information classification policy not only outlines what level of security protections certain data receives, but it also serves to instruct employees on how to treat sensitive data.\n\nA, B, and D are incorrect. Clean desk policies, which instruct employees to not leave sensitive data unattended, as well as data disposal policies, can be included in the information and data handling policies, but these are very specific instances and don\u2019t cover all information or all scenarios where an employee would be in a position to treat data with care. Protection of personally identifiable information on social media would be part of an organization\u2019s social media policy.", 
+      "hint": "Also determines the level of security protections certain data receives.", 
+      "question": "For which of the following should employees receive training to establish how they are to treat information of differing sensitivity levels?", 
+      "question_number": 83
+    }, 
+    {
+      "choices": [
+        "Exculpatory evidence", 
+        "Inculpatory evidence", 
+        "Demonstrative evidence", 
+        "Documentary evidence"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Exculpatory evidence proves innocence.\n\nB, C, and D are incorrect. Inculpatory evidence proves guilt. Demonstrative evidence, which can be in the form of charts, graphs, drawings, and so forth, is used to help non-technical people, such as the members of a jury, understand an event. Documentary evidence directly supports or proves a definitive assertion.", 
+      "hint": "This evidence excludes the possibility of guilt.", 
+      "question": "What type of evidence in a computer forensics investigation, when found to prove a suspect\u2019s innocence, cannot be ignored, in the interest of impartiality?", 
+      "question_number": 84
+    }, 
+    {
+      "choices": [
+        "Securing the scene", 
+        "Notifying and coordinating with senior management and law enforcement officials", 
+        "Determining the initial scope and impact of the incident", 
+        "Notifying the incident response team"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Notifying and coordinating with senior management and law enforcement officials is normally the job of a senior leader within the incident response team.\n\nA, C, and D are incorrect. The primary job of a first responder is to secure the scene. They are also responsible for notifying the incident response team and initially determining the scope, seriousness, and impact of the incident.", 
+      "hint": "This duty should be performed by an experienced leadership member of the incident response team.", 
+      "question": "All of the following are considered duties of a first responder to an incident, except:", 
+      "question_number": 85
+    }, 
+    {
+      "choices": [
+        "Tabletop exercise", 
+        "Documentation review", 
+        "Full-scale test", 
+        "Walkthrough test"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. The documentation review is the simplest form of test. In this type of test, the business continuity plan, disaster recovery plan, and associated documents are reviewed by relevant personnel including managers, recovery team members, and anyone else who may have responsibilities directly affecting plans.\n\nA, C, and D are incorrect. A tabletop exercise is a type of group review. In a full-scale test, all personnel are usually involved and may actually conduct activities as they would during a real incident. This type of test is more complex and normally requires extensive resources, such as people and equipment, so it is typically conducted infrequently. In a walkthrough test, team members go through the motions of fulfilling the responsibilities and conducting the activities required during an incident or disaster.", 
+      "hint": "It involves reviewing disaster recovery plans.", 
+      "question": "Which of the following is the simplest form of disaster recovery exercise?", 
+      "question_number": 86
+    }, 
+    {
+      "choices": [
+        "99.999 percent availability", 
+        "99.9 percent availability", 
+        "99.99 percent availability", 
+        "99 percent availability"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. 99.99 percent availability accounts for 52 minutes of downtime per year.\n\nA, B, and D are incorrect. 99.999 percent availability allows only 5.26 minutes of downtime per year, which may not be enough if the server requires almost an hour of maintenance time. 99.9 percent availability equates to more than 8 hours of downtime per year and exceeds the stated requirement. 99 percent availability is more than 3 days of downtime per year, far exceeding the requirement for no more than 1 hour of downtime.", 
+      "hint": "Remember how many \u201c9\u2019s\u201d account for under 1 hour of downtime per year.", 
+      "question": "You are trying to determine the appropriate level of high availability for a server. The server must be available on a constant basis, and downtime in a given year cannot exceed 1 hour. It normally takes you about 45 minutes to bring down and restart the server for maintenance. Which of the following reflects the level of availability you require?", 
+      "question_number": 87
+    }, 
+    {
+      "choices": [
+        "Virus", 
+        "Trojan horse", 
+        "Logic bomb", 
+        "Adware"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. A logic bomb is simply a script that is set to execute at a certain time. Logic bombs are usually created by rogue administrators or disgruntled employees.\n\nA, B, and D are incorrect. A virus is a piece of malicious software that must be propagated through a definite user action. A Trojan horse is a piece of software that seems to be of value to the user, but in reality is malware. Adware is usually annoying advertisements that come in the form of pop-up messages in a user\u2019s browser.", 
+      "hint": "This is usually developed by a rogue administrator or employee.", 
+      "question": "Which of the following is generally a script planted by a disgruntled employee or other malicious actor that is set to execute at a certain time?", 
+      "question_number": 88
+    }, 
+    {
+      "choices": [
+        "The RPO is the minimum amount of data the organization is expected to lose during a disaster or an incident.", 
+        "The RPO is the maximum amount of time the organization can afford to be down from normal processing.", 
+        "The RPO is the maximum allowable amount of data (measured in gigabytes) that the organization can afford to lose during a disaster or an incident.", 
+        "The RPO is the maximum allowable amount of data (measured in terms of time) that the organization can afford to lose during a disaster or an incident."
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. The RPO is the maximum allowable amount of data (measured in terms of time) that the organization can afford to lose during a disaster or an incident.\n\nA, B, and C are incorrect. The RPO is the maximum amount of data, not the minimum, that can be lost during a disaster or an incident. RPO refers to data that can be lost, not time itself. RPO is measured in time, not gigabytes.", 
+      "hint": "Deals with both data and time.", 
+      "question": "Which of the following statements best defines the recovery point objective (RPO)?", 
+      "question_number": 89
+    }, 
+    {
+      "choices": [
+        "Flood attack", 
+        "Malware attack", 
+        "Man-in-the-middle attack", 
+        "Phishing attack"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. A flood is a type of network attack based upon confusing a switch with ICMP traffic.\n\nB, C, and D are incorrect. Malware would not cause a large volume of ICMP segments to be sent to a host. A man-in-the-middle attack attempts to break into an existing communications session, and is not a denial-of service attack. A phishing attack is a form of social engineering attack using e-mail.", 
+      "hint": "The switch can't keep up with all the changes to the internal MAC map.", 
+      "question": "You have received reports that a number of hosts in your company's internal network are sluggish and unresponsive. After troubleshooting other items, you decide to use a sniffer to examine the network traffic coming into the host. You see that massive amounts of  ICMP broadcasts are being sent on the network. The switch is having trouble processing all of this traffic, due to repeated ICMP replies, causing it to slow down. Which of the following is the most likely explanation for this?", 
+      "question_number": 90
+    }, 
+    {
+      "choices": [
+        "SQL", 
+        "LDAP", 
+        "HTTPS", 
+        "TLS"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. The Lightweight Directory Application Protocol (LDAP) uses TCP port 389.\n\nA, C, and D are incorrect. SQL is a query language for directories. HTTPS is the secure HTTP protocol for Web pages. TLS is an authentication/encryption protocol.", 
+      "hint": "This protocol is based on the X.500 protocol.", 
+      "question": "Marisol sees a tremendous amount of traffic on TCP port 389 from the Internet. Which TCP/IP service should she inspect first?", 
+      "question_number": 91
+    }, 
+    {
+      "choices": [
+        "Lack of restrictive permissions on the Web form", 
+        "Lack of input validation", 
+        "Lack of adequate memory in a buffer", 
+        "Lack of properly formatted HTML"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A lack of input validation in the Web form field may allow certain types of attacks to take place when a user enters malicious or incorrect characters in the form.\n\nA, C, and D are incorrect. Permissions do not affect the quality or type of input in the field, only who can access and perform actions on the form. Adequate memory in a buffer cannot perform input validation functions. Properly formatted HTML cannot perform input validation on a form field.", 
+      "hint": "Should be considered during secure programming processes.", 
+      "question": "Which of the following can cause a successful attack on a system when a user enters malicious code or characters into a form field on a Web application?", 
+      "question_number": 92
+    }, 
+    {
+      "choices": [
+        "Persistent cookies", 
+        "Session cookies", 
+        "Locally shared objects", 
+        "Flash cookies"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Session cookies are used for a single Web browsing session only and are generally not carried across Web sessions.\n\nA, C, and D are incorrect. Persistent cookies are saved and used between various Web sessions. Locally shared objects, also called flash cookies, are used for Web sites that use Adobe Flash content, and they can be persistent.", 
+      "hint": "Sometimes stores sensitive information.", 
+      "question": "Which of the following are typically created for a single Web browsing session and are generally not carried across different sessions?", 
+      "question_number": 93
+    }, 
+    {
+      "choices": [
+        "An attack that exceeds the memory allocated to an application for a particular function, causing it to crash.", 
+        "An attack that uses unexpected numerical results from a mathematical operation to overflow a buffer.", 
+        "An attack on a database through vulnerabilities in the Web application, usually in user input fields.", 
+        "An attack that involves sending malicious XML content to a Web application, taking advantage of any lack of input validation and XML parsing."
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. A buffer overflow attack is an attack that exceeds the memory allocated to an application for a particular function, causing it to crash.\n\nB, C, and D are incorrect. While similar to a buffer overflow attack, answer B describes an integer overflow attack, which uses unexpected numerical results from a mathematical operation to overflow a buffer. An SQL injection attack is an attack on a database through vulnerabilities in the Web application, usually in user input fields. An XML injection attack involves sending malicious XML content to a Web application, taking advantage of any lack of input validation and XML parsing.", 
+      "hint": "Relates to storage space allocated to a buffer.", 
+      "question": "Which of the following statements best describes a buffer overflow attack?", 
+      "question_number": 94
+    }, 
+    {
+      "choices": [
+        "RADIUS encrypts user passwords during the authentication process.", 
+        "RADIUS accepts earlier forms of authentication protocols, such as PAP.", 
+        "RADIUS uses UDP port 1812.", 
+        "RADIUS uses TCP port 1812."
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. RADIUS does not use TCP.\n\nA, B, and C are incorrect. All of these are characteristics of the RADIUS protocol.", 
+      "hint": "This protocol does not require the use of established connections and sequence numbers.", 
+      "question": "All of the following are characteristics of the RADIUS authentication protocol, EXCEPT:", 
+      "question_number": 95
+    }, 
+    {
+      "choices": [
+        "Authentication methods", 
+        "Password length", 
+        "Use of additional character space", 
+        "Encryption strength"
+      ], 
+      "correct_answers": "BC", 
+      "explanation": "B and C are correct. Password length and the use of additional character space are two important characteristics of password strength and complexity.\n\nA and D are incorrect. Neither authentication methods nor encryption strength directly affects password strength.", 
+      "hint": "These relate to password complexity.", 
+      "question": "Which of the following are two characteristics of strong passwords? (Choose two.)", 
+      "question_number": 96
+    }, 
+    {
+      "choices": [
+        "PAP", 
+        "CHAP", 
+        "MS-CHAP", 
+        "EAP"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. The Password Authentication Protocol (PAP) is an older authentication method that passes usernames and passwords in clear text. For this reason, it is no longer used.\n\nB, C, and D are incorrect. CHAP, the Challenge Handshake Authentication Protocol, uses password hashes and challenge methods to authenticate to the system. Passwords are not passed in clear text with this protocol. MS-CHAP (Microsoft CHAP) is a Microsoft proprietary version of CHAP, native to Windows systems. The Extensible Authentication Protocol (EAP) is a modern authentication framework that can use various authentication methods. It also does not pass username and password information in clear text.", 
+      "hint": "This is an older method of authentication and is almost never used.", 
+      "question": "Which of the following forms of authentication pass credentials in clear text and is not recommended for use?", 
+      "question_number": 97
+    }, 
+    {
+      "choices": [
+        "Kerberos", 
+        "MS-CHAP", 
+        "EAP", 
+        "SESAME"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Kerberos is an authentication protocol used in Windows Active Directory. It uses a series of tickets and timestamps to authenticate individuals and prevent replay attacks.\n\nB, C, and D are incorrect. MS-CHAP is a Microsoft version of the Challenge Handshake Authentication Protocol, used in earlier versions of Windows. It uses challenges and password hashes to authenticate individuals. EAP, the Extensible Authentication Protocol, is an authentication framework that can use several other protocols for secure access across both wired and wireless networks. SESAME (Secure European System for Applications in a Multivendor Environment) is a European-developed authentication protocol that can provide for single sign-on capability. It is not widely used and does not use tickets for authentication.", 
+      "hint": "This protocol is used in Windows Active Directory.", 
+      "question": "Which of the following authentication protocols uses a series of tickets to authenticate users to resources, as well as timestamps to prevent replay attacks?", 
+      "question_number": 98
+    }, 
+    {
+      "choices": [
+        "Plaintext", 
+        "Ciphertext", 
+        "Hash", 
+        "Message digest"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Ciphertext is a result of the encryption process; it is encrypted text.\n\nA, C, and D are incorrect. Plaintext is unencrypted text. A hash or message digest is a cryptographic representation of variable length text, but it is not the text itself.", 
+      "hint": "This type of text is encrypted.", 
+      "question": "When information is converted to an unreadable state using cryptography, in what form is the information?", 
+      "question_number": 99
+    }, 
+    {
+      "choices": [
+        "Symmetric key", 
+        "Codebook", 
+        "Algorithm", 
+        "Asymmetric key"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Codes are representations of an entire phrase or sentence, where ciphers are encrypted on a character-by-character basis. A codebook is needed to translate coded phrases into their true plaintext meanings.\n\nA, C, and D are incorrect. A symmetric key is used to encrypt ciphers, not codes, as are algorithms and asymmetric keys.", 
+      "hint": "Remember the difference between ciphers and codes.", 
+      "question": "Which of the following is normally required to convert and read coded messages?", 
+      "question_number": 100
+    }, 
+    {
+      "choices": [
+        "Password history", 
+        "Maximum password age", 
+        "Minimum password age", 
+        "Password complexity"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. The minimum password age setting is used to force users to use a password for a minimum amount of time before they are allowed to change it. This prevents them from rapidly cycling through the password history to reuse an older password.\n\nA, B, and D are incorrect. Password history simply records a previous number of passwords, so that they cannot be reused in the system. The maximum password age is used to expire a password after a certain time period. Password complexity enforces the use of longer password lengths and character spaces, increasing password strength.", 
+      "hint": "This is usually set to a small number of days, forcing the user to use a password for a short time to get used to it.", 
+      "question": "Which of the following policy settings prevent a user from rapidly changing passwords and cycling through his or her password history to reuse a password?", 
+      "question_number": 101
+    }, 
+    {
+      "choices": [
+        "Security identifier (SID)", 
+        "User identifier (UID)", 
+        "Group identifier (GID)", 
+        "Access control entry (ACE)"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. A security identifier (SID) is an unique number assigned to each individual user account. It\u2019s never used, even when an account is deleted and re-created.\n\nB, C, and D are incorrect. Both a UID and GID refer to unique numbers in Linux and UNIX-based systems that identify users and groups. An access control entry (ACE) is a unique entry in an access control list (ACL) that describes a user\u2019s permissions for accessing objects.", 
+      "hint": "This is an unique number that is not reused, even if the account is deleted and re-created.", 
+      "question": "Which of the following is used in Windows systems to identify a user account?", 
+      "question_number": 102
+    }, 
+    {
+      "choices": [
+        "Blowfish", 
+        "Twofish", 
+        "Rijindael", 
+        "RC4"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Rijindael was selected as the winner of the NIST competition and became the U.S. government\u2019s Advanced Encryption Standard (AES).\n\nA, B, and D are incorrect. Twofish, another symmetric algorithm, was one of the five finalists for the competition, but it did not win. Blowfish is also symmetric algorithm, but was not considered in the competition to be the AES. RC4 is a symmetric streaming cipher commonly seen in WEP and SSL implementations. It was not one of the finalists involved in the AES competition.", 
+      "hint": "This algorithm was selected out of five possible candidates.", 
+      "question": "Which of the following algorithms won the U.S. government\u2013sponsored competition to become the Advanced Encryption Standard (AES)?", 
+      "question_number": 103
+    }, 
+    {
+      "choices": [
+        "ECDH", 
+        "RSA", 
+        "AES", 
+        "SHA-2"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Elliptic Curve Diffie-Hellman (ECDH) is a key exchange protocol used in public key cryptography. It is used to negotiate, agree upon, and establish a secure session between two parties.\n\nB, C, and D are incorrect. RSA (Rivest-Shamir-Adleman) is the most common public-private key generation algorithm used in public key cryptography. It is used to generate a public and private key pair. AES is the Advanced Encryption Standard, and it is not used in public key cryptography; it is a symmetric key cryptography algorithm. SHA-2 is the second iteration of the Secure Hashing Algorithm and is used to generate message digests for plaintext. It is not used in public key cryptography to exchange keys or establish secure sessions.", 
+      "hint": "This protocol is used to negotiate and establish a shared key and secured session between two parties.", 
+      "question": "Which of the following is a key agreement protocol used in public key cryptography?", 
+      "question_number": 104
+    }, 
+    {
+      "choices": [
+        "Hashes are cryptographic representations of plaintext.", 
+        "Hashes produce fixed-length digests for variable-length text.", 
+        "Hashing can be used to protect data integrity.", 
+        "Hashes are decrypted using the same algorithm and key that encrypted them."
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Hashes are produced from one-way mathematical functions and cannot be decrypted.\n\nA, B, and C are incorrect. All of these are characteristics of hashing.", 
+      "hint": "Hashing is a one-way function.", 
+      "question": "All of the following are characteristics of hashing, except:", 
+      "question_number": 105
+    }, 
+    {
+      "choices": [
+        "16", 
+        "32", 
+        "64", 
+        "128"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. DES uses 16 rounds of encryption.\n\nB, C, and D are incorrect. DES does not use 32,64, or 128 rounds of encryption or decryption processes.", 
+      "hint": "Remember the differences among various symmetric algorithms.", 
+      "question": "How many rounds does DES perform when it encrypts plaintext?", 
+      "question_number": 106
+    }, 
+    {
+      "choices": [
+        "DHE", 
+        "RSA", 
+        "OCSP", 
+        "ECC"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. The Online Certificate Status Protocol (OCSP) is used to obtain the revocation status of digital certificates. It is used as an alternative to certificate revocation lists and enables clients to request and receive the electronic status of digital certificates automatically and in real-time.\n\nA, B, and D are incorrect. Diffie-Hellman Exchange (DHE) is a key negotiation and agreement protocol used in public key cryptography. RSA is the de facto standard used to generate public and private key pairs in a PKI. Elliptic curve cryptography (ECC) is a public key cryptography protocol used on small mobile devices, due to its low power and computing requirements.", 
+      "hint": "It is used in a public key infrastructure (PKI) and replaces certificate revocation lists.", 
+      "question": "Which of the following is a protocol used to obtain the status of digital certificates in public keys?", 
+      "question_number": 107
+    }, 
+    {
+      "choices": [
+        "Bobby\u2019s public key", 
+        "Dawn\u2019s private key", 
+        "Bobby\u2019s private key", 
+        "Dawn\u2019s public key"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. To encrypt information that Dawn can decrypt, using public and private key pairs, Bobby would need Dawn\u2019s public key to encrypt data that only her private key can decrypt.\n\nA, B, and C are incorrect. Encrypting with Bobby\u2019s public key would allow only Bobby\u2019s private key to decrypt the data, and only he would possess that. Bobby would not possess Dawn\u2019s private key to encrypt data to her, and then only her public key, which everyone would have, would be able to decrypt it, so there would be no confidentiality involved. Bobby would not use his private key to encrypt data, because only his public key can decrypt it, and everyone could have that key, so no confidentiality would be assured.", 
+      "hint": "What one key in a pair encrypts, only the other key in the same pair can decrypt.", 
+      "question": "If Bobby and Dawn exchange confidential encrypted e-mail messages using public and private key pairs, which of the following keys would Bobby need to encrypt confidential data in an e-mail message sent to Dawn?", 
+      "question_number": 108
+    }, 
+    {
+      "choices": [
+        "Key streaming", 
+        "Key repetition", 
+        "Key exchange", 
+        "Key stretching"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Key stretching is a technique used to change weak keys into stronger ones by feeding them into an algorithm to produce enhanced keys.\n\nA, B, and C are incorrect. Key streaming involves sending individual characters of the key through an algorithm and using mathematical XOR function to change the output. Key repetition is not a valid answer or term. Key exchange involves generating and exchanging a asymmetric key used for a particular communications session, or exchanging public keys in order to use them for public key cryptography.", 
+      "hint": "This method involves changing weaker keys to stronger keys.", 
+      "question": "Which of the following methods of strengthening weak keys involves taking a weak initial key and feeding it to an algorithm that produces an enhanced key, which is much stronger?", 
+      "question_number": 109
+    }, 
+    {
+      "choices": [
+        "WPA2", 
+        "WEP", 
+        "WPA", 
+        "802.1X"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. WEP is a legacy wireless encryption protocol that has been determined to be very weak and easily broken. It uses the RC4 streaming protocol and weak initialization vectors (24-bit) to encrypt data on wireless networks.\n\nA, C, and D are incorrect. WPA2 is an advanced encryption protocol that uses AES. WPA was an interim protocol used to correct some of WEP\u2019s weaknesses. It uses the TKIP protocol. 802.1X is a port-based authentication method, not a wireless encryption protocol.", 
+      "hint": "This is a weak encryption protocol used in wireless networking.", 
+      "question": "Which of the following encryption protocols uses RC4 with small initialization vector sizes?", 
+      "question_number": 110
+    }, 
+    {
+      "choices": [
+        "Security testing", 
+        "Secure design", 
+        "Security requirements", 
+        "Secure implementation"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. During the secure testing phase of the secure software development model, software is measured or tested against security, functional, and performance requirements. This may include secure code review, application fuzzing, and vulnerability assessments, as well as penetration testing.\n\nB, C, and D are incorrect. In the secure design stage, different security functionality is designed into the application. In the security requirements stage, requirements for different security functions are determined. During secure implementation of software, security requirements are validated as implemented in the application.", 
+      "hint": "During this stage, software is measured against particular security, functional, and performance requirements.", 
+      "question": "During which stage of a secure development model would you normally find steps such as secure code review, fuzzing, and vulnerability assessments?", 
+      "question_number": 111
+    }, 
+    {
+      "choices": [
+        "EAP-TTLS needs server and client certifcates; EAP-TLS only needs server certifcates.", 
+        "EAP-TTLS can use unsigned certifcates; EAP-TLS must have third-party signed certificates.", 
+        "EAP-TLS can use unsigned certifcates; EAP-TTLS must have third-party signed certificates.", 
+        "EAP-TLS needs server and client certifcates; EAP-TTLS only needs server certifcates."
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. EAP-TLS needs server and client certifcates; EAP-TTLS only needs server certifcates.\n\nA, B, and C are incorrect. The EAP standard does not define the use of signed or unsigned certificates, although most implementations require signed certificates.", 
+      "hint": "No client side needed on one of those!", 
+      "question": "What is the biggest difference between EAP-TLS and EAP-TTLS?", 
+      "question_number": 112
+    }, 
+    {
+      "choices": [
+        "Layered security", 
+        "Network segmentation", 
+        "Application level firewalls", 
+        "User-dependent security"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. The organization should not depend solely upon the users to manage security and static devices, because these devices can be managed just as traditional hosts and network devices are.\n\nA, B, and C are incorrect. These are all valid methods of securing static hosts in an organization.", 
+      "hint": "You should never rely on this particular method as the sole means of security.", 
+      "question": "All of the following are valid methods to secure static hosts in an organization, except:", 
+      "question_number": 113
+    }, 
+    {
+      "choices": [
+        "Minicomputers", 
+        "Embedded hosts", 
+        "Supervisory control and data acquisition", 
+        "Mainframes"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Supervisory control and data acquisition (SCADA) systems are used to control and manage heating, ventilation, air-conditioning, and other types of industrial and environmental systems.\n\nA, B, and D are incorrect. Minicomputers are antiquated computers that performed advanced tasks in the place of mainframe systems and are no longer widely in use. Although some SCADA systems could be embedded, embedded hosts normally refer to systems that have operating systems burned into their computer chips. Mainframe systems normally do not control industrial types of systems, such as heating, ventilation, and air-conditioning.", 
+      "hint": "This is synonymous with industrial control systems.", 
+      "question": "Which of the following types of network-connected systems can manage heating, ventilation, and air-conditioning controls?", 
+      "question_number": 114
+    }, 
+    {
+      "choices": [
+        "Remote management", 
+        "Geolocation", 
+        "Geofencing", 
+        "Geotagging"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Geotagging is the practice of marking media files, such as pictures and video, with relevant information such as geographic location (using the GPS features of the mobile device) and time. This information can be used by security professionals to track where and how a mobile device has been used.\n\nA, B, and C are incorrect. Remote management is the overall process of remotely managing and monitoring mobile devices that are used to connect to the corporate infrastructure. Geolocation is the use of a device\u2019s GPS features to determine device location, to locate points of interest, and to gather other useful information. Although it can be used to geotag media, it is not the same as geotagging. Geofencing is the use of geolocation features to ensure that a mobile device does not leave specific areas of corporate property.", 
+      "hint": "This practice can be used to identify where, when, and how a mobile device was used by examining metadata on media files.", 
+      "question": "Which of following is the process of marking a photo or other type of media with geographical location information using the GPS of a mobile device?", 
+      "question_number": 115
+    }, 
+    {
+      "choices": [
+        "Snapshot", 
+        "Differential backup", 
+        "Incremental backup", 
+        "System state backup"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. A snapshot is a quick backup of critical configuration files, used by the hypervisor to restore the virtual machine back to its point-in-time status should it become unstable or suffer any other issues.\n\nB, C, and D are incorrect. Differential and incremental backups apply to entire systems and are used to back up only files that have changed since the last full backup. The system state backup is a Microsoft Windows type of backup that backs up critical files used by the operating system to restore it in the event of a system crash or other issue. Virtual machines can make use of all of these other types of backups, but they are not used by the hypervisor to restore the VM itself.", 
+      "hint": "It takes only a quick backup of certain files as they exist at that particular point in time; it\u2019s not a full backup of the entire virtual machine.", 
+      "question": "Which of the following is a point-in-time backup of certain key configuration settings of a virtual machine, allowing the VM to be restored back to that point in time if it suffers a crash or other issue?", 
+      "question_number": 116
+    }, 
+    {
+      "choices": [
+        "Host operating system", 
+        "Hypervisor", 
+        "Guest operating system", 
+        "Load balancer"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. A hypervisor, also called a virtual machine monitor, is application software responsible for creating and managing virtual machines and their associated files on a host.\n\nA, C, and D are incorrect. The host operating system does not create or manage virtual machines; it merely shares resources with them. The guest operating system is the virtual machine itself and is managed by a hypervisor. A load balancer is other software or a hardware appliance responsible for balancing user requests and network traffic among several different physical or virtualized hosts.", 
+      "hint": "This software supervises all aspects of virtual machine creation and management.", 
+      "question": "Which of the following is an application designed to create and initiate files on a host to provide a fully functional virtual machine?", 
+      "question_number": 117
+    }, 
+    {
+      "choices": [
+        "Upgrade management", 
+        "Account management", 
+        "Patch management", 
+        "Change management"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Patch management is the formal effort designed to remediate vulnerabilities and other software flaws on a regular basis.\n\nA, B, and D are incorrect. Managing upgrades is part of a formal change and configuration management process. Account management is the process of provisioning and maintaining user accounts on the system. Change management is a formalized process that involves both long-term and short-term infrastructure changes, as well as configuration changes to hosts and networks.", 
+      "hint": "This process allows security and functionality issues to be fixed on a regular basis.", 
+      "question": "Which of the following formal management efforts is designed to remediate security flaws discovered in applications and operating systems?", 
+      "question_number": 118
+    }, 
+    {
+      "choices": [
+        "The error caused from rejecting someone who is in fact an authorized user", 
+        "Type I error", 
+        "The error caused when an unauthorized user is validated as authorized", 
+        "Type II error"
+      ], 
+      "correct_answers": "AB", 
+      "explanation": "A and B are correct. A false reject rate (FRR) is the error caused from rejecting an authorized user; it is also called a Type I error.\n\nC and D are incorrect. A false acceptance rate (FAR) is the error caused when an unauthorized user is validated as authorized, also referred to as a Type II error.", 
+      "hint": "A high false reject rate could create a denial-of-service condition for authorized users.", 
+      "question": "Which of the following describe a false reject rate? (Choose two.)", 
+      "question_number": 119
+    }, 
+    {
+      "choices": [
+        "Something you know.", 
+        "Something you have.", 
+        "Something you are.", 
+        "Something you do."
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct: This is an example of \"something you are,\" like any biometric factor, such as a fingerprint or retinal eye pattern.\n\nA, B, and D are incorrect. An example of \u201csomething you know\u201d would be a password or PIN. \u201cSomething you have\u201d would include a token or smart card. \u201cSomething you do\u201d would be considered swiping a pattern like a pattern unlock on a cell phone.", 
+      "hint": "This is an action performed by a user.", 
+      "question": "Which of the following types of factors could be used to describe a fingerprint-based method of logging in and authenticating to a touchscreen device?", 
+      "question_number": 120
+    }, 
+    {
+      "choices": [
+        "Authorization", 
+        "Authentication", 
+        "Auditing", 
+        "Accountability"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Authentication is the process of validating that a user\u2019s credentials are authentic, after the user has presented them through the identification process.\n\nA, C, and D are incorrect. Authorization is the process of controlling access to resources through methods that include permissions, rights, and privileges. Auditing is the process of reviewing logs and other audit trails to determine what actions have been performed on systems and data. Accountability uses auditing to ensure that users are traced to and held responsible for their actions.", 
+      "hint": "Compares presented credentials to a database to verify that they are authentic.", 
+      "question": "Which of the following processes is concerned with validating credentials?", 
+      "question_number": 121
+    }, 
+    {
+      "choices": [
+        "Whitelisting", 
+        "Containerization", 
+        "Sandboxing", 
+        "Blacklisting"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Sandboxing separates applications from one another and does not allow them to share execution, user, or data space.\n\nA, B, and D are incorrect. Whitelisting enables an administrator to determine which applications and other software the user is allowed to install and execute. Containerization is a technique used to separate different sensitivities of data, such as corporate and personal data on a mobile device. Blacklisting is a method that enables administrators to restrict users from installing and executing certain applications.", 
+      "hint": "This technique separates applications, not necessarily data.", 
+      "question": "The corporate IT manager wants you to implement a process that separates corporate apps from personal apps on mobile devices. Which of the following techniques will enable you to do this?", 
+      "question_number": 122
+    }, 
+    {
+      "choices": [
+        "Multifactor authentication", 
+        "Single-factor authentication", 
+        "Single sign-on", 
+        "Pass-through authentication"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Single sign-on is a method of authentication that enables a user to provide one set of credentials and use them throughout an interconnected network. Both Kerberos and Sesame protocols allow single sign-on.\n\nA, B, and D are incorrect. Multifactor authentication refers to the use of several different factors to authenticate to a system, such as something you know, something you are, and something you have. Multifactor authentication can be used in a single sign-on environment but is not necessarily required. Single-factor authentication uses only one factor, such as something you know, to authenticate to a system. It can also be used in a single sign-on environment but is not required. Pass-through authentication can appear to be similar to single sign-on, but it requires all individual systems simply to accept credentials passed from another system without a unified approach.", 
+      "hint": "This is implemented through various methods, including Kerberos and Sesame.", 
+      "question": "Which of the following enables a user to provide one set of credentials to the system and use those credentials throughout other interconnected systems?", 
+      "question_number": 123
+    }, 
+    {
+      "choices": [
+        "Mandatory access control model", 
+        "Rule-based access control model", 
+        "Role-based access control model", 
+        "Discretionary access control model"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Discretionary access control enables a user who has created or owns an object, such as a file or folder, the discretion to assign permissions for that object to anyone they choose.\n\nA, B, and C are incorrect. Mandatory access control models use labels and security clearances to grant access to objects. Rule-based access control models use a specific set of rules that control the interaction between users and objects. Role-based access control models use defined roles with specific rights and permissions assigned to those roles to control access to objects.", 
+      "hint": "This access control model is not as restrictive as others.", 
+      "question": "Which of the following access control models enables a person who creates or owns objects to define permissions to access those objects?", 
+      "question_number": 124
+    }, 
+    {
+      "choices": [
+        "Access approval list", 
+        "Access control list", 
+        "Metadata table", 
+        "Rule-based access control"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. An access control list (ACL) is a physical or logical list that details specific access levels individuals or entities may have when interacting with objects. An ACL is also used on network devices to determine how traffic from various users can enter and exit a network device and access internal hosts.\n\nA, C, and D are incorrect. Access approval lists and metadata tables are distractors and are not valid terms. Rule-based access control is an access control model based upon various access control rules that apply to users, objects, and actions.", 
+      "hint": "This list is either physical or logical and may reside on objects or network devices.", 
+      "question": "Which of the following details the specific access levels that individuals or entities may have when interacting with objects?", 
+      "question_number": 125
+    }, 
+    {
+      "choices": [
+        "Credential validation", 
+        "Principle of least privilege", 
+        "Separation of duties", 
+        "Rights, permissions, and privileges"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Validating credentials is an important aspect of authentication, not authorization.\n\nB, C, and D are incorrect. All of these elements directly support authorization.", 
+      "hint": "This element supports authentication.", 
+      "question": "All of the following are supporting elements of authorization, except:", 
+      "question_number": 126
+    }, 
+    {
+      "choices": [
+        "Preventative control", 
+        "Corrective control", 
+        "Deterrent control", 
+        "Compensating control"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. A deterrent control keeps someone from performing a malicious act, provided that he or she knows the control is there and is aware of the consequences for violating it.\n\nA, B, and D are incorrect. The difference between a deterrent control and a preventive control is that it is necessary for a potential attacker to have knowledge of the deterrent control for it to be effective. Users do not have to have knowledge of a preventative control for it to function. A corrective control is used to correct a condition when there is either no control at all, or when the existing control is ineffective. Normally, a corrective control is temporary until a more permanent solution is put into place. A compensating control assists and mitigates the risk when an existing control is unable to do so.", 
+      "hint": "In this case, the person understands that the control is in place and that there are consequences for violating the control.", 
+      "question": "If a person knows a control exists, and this control keeps him or her from performing a malicious act, what type of control would this be classified as?", 
+      "question_number": 127
+    }, 
+    {
+      "choices": [
+        "Water", 
+        "Halon", 
+        "Carbon dioxide", 
+        "FM-200"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Halon is a dangerous chemical that was previously used in data centers to suppress fires. However, it was banned in 1987 because it is also dangerous to human beings.\n\nA, C, and D, are incorrect. Water is still used to combat certain classes of fires. Carbon dioxide is used to combat both liquid and electrical fires. FM-200 has generally replaced Halon in data center fire suppression systems.", 
+      "hint": "This chemical removes all oxygen from a room, extinguishing the fire, but it is also harmful to humans.", 
+      "question": "Which of the following fire suppression chemicals was banned in 1987 and can no longer be used in data centers?", 
+      "question_number": 128
+    }, 
+    {
+      "choices": [
+        "Probability", 
+        "Threat", 
+        "Vulnerability", 
+        "Impact"
+      ], 
+      "correct_answers": "AD", 
+      "explanation": "A and D are correct. Probability and impact values are evaluated and assessed during a risk assessment.\n\nB and C are incorrect. Threats and vulnerabilities do not have defined values.", 
+      "hint": "Two of the elements of risk that have defined values.", 
+      "question": "Risk assessment means evaluating which of the following elements? (Choose two.)", 
+      "question_number": 129
+    }, 
+    {
+      "choices": [
+        "Mean time between failures", 
+        "Mean time to recovery", 
+        "Mean time to failure", 
+        "Mean time to replace"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. The mean time to failure (MTTF) is the length of time a device is expected to last in operation. In MTTF, only a single, definitive failure will occur and will require that the device be replaced rather than repaired.\n\nA, B, and D are incorrect. Mean time between failures (MTBF) represents the manufacturer\u2019s best guess (based on historical data) regarding how much time will pass between major failures of that component. This assumes that more than one failure will occur, which means that the component will be repaired, rather than replaced. Mean time to recovery (MTTR) is the amount of time it takes for a hardware component to recover from failure. Mean time to replace is not a valid term.", 
+      "hint": "This term does not allow for multiple failures of a component or device.", 
+      "question": "Which of the following terms indicates the length of time a device is expected to last in operation, and only a single, definitive failure will occur and will require that the device be replaced rather than repaired?", 
+      "question_number": 130
+    }, 
+    {
+      "choices": [
+        "Threat actors initiate vulnerabilities.", 
+        "Threats exploit vulnerabilities.", 
+        "Threats cause impact to vulnerabilities.", 
+        "Threat actors create vulnerabilities in assets."
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Threats exploit vulnerabilities.\n\nA, C, and D are incorrect. The relationship between the elements of risk are as follows: threat actors initiate threats, which in turn exploit vulnerabilities.", 
+      "hint": "Remember which elements act upon the other elements of risk.", 
+      "question": "Which of the following statements best describes the relationship between the elements of risk?", 
+      "question_number": 131
+    }, 
+    {
+      "choices": [
+        "Telecommunication companies", 
+        "End users", 
+        "Government entities", 
+        "Satellite providers"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Telecommunication companies will use an interconnection service agreement (ISA) when connecting to each other\u2019s network to handle essential details about technology and personnel. \n\nB, C, and D are incorrect. ISAs are uniquely for telcommunication companies acting as ISPs.", 
+      "hint": "These are for BIG pipes!", 
+      "question": "What type of organizations are the main users of an interconnection service agreement (ISA)?", 
+      "question_number": 132
+    }, 
+    {
+      "choices": [
+        "As functionality increases, security increases.", 
+        "As security increases, functionality decreases.", 
+        "As resources increase, security decreases but functionality decreases.", 
+        "As resources decrease, both functionality and security decrease."
+      ], 
+      "correct_answers": "BD", 
+      "explanation": "B and D are correct. The relationship between security and functionality is inversely proportional. As one increases, the other decreases. The relationship between resources and both security and functionality is directly proportional. As resources increase, so do both functionality and security. If resources decrease, so do functionality and security.\n\nA and C are incorrect. If functionality increases, security generally decreases. If resources increase, both security and functionality increase as well.", 
+      "hint": "As each of these factors change, so do the others.", 
+      "question": "Which of the following are true statements regarding the relationships of functionality, security, and available resources? (Choose two.)", 
+      "question_number": 133
+    }, 
+    {
+      "choices": [
+        "Lack of control", 
+        "Lack of accountability", 
+        "Lack of responsibility", 
+        "Lack of availability"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Lack of control over data and the infrastructure is probably the greatest risk to cloud computing.\n\nB, C, and D are incorrect. Accountability and responsibility can be established through effective security controls and well-written service-level agreements. Cloud computing usually increases availability of data for users, since it is typically built on highly available, redundant infrastructures.", 
+      "hint": "The organization gives all of this to the provider.", 
+      "question": "Which of the following is the biggest risk involved in cloud computing?", 
+      "question_number": 134
+    }, 
+    {
+      "choices": [
+        "External", 
+        "Private", 
+        "Community", 
+        "Public"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. A public cloud is operated by a third-party provider who leases space in the cloud to anyone who needs it.\n\nA, B, and C are incorrect. An external cloud is not a valid type of cloud and could be a public, private, or community cloud. A private cloud is for use only by one organization and is usually hosted by that organization\u2019s infrastructure. A community cloud is for use by similar organizations or communities, such as universities or hospitals, that need to share common data.", 
+      "hint": "This type of cloud service is available for anyone to use.", 
+      "question": "Which type of cloud service is usually operated by a third-party provider that sells or rents \u201cpieces\u201d of the cloud to different entities, such as small businesses or large corporations, to use as they need?", 
+      "question_number": 135
+    }, 
+    {
+      "choices": [
+        "24-bit", 
+        "48-bit", 
+        "64-bit", 
+        "128-bit"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. The IV size for TKIP is 48-bit.\n\nA, C, and D are incorrect. The only valid IV size for TKIP is 48-bit.", 
+      "hint": "It is twice the IV size as WEP.", 
+      "question": "What size is the initialization vector (IV) for the Temporal Key Integrity Protocol (TKIP), used in the WPA standard?", 
+      "question_number": 136
+    }, 
+    {
+      "choices": [
+        "512-bit", 
+        "256-bit", 
+        "128-bit", 
+        "64-bit"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. WEP key sizes are 64-bits (40-bit key and 24-bit initialization vector) or 128-bit (104-bit key and 24-bit initialization vector). The 802.11b standard called for a 64-bit key.\n\nA, B, and C are incorrect. Neither 512-bit nor 256-bit are valid WEP key sizes. The original 802.11b standard called for a 64-bit key; the 128-bit key was developed after this standard was issued.", 
+      "hint": "WEP key sizes are very small, making them very insecure.", 
+      "question": "What size WEP key did the original IEEE 802.11b specification use?", 
+      "question_number": 137
+    }, 
+    {
+      "choices": [
+        "SMTP", 
+        "POP3", 
+        "IMAPS", 
+        "IMAP4"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. IMAPS (secure IMAP) is a secure version of the IMAP4 protocol used over SSL or TLS connections to provide for client e-mail security.\n\nA, B, and D are incorrect. SMTP is a server-side e-mail protocol and is not used over SSL or TLS. SMTP uses TCP port 25. POP3 is a non-secure client-side e-mail protocol that uses TCP port 110. IMAP4 is a non-secure client-side e-mail protocol that uses TCP port 143.", 
+      "hint": "It is a secure version of a client-level e-mail protocol.", 
+      "question": "Which of the following secure e-mail protocols is carried over an SSL or TLS connection and uses TCP port 993?", 
+      "question_number": 138
+    }, 
+    {
+      "choices": [
+        "FTPS", 
+        "FTP", 
+        "SCP", 
+        "SFTP"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. FTPS is a secure version of the non-secure FTP protocol and is used over SSL or TLS connections to ensure security when transferring files to or from an Internet-based host.\n\nB, C, and D are incorrect. FTP is a non-secure protocol used to copy files to and from Internet-based hosts. SCP is a secure copy protocol used to copy files securely to and from a networked host, and it uses SSH. SFTP is a secure file transfer protocol used to copy files to and from an Internet-based host, and it also uses SSH.", 
+      "hint": "It is a secure version of a normally non-secure protocol.", 
+      "question": "Which of the following secure file copy protocols is used over an SSL or TLS connection?", 
+      "question_number": 139
+    }, 
+    {
+      "choices": [
+        "SCP", 
+        "SSH", 
+        "TLS", 
+        "SSL"
+      ], 
+      "correct_answers": "CD", 
+      "explanation": "C and D are correct. Both Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols are used to encrypt traffic sent over untrusted networks, such as the Internet. Both use TCP port 443.\n\nA and B are incorrect. SCP is part of the SSH protocol suite and is used to copy files securely from one host to another. SSH is a protocol used to connect to and administer hosts remotely. Both SCP and SSH use TCP port 22.", 
+      "hint": "Used primarily in Web applications to secure Internet traffic.", 
+      "question": "Which of the following secure protocols protects traffic during transmission and uses TCP port 443? (Choose two.)", 
+      "question_number": 140
+    }, 
+    {
+      "choices": [
+        "SMTP", 
+        "SNMP", 
+        "Syslog", 
+        "ACL"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. The Simple Network Management Protocol (SNMP) uses a management information base, or MIB, specific to each device and from which device information can be obtained.\n\nA, C, and D are incorrect. SMTP, the Simple Mail Transport Protocol, is responsible for sending e-mail. Syslog is a log server found in UNIX and Linux systems. An access control list (ACL) resides on network devices and filters traffic coming into and out of a device.", 
+      "hint": "Used to manage network devices.", 
+      "question": "Which of the following uses a management information base (MIB) to provide detailed device-specific information to a central management console?", 
+      "question_number": 141
+    }, 
+    {
+      "choices": [
+        "DHCP logs", 
+        "MAC filtering logs", 
+        "NAC device logs", 
+        "Switch logs"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. MAC addresses can be spoofed, so examining MAC address on filtering logs may not provide any indication of whether a host is authorized or not.\n\nA, C, and D are incorrect. All of these are valid methods of detecting rogue hosts that connect to the network.", 
+      "hint": "This is ineffective, as hardware addresses can be spoofed.", 
+      "question": "All of the following are methods that can be used to detect unauthorized (rogue) hosts connected to the network, except:", 
+      "question_number": 142
+    }, 
+    {
+      "choices": [
+        "Centralized", 
+        "SIEM", 
+        "Decentralized", 
+        "Syslog"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Decentralized log management means that logs are managed and reviewed on a host-by-host basis, rather than as a centralized, consolidated group.\n\nA, B, and D are incorrect. Centralized log management involves collecting logs from across the network into a system and reviewing then as a group. Security Information Event Management (SIEM) is a centralized method of obtaining logs and other data from disparate devices across a network. Syslog is a logging tool found in UNIX and Linux systems, which can be used either on a centralized or decentralized basis.", 
+      "hint": "Logs managed on an individual basis, rather than as a consolidated group.", 
+      "question": "Which of the following methods of log management involves visiting each individual host to review its log files?", 
+      "question_number": 143
+    }, 
+    {
+      "choices": [
+        "Rule-based system", 
+        "Anomaly-based system", 
+        "Signature-based system", 
+        "Filter-based system"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Anomaly-based systems detect unusual network traffic patterns based upon a baseline of normal network traffic.\n\nA, C, and D are incorrect. Rule-based systems use predefined rule sets. Signature-based systems use predefined traffic signatures that are typically downloaded from a vendor. Filter-based systems, such as routers and firewalls, base detection on access control lists that specify traffic that is permitted and denied.", 
+      "hint": "Detects unusual traffic patterns.", 
+      "question": "Which type of network intrusion detection system (NIDS) develops a baseline of normal traffic so it can detect deviations in this traffic that might indicate an attack?", 
+      "question_number": 144
+    }, 
+    {
+      "choices": [
+        "22", 
+        "25", 
+        "53", 
+        "80"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. DNS uses TCP and UDP port 53, so this port should be left open. All other unnecessary ports should be closed.\n\nA, B, and C are incorrect. Port 22 is used by SSH. Port 25 is used by SMTP. Port 80 is used by HTTP.", 
+      "hint": "Remember that DNS uses the same TCP and UDP port number for its services.", 
+      "question": "You have a server that is used for Domain Name System (DNS) queries. You find that it has several open ports, and you intend to close all of the unnecessary ports on the server. The server is listening on ports 22, 25, 53, and 80. Which port must be left open to continue to use DNS functionality?", 
+      "question_number": 145
+    }, 
+    {
+      "choices": [
+        "Geographically", 
+        "Physically", 
+        "Logically", 
+        "Functionally"
+      ], 
+      "correct_answers": "BC", 
+      "explanation": "B and C are correct. Networks are typically separated for security purposes either physically, logically, or both. Physical separation involves separating network hosts by connecting them to different devices. Logical separation involves separating them through segmented IP subnetworks.\n\nA and D are incorrect. Separating network hosts either geographically or functionally does not contribute to security.", 
+      "hint": "One way involves separation by device; the other way involves separation by configuration.", 
+      "question": "Which of the following two ways  typically separate network hosts for security purposes? (Choose two.)", 
+      "question_number": 146
+    }, 
+    {
+      "choices": [
+        "Allows logical segmentation of hosts by IP subnet.", 
+        "Creates broadcast domains.", 
+        "Allows different security policies to be applied to different hosts.", 
+        "Allows physical segmentation of hosts by IP subnet."
+      ], 
+      "correct_answers": "AC", 
+      "explanation": "A and C are correct. VLANs offer the security advantage of logically segmenting hosts, and they allow different segments to receive different security policies.\n\nB and D are incorrect. VLANs help eliminate broadcast domains, not create them. VLANs use logical segmentation, not physical segmentation.", 
+      "hint": "VLANs segment hosts by virtual IP subnetworks.", 
+      "question": "A virtual LAN (VLAN) offers which of the following advantages for network security? (Choose two.)", 
+      "question_number": 147
+    }, 
+    {
+      "choices": [
+        "dig", 
+        "Nmap", 
+        "Kali", 
+        "nslookup", 
+        "ping"
+      ], 
+      "correct_answers": "AD", 
+      "explanation": "A and D are correct. Both dig and nslookup are designed to query DNS servers.\n\nB, C, and E are incorrect. One might argue that Nmap and ping might be used to diagnose DNS, but neither of them are specifically for DNS queries. Kali is a Linux distro, not a utility.", 
+      "hint": "Many utilities might diagnose DNS issues in certain situations, but these tools are only for DNS.", 
+      "question": "Which of the following utilities are specifically used to diagnose DNS issues? (Select Two)", 
+      "question_number": 148
+    }, 
+    {
+      "choices": [
+        "SMTP", 
+        "SNMP", 
+        "SHTTP", 
+        "SSH"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. The Simple Network Management Protocol (SNMP) uses SNMP agents that respond to queries to report their status to a central program manager.\n\nA, C, and D are incorrect. These protocols are not used to manage network devices.", 
+      "hint": "The default community strings are public and private.", 
+      "question": "Which of the following network management protocols uses agents that respond to queries to report its status to a central program manager?", 
+      "question_number": 149
+    }, 
+    {
+      "choices": [
+        "Mandatory access control model", 
+        "Rule-based access control model", 
+        "Role-based access control model", 
+        "Discretionary access control model"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Mandatory access control models use labels and security clearances to grant access to objects.\n\nB, C, and D are incorrect. Rule-based access control models use a specific set of rules that control the interaction between users and objects. Role-based access control models use defined roles with specific rights and permissions assigned to those roles to control access to objects. Discretionary access control allows a user who has created or owns an object, such as a file or folder, the discretion to assign permissions for that object to anyone they choose.", 
+      "hint": "This access control model requires a lot of thought to create the labels and required security clearances to view objects.", 
+      "question": "Which of the following access control models uses labels and security clearances to grant access to objects?", 
+      "question_number": 150
+    }, 
+    {
+      "choices": [
+        "Multifactor authentication", 
+        "Single-factor authentication", 
+        "Single sign-on", 
+        "Pass-through authentication"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Multifactor authentication refers to the use of several different factors to authenticate to a system, such as something you know, something you are, and something you have. Multifactor authentication can be used in a single sign-on environment, but is not necessarily required.\n\nB, C, and D are incorrect. Single-factor authentication uses only one factor, such as something you know, to authenticate to a system. It can also be used in a single sign-on environment but is not required. Single sign-on is a method of authentication that enables a user to provide one set of credentials and use them throughout an interconnected network. Both Kerberos and SESAME protocols allow single sign-on. Pass-through authentication can appear to be similar to single sign-on, but it requires all individual systems to accept credentials passed from another system without a unified approach.", 
+      "hint": "This often includes an array of options used together, such as biometrics, passwords, tokens, and PINs.", 
+      "question": "Which of the following refers to the use of several different factors to authenticate to a system?", 
+      "question_number": 151
+    }, 
+    {
+      "choices": [
+        "The error caused from rejecting someone who is in fact an authorized user", 
+        "Type I error", 
+        "The error caused when an unauthorized user is validated as authorized", 
+        "Type II error"
+      ], 
+      "correct_answers": "CD", 
+      "explanation": "C and D are correct. A false acceptance rate (FAR) is the error caused when an unauthorized user is validated as authorized; it is also referred to as a Type II error.\n\nA and B are incorrect. A false reject rate (FRR) is the error caused from rejecting an authorized user; it is also called a Type I error.", 
+      "hint": "A high false acceptance rate could create a situation in which unauthorized users can access your network or system.", 
+      "question": "Which of the following describes a false acceptance rate? (Choose two.)", 
+      "question_number": 152
+    }, 
+    {
+      "choices": [
+        "Access approval list", 
+        "Access control list", 
+        "Metadata table", 
+        "Rule-based access control"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Rule-based access control is an access control model based upon various access control rules that apply to users, objects, and actions.\n\nA, B, and C are incorrect. An access control list (ACL) is a physical or logical list that details specific access levels individuals have to access objects. It is also used on network devices to determine which traffic from various users can enter and exit network devices and access internal hosts. Access approval lists and metadata tables are distractors and are not valid terms.", 
+      "hint": "This is a model, not a physical or logical list.", 
+      "question": "Which of the following is an access control model based upon various access control rules that apply to users, objects, and actions?", 
+      "question_number": 153
+    }, 
+    {
+      "choices": [
+        "Password history", 
+        "Maximum password age", 
+        "Password complexity", 
+        "Minimum password age"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Password complexity enforces the use of longer password lengths and character spaces to increase password strength.\n\nA, B, and D are incorrect. Password history records previous passwords so they cannot be reused in the system. The maximum password age is used to expire a password after a certain time period. The minimum password age setting is used to force users to use a password for a minimum amount of time before they are allowed to change it. This prevents them from rapidly cycling through the password history in order to reuse an older password.", 
+      "hint": "This is usually set to a specified number of different types of characters, such as capital letters and symbols.", 
+      "question": "Which of the following policy settings enforces the use of longer password lengths and character spaces to increase password strength?", 
+      "question_number": 154
+    }, 
+    {
+      "choices": [
+        "Create user groups on all the Linux systems.", 
+        "Install and configure SAMBA on the Linux systems to access the AD.", 
+        "Configure access to the resource on the file server.", 
+        "Create new local users on the domain controller."
+      ], 
+      "correct_answers": "BC", 
+      "explanation": "B and C are correct. Install and configure SAMBA on the Linux systems to access the AD and then set up access to the resources on the sharing sysytem (in this case the file server).\n\nA and D are incorrect. Linux user groups are useless for accessing Windows resources. One should rarely create local users on a Windows server.", 
+      "hint": "Sounds like a dance.", 
+      "question": "Mike has five Linux sysytems that need access to a shared folder with a Windows file server that's part of an Active Directory (AD) domain. What can he do to give these systems access to the shared resource? (Choose two.)", 
+      "question_number": 155
+    }, 
+    {
+      "choices": [
+        "PAP", 
+        "CHAP", 
+        "MS-CHAP", 
+        "EAP"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Challenge-Handshake Authentication Protocol (CHAP) uses password hashes and challenge methods to authenticate to the system.\n\nA, C, and D are incorrect. The Password Authentication Protocol (PAP) is an older authentication method that passes usernames and passwords in clear text. For this reason, it is no longer used. Passwords are not passed in clear text with this protocol. MS-CHAP (Microsoft CHAP) is a Microsoft proprietary version of CHAP, native to Windows systems. The Extensible Authentication Protocol (EAP) is a modern authentication framework that can use various authentication methods. It also does not pass user name and password information in clear text.", 
+      "hint": "This method is often used by PPP servers.", 
+      "question": "Which of the following forms of authentication uses password hashes and challenge methods to authenticate to the system?", 
+      "question_number": 156
+    }, 
+    {
+      "choices": [
+        "Kerberos is a proprietary standard, making it less safe.", 
+        "XTACACS is an open standard, making it more safe.", 
+        "XTACACS uses RC4 encryption.", 
+        "XTACACS is completely encrypted."
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct.  XTACACS encrypts everything between all connection points.\n\nA, B, and C are incorrect. Kerberos is an open standard as is XTACACS. Open standards are consided more safe than proprietary. XTACACS doesn't define what encryption to use, but RC4 is dated and insecure.", 
+      "hint": "This makes it much more secure than RADIUS", 
+      "question": "Which of the following answers best describes the one major advantage of XTACACS over RADIUS?", 
+      "question_number": 157
+    }, 
+    {
+      "choices": [
+        "Upgrade management", 
+        "Account management", 
+        "Patch management", 
+        "Change management"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Change management is a formalized process that involves both long-term and short-term infrastructure changes, as well as configuration changes to hosts and networks.\n\nA, B, and C are incorrect. Managing upgrades is part of a formal change and configuration management process. Account management is the process of provisioning and maintaining user accounts on the system. Patch management is the formal effort designed to remediate vulnerabilities and other software flaws on a regular basis.", 
+      "hint": "This process allows configuration changes to hosts and networks.", 
+      "question": "Which of the following formal management efforts is a formalized process that involves both long-term and short-term infrastructure changes?", 
+      "question_number": 158
+    }, 
+    {
+      "choices": [
+        "Host operating system", 
+        "Hypervisor", 
+        "Guest operating system", 
+        "Load balancer"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. A load balancer is a piece of application software or a hardware appliance that is responsible for balancing user requests and network traffic among several different physical or virtualized hosts.\n\nA, B, and C are incorrect. The host operating system does not create or manage virtual machines; it merely shares resources with them. The hypervisor, also called a virtual machine monitor, is a piece of application software that is responsible for creating and managing virtual machines and their associated files on a host. The guest operating system is the virtual machine itself and is managed by a hypervisor.", 
+      "hint": "This software is responsible for ensuring that a single resource is not overloaded.", 
+      "question": "Which of the following is a software or a hardware appliance responsible for balancing user requests and network traffic among several different physical or virtualized hosts?", 
+      "question_number": 159
+    }, 
+    {
+      "choices": [
+        "SQL injection", 
+        "MySQL injection", 
+        "Relational injection", 
+        "Hierarchical injection"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. SQL injections inesrt unaticipated SQL commands to try to break the application. \n\nB, C, and D are incorrect. MySQL is one of many forms of SQL tools. Relational injection and Hierachal injection are nonsense terms.", 
+      "hint": "This type of injection abuses a standard query language.", 
+      "question": "Which of the following types of injections use standardized database interfaces to attack a Web application?", 
+      "question_number": 160
+    }, 
+    {
+      "choices": [
+        "Security testing", 
+        "Secure design", 
+        "Security requirements", 
+        "Secure implementation"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. In the security requirements stage, requirements for different security functions are determined. Iterations of interviews and surveys might be developed and gathered and diagrams developed to show project milestones.\n\nA, B, and D are incorrect. During the secure testing phase of the secure software development model, software is measured or tested against security, functional, and performance requirements. This may include secure code review, application fuzzing, and vulnerability assessments, as well as penetration testing. In the secure design stage, different security functionality is designed into the application. During the secure implementation of software, security requirements are validated as implemented in the application.", 
+      "hint": "During this stage, software requirements are gathered to be built into the tool.", 
+      "question": "During which stage of a secure development model would you normally find steps such as requirements gathering, analysis, and diagram development?", 
+      "question_number": 161
+    }, 
+    {
+      "choices": [
+        "Whitelisting", 
+        "Containerization", 
+        "Sandboxing", 
+        "Blacklisting"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Blacklisting allows you to restrict users from installing and executing certain applications on their mobile devices.\n\nA, B, and C are incorrect. Whitelisting allows an administrator to determine which applications and other software the user is allowed to install and execute. Containerization is a technique used to separate different sensitivities of data, such as corporate and personal data, on a mobile device. Sandboxing separates applications from each other and does not allow them to share execution, user, or data space.", 
+      "hint": "This technique keeps certain things out, as opposed to specifying what is let in.", 
+      "question": "The corporate IT manager wants you to implement a process that will allow administrators to restrict users from installing and executing certain applications on their mobile devices. Which of the following meets those goals?", 
+      "question_number": 162
+    }, 
+    {
+      "choices": [
+        "Authorization", 
+        "Authentication", 
+        "Auditing", 
+        "Accountability"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Accountability uses auditing to ensure that users are traced to and held responsible for their actions.\n\nA, B, and C are incorrect. Authorization is the process of controlling access to resources through methods that include permissions, rights, and privileges. Authentication is the process of validating that a user\u2019s credentials are authentic, after they have presented them through the identification process. Auditing is the process of reviewing logs and other audit trails to determine what actions have been performed on systems and data.", 
+      "hint": "Compares users to logs and enables you to tie poor behaviors to specific users.", 
+      "question": "Which of the following processes uses auditing to ensure that users are traced to and held responsible for their actions?", 
+      "question_number": 163
+    }, 
+    {
+      "choices": [
+        "Snapshot", 
+        "Differential backup", 
+        "Incremental backup", 
+        "System state backup"
+      ], 
+      "correct_answers": "BC", 
+      "explanation": "B and C are correct. Differential and incremental backups apply to entire systems and are used to back up files that have changed since the last full backup.\n\nA and D are incorrect. A snapshot is a quick backup of critical configuration files, used by the hypervisor to restore the virtual machine back to its point-in-time status should it become unstable or suffer other issues. The system state backup is a Microsoft Windows type of backup that backs up critical files used by the operating system to restore the system in the event of a system crash or other issue.", 
+      "hint": "When you restore, you should have a full backup of the data.", 
+      "question": "Which of the following are used to back up files that have changed since the last full backup of a virtual machine? (Choose two.)", 
+      "question_number": 164
+    }, 
+    {
+      "choices": [
+        "Remote management", 
+        "Geolocation", 
+        "Geofencing", 
+        "Geotagging"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Geofencing is the use of geolocation features to ensure that a mobile device does not leave specific areas of corporate property.\n\nA, B, and D are incorrect. Remote management is the overall process of remotely managing and monitoring mobile devices that are used to connect to the corporate infrastructure. Geolocation is the use of a device\u2019s GPS features to determine device location, locate points of interest, and find other useful information. Geotagging is the practice of marking media files, such as pictures and video, with relevant information such as geographic location (using the GPS features of the mobile device) and time. This information can be used by security professionals to track where and how a mobile device has been used.", 
+      "hint": "This practice helps enclose a mobile device using its GPS technology.", 
+      "question": "Which of following uses geolocation features to ensure that a mobile device does not leave specific areas of corporate property?", 
+      "question_number": 165
+    }, 
+    {
+      "choices": [
+        "Layer 2 switch", 
+        "Layer 3 switch", 
+        "Router", 
+        "Firewall"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "The correct answer is B, Layer 3 switch. A layer 3 switch supports inter VLAN routing to interconnect disparate VLANs.\n\nA, C, and D are incorrect. A layer 2 switch could interconnect VLAN via trunk ports, but only to interconnect to other layer 2 switches. A router could interconnect two VLANs, but this would take substantial configuration. A firewall is not capable of interconnecting VLANs.", 
+      "hint": "Two of the devices listed will do the job, but only one is specifically designed to do this job.", 
+      "question": "Marisol needs to interconnect multiple VLANs in her production environment. Which of the following network devices would best address this issue?", 
+      "question_number": 166
+    }, 
+    {
+      "choices": [
+        "S/MIME", 
+        "SSH", 
+        "MD5", 
+        "Ipsec"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. IPsec provides encryption, integrity, and authentication for data tunneled over VPNs across public networks.\n\nA, B, and C are incorrect. S/MIME is used for encrypting e-mail, SSH allows secure remote access, and MD5 facilitates hashes to allow for integrity.", 
+      "hint": "Remember which encryption protocols are used with VPN services.", 
+      "question": "Which of the following protocols would you use to encrypt VPN traffic?", 
+      "question_number": 167
+    }, 
+    {
+      "choices": [
+        "HTTPS", 
+        "POP/IMAP", 
+        "WPA2", 
+        "PGP/GPG"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Pretty Good Privacy (or GNU Privacy Guard) is a low-cost solution that enables encrypted e-mail messages.\n\nA, B, and C are incorrect. HTTPS provides encryption for Web communications, not e-mail. POP/IMAP are unencrypted mail client access protocols. WPA2 provides encryption for wireless networks, not e-mail.", 
+      "hint": "Remember the types of encryption applications available for e-mail.", 
+      "question": "You are the security administrator for a small business. You want to provide your users with the ability to encrypt outbound e-mail messages, but the company cannot afford an expensive encryption solution. Which of the following is the best option?", 
+      "question_number": 168
+    }, 
+    {
+      "choices": [
+        "CRL", 
+        "Key escrow", 
+        "Certificate authority", 
+        "Registrar"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Key escrow involves a third party that holds a special third key in addition to your private and public key pair.\n\nA, C, and D are incorrect. A CRL (certificate revocation list) is not valid in this scenario, as certificate authorities and registrars are used during the certificate life cycle to publish digital certificates.", 
+      "hint": "This entity will hold a third key in addition to the private and public keys.", 
+      "question": "Which cryptography concept refers to the requirement for a trusted third party that can hold a special key (in addition to your private and public key pair) that is used to decrypt a stored backup copy of the private key if the original is lost?", 
+      "question_number": 169
+    }, 
+    {
+      "choices": [
+        "Authentication failure", 
+        "Least privilege", 
+        "Privilege creep", 
+        "False acceptance rate"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "The correct answer is C, Privilege creep. Bradley keeps getting new privileges, yet nothing is turned off.\n\nA, B, and D are incorrect. Authentication failure implies something has gone wrong. There has been no failure in authentication. The principle of least privilege means that administrators never give a user account more rights and permissions than is needed for the user to do his or her job. False acceptance rate indicates the level of errors that the system may generate indicating that unauthorized users are identified and authenticated as valid users in a biometric system.", 
+      "hint": "Some plants do this.", 
+      "question": "Scott is an outside specialist hired to audit a small, but suddenly fast-growing company. While performing a user audit, Scott notices that one user, Bradley, a sales intern who has worked for this company intermittently for three years, has the following permissions on the network:\n\nMember of Sales group\nMember of Printer Administrators group\nUser name/password on primary company Internet gateway\nMember of Domain Admins for the company Active Directory\n\nShocked, Scott asks around the office how this intern has this level of access? It seems Bradley has substantial tech skills and the IT department gave him access to printers, gateway, and domain controllers so that he \"could help with different problems\" over the years. This is a classic example of which of the following?", 
+      "question_number": 170
+    }, 
+    {
+      "choices": [
+        "RSA card", 
+        "HOTP card", 
+        "CAC card", 
+        "PAC card"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "The correct answer is C, CAC (common access control) card. \n\nA, B, and D are incorrect. RSA is a popular asymetric encryption. HOTP (HMAC-based one-time password) is an algorithm used to generate one-time passwords and a physical access control (PAC) describes the mechanisms for admitting and denying user access to your space.", 
+      "hint": "It may have been adopted of the US military but many others copy this common type of card.", 
+      "question": "The United States Department of Defense uses a specific form of personal identification verificatication (PIV) card called?", 
+      "question_number": 171
+    }, 
+    {
+      "choices": [
+        "Something you do", 
+        "Something you have", 
+        "Something you know", 
+        "Something you are"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "The correct answer is C, Something you know. A password is memorized, therefore you know it.\n\nA, B, and D are incorrect. Something you do would be an action unique to you like a written signature. Something you have is an item on your person like an ID card. Something you are is an aspect of your physical person that's unique to you like a finger print.", 
+      "hint": "Where do you store a password?", 
+      "question": "A password is an example of which of the following authentication factors?", 
+      "question_number": 172
+    }, 
+    {
+      "choices": [
+        "Transitive trust", 
+        "Web of trust", 
+        "One-way trust", 
+        "Federated trust"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "The correct answer is D, Federated trust. A federated system involves the use of a common authentication system and credentials database that multiple entities use and share.\n\nA, B, and C are incorrect. A web of trust isnt a trust relationship, it is a method to handle trust for certificates. A one-way trust shows one party trusts another but not the reverse. A transitive trust is where if entity B trusts entity A and entity C trusts entity B than entity C trusts entity A.", 
+      "hint": "There's only one trust here.", 
+      "question": "Three organizations require access to each other's shared resources. To enable access, the three groups decide to use a single sign-on database that all three agree will handle authentication. What form of trust relationship is this?", 
+      "question_number": 173
+    }, 
+    {
+      "choices": [
+        "ECDH", 
+        "RSA", 
+        "AES", 
+        "SHA-2"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. RSA (Rivest-Shamir-Adleman) is the most common public-private key generation algorithm used in public key cryptography.\n\nA, C, and D are incorrect. Elliptic Curve Diffie-Hellman (ECDH) is a key exchange protocol used in public key cryptography. It is used to initially negotiate, agree upon, and establish a secure session between two parties. AES is the Advanced Encryption Standard, and it is not used in public key cryptography; it is a symmetric key cryptography algorithm. SHA-2 is the second iteration of the Secure Hashing Algorithm and is used to generate message digests for plaintext. It is not used in public key cryptography to exchange keys or establish secure sessions.", 
+      "hint": "This protocol is used to generate a public and private key pair.", 
+      "question": "Which of the following is the most common public-private key generation algorithm used in public key cryptography?", 
+      "question_number": 174
+    }, 
+    {
+      "choices": [
+        "Blowfish", 
+        "Twofish", 
+        "Rijindael", 
+        "RC4"
+      ], 
+      "correct_answers": "B", 
+      "explanation": "B is correct. Twofish, a symmetric algorithm, was one of the five finalists for the competition, but it did not win.\n\nA, C, and D are incorrect. Rijindael was selected as the winner of the NIST competition and became the U.S. government\u2019s Advanced Encryption Standard (AES). Blowfish is also a symmetric algorithm, but it was not considered in the competition to be the AES. RC4 is a symmetric streaming cipher commonly seen in WEP and SSL implementations. It was not one of the finalists involved in the AES competition.", 
+      "hint": "This algorithm was NOT selected out of five possible candidates.", 
+      "question": "Which of the following algorithms was one of the five finalists for the U.S. government\u2013sponsored competition to become the Advanced Encryption Standard (AES) competition, but did not win?", 
+      "question_number": 175
+    }, 
+    {
+      "choices": [
+        "Hashes are cryptographic representations of plaintext.", 
+        "Hashes produce fixed-length digests for variable-length text.", 
+        "Hashing can be used to protect data integrity.", 
+        "Hashes are decrypted using the same algorithm and key that encrypted them."
+      ], 
+      "correct_answers": "ABC", 
+      "explanation": "A, B, and C are correct. All of these are characteristics of hashing.\n\nD is incorrect. Hashes are produced from one-way mathematical functions and cannot be decrypted.", 
+      "hint": "Hashing is a one-way function.", 
+      "question": "Which of the following are characteristics of hashing? (Choose all that apply.)", 
+      "question_number": 176
+    }, 
+    {
+      "choices": [
+        "Plaintext", 
+        "Ciphertext", 
+        "Hash", 
+        "Message digest"
+      ], 
+      "correct_answers": "CD", 
+      "explanation": "C and D are correct. A hash or message digest is a cryptographic representation of variable length text, but it is not the text itself.\n\nA and B are incorrect. Plaintext is unencrypted text. Ciphertext is a result of the encryption process and is encrypted text.", 
+      "hint": "This is a representation of variable length text.", 
+      "question": "Which of the following is a cryptographic representation of text, but not the text itself? (Choose two.)", 
+      "question_number": 177
+    }, 
+    {
+      "choices": [
+        "Steganography", 
+        "Hashing", 
+        "Asymmetric", 
+        "Symmetric"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. When using symmetric encryption, both the sender and receiver use the same key.\n\nA, B, and C are incorrect. Steganography hides data within photos or another piece of data. Hashing is used to verify data integrity. Asymmetric cryptography uses a public and private key pair for encryption, so it does not use the same key for both parties.", 
+      "hint": "Remember which encryption method uses the same key for encryption and decryption.", 
+      "question": "Which of the following cryptography types do you use when you want to perform a one-time, single-key, encrypted transaction with another company?", 
+      "question_number": 178
+    }, 
+    {
+      "choices": [
+        "DHE", 
+        "RSA", 
+        "OCSP", 
+        "ECC"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "A is correct. Diffie-Hellman Exchange (DHE) is a key negotiation and agreement protocol used in public key cryptography.\n\nB, C, and D are incorrect. RSA is the de facto standard used to generate public and private key pairs in a PKI. The Online Certificate Status Protocol (OCSP) is used to obtain the revocation status of digital certificates. It is used as an alternative to certificate revocation lists, enabling clients to request and receive the electronic status of digital certificates automatically in real-time. Elliptic curve cryptography (ECC) is a public key cryptography protocol used on small mobile devices because of its low power and computing requirements.", 
+      "hint": "This is generally not used on small mobile devices.", 
+      "question": "Which of the following is a key negotiation and agreement protocol used in public key cryptography?", 
+      "question_number": 179
+    }, 
+    {
+      "choices": [
+        "WPA2", 
+        "WEP", 
+        "WPA", 
+        "802.1X"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. 802.1X is a port-based authentication method, not a wireless encryption protocol.\n\nA, B, and C are incorrect. WPA2 is an advanced encryption protocol, which uses AES. WEP is a legacy wireless encryption protocol, which has been determined to be very weak and easily broken. It uses the RC4 streaming protocol and weak initialization vectors (24-bit) to encrypt data on wireless networks. WPA was an interim protocol used to correct some of WEP\u2019s weaknesses. It uses the TKIP protocol.", 
+      "hint": "This is not a wireless encryption protocol.", 
+      "question": "Which of the following is a port-based authentication method?", 
+      "question_number": 180
+    }, 
+    {
+      "choices": [
+        "Key streaming", 
+        "Key repetition", 
+        "Key exchange", 
+        "Key stretching"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. Key exchange involves generating and exchanging asymmetric keys used for a particular communication session, exchanging public keys in order to use them for public key cryptography.\n\nA, B, and D are incorrect. Key streaming involves sending individual characters of the key through an algorithm and using mathematical XOR function to change the output. Key repetition is not a valid answer or term. Key stretching is a technique used to change weak keys to stronger ones by feeding them into an algorithm to produce an enhanced key.", 
+      "hint": "This method involves exchanging public keys in order to use them for public key cryptography.", 
+      "question": "Which of the following methods of strengthening weak keys involves generating and exchanging asymmetric keys within a particular communication session?", 
+      "question_number": 181
+    }, 
+    {
+      "choices": [
+        "The company's account policy", 
+        "Microsoft best practices", 
+        "The Sarbanes-Oxley regulation", 
+        "The most pertiinent FIPS documentation"
+      ], 
+      "correct_answers": "A", 
+      "explanation": "The correct answer is A, the company's account policy.\n\nB, C, and D are incorrect. Microsoft best practices as well as FIPS might give some good ideas, but there is no law (such as Sarbanes-Oxley) requiring a certian naming convention for user accounts.", 
+      "hint": "Freeeeeedom!", 
+      "question": "Travis just got promoted to network administrator after the previous administrator left rather abruptly. There are three new hires that need onboarding with user accounts. When Travis looks at all the existing account names, he notices there is no common naming system. Where should he look to try to give the new hires user accounts with proper naming conventions?", 
+      "question_number": 182
+    }, 
+    {
+      "choices": [
+        "Disable the user's account.", 
+        "Delete all permissions from the user's account.", 
+        "Disable all groups to which the user is associated.", 
+        "Demote the user to guest permissions."
+      ], 
+      "correct_answers": "A", 
+      "explanation": "The correct answer is A, disable the user's account.\n\nB, C, and D are incorrect. Each permission option can be quickly changed, permitting access to potentially sensitive information.", 
+      "hint": "Don't throw it all away.", 
+      "question": "Which of the following actions would be a prudent action to take for an employee who is leaving your company?", 
+      "question_number": 183
+    }
+  ]
+}

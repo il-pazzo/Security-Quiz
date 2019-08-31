@@ -1,0 +1,29 @@
+{
+  "questions": [
+    {
+      "choices": [
+        "Exculpatory evidence", 
+        "Inculpatory evidence", 
+        "Demonstrative evidence", 
+        "Documentary evidence"
+      ], 
+      "correct_answers": "D", 
+      "explanation": "D is correct. Documentary evidence directly supports or proves a definitive assertion.\n\nA, B, and C are incorrect. Exculpatory evidence proves innocence. Inculpatory evidence proves guilt. Demonstrative evidence, which can be in the form of charts, graphs, drawings, and so forth, is used to help nontechnical people, such as the members of a jury, understand an event.", 
+      "hint": "This evidence can either include or exclude the possibility of guilt.", 
+      "question": "What type of evidence in a computer forensics investigation directly supports a particular assertion?", 
+      "question_number": 1
+    }, 
+    {
+      "choices": [
+        "Tabletop exercise", 
+        "Documentation review", 
+        "Full-scale test", 
+        "Walkthrough test"
+      ], 
+      "correct_answers": "C", 
+      "explanation": "C is correct. In a full-scale test, all personnel are usually involved and may actually conduct activities as they would during a real incident. This type of test is more complex and normally requires extensive resources, such as people and equipment, so it is typically conducted infrequently.\n\nA, B, and D are incorrect. A tabletop exercise is a type of group review. The documentation review is the simplest form of test, in which the business continuity plan, disaster recovery plan, and associated documents are reviewed by relevant personnel including managers, recovery team members, and anyone else who may have responsibilities directly affecting plans. In a walkthrough test, team members go through the motions of fulfilling the responsibilities and conducting the activities required during an actual incident or disaster.", 
+      "hint": "Involves actually implementing disaster recovery plans.", 
+      "question": "Which of the following is the most comprehensive and expensive form of disaster recovery exercise?", 
+      "question_number": 2
+    }
+]}
