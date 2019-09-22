@@ -65,7 +65,7 @@ class QuizViewController: UIViewController {
     var shuffledIndex = -1      // index into shuffledIndices, which names the questionIndex
     var reviewMode: ReviewMode = .Study
     var isShowingQuestion = true
-    var wantsShuffle = false
+    var wantsShuffle = true
     
     var numQuestions = 0
     var numCorrect = 0
@@ -89,16 +89,10 @@ class QuizViewController: UIViewController {
         else {
             print( "no quiz passed; using defaults" )
         }
+        
         configureNavigationBar()
         
-        switchArray = [ uiSwitchA, uiSwitchB, uiSwitchC, uiSwitchD, uiSwitchE ]
-        switchLabelArray = [ uiSwitchALabel, uiSwitchBLabel, uiSwitchCLabel, uiSwitchDLabel, uiSwitchELabel ]
-        answerMarkArray  = [ uiAnswerMarkA, uiAnswerMarkB, uiAnswerMarkC, uiAnswerMarkD, uiAnswerMarkE ]
-        
-        for switchControl in switchArray {
-            switchControl.addTarget( self, action: #selector(switchToggled), for: .valueChanged )
-        }
-        
+        loadMultipleChoiceUIComponentsIntoArrays()
         loadQuestionsFromJsonFile()
         initShuffledIndices()
         
@@ -117,6 +111,17 @@ class QuizViewController: UIViewController {
         
         navigationItem.title = questionSetName
     }
+    private func loadMultipleChoiceUIComponentsIntoArrays() {
+        
+        switchArray = [ uiSwitchA, uiSwitchB, uiSwitchC, uiSwitchD, uiSwitchE ]
+        switchLabelArray = [ uiSwitchALabel, uiSwitchBLabel, uiSwitchCLabel, uiSwitchDLabel, uiSwitchELabel ]
+        answerMarkArray  = [ uiAnswerMarkA, uiAnswerMarkB, uiAnswerMarkC, uiAnswerMarkD, uiAnswerMarkE ]
+        
+        for switchControl in switchArray {
+            switchControl.addTarget( self, action: #selector(switchToggled), for: .valueChanged )
+        }
+    }
+    
     @objc private func mainMenu() {
         
         dismiss(animated: true, completion: nil)
@@ -124,16 +129,13 @@ class QuizViewController: UIViewController {
 
     func initShuffledIndices() {
     
-//        for i in 0 ..< questions.count {
-//            shuffledIndices.append( i )
-//        }
         shuffledIndices = Array( 0 ..< questions.count )
 
         if wantsShuffle {
             shuffleIndices()
         }
     }
-    func shuffleIndices() {
+    private func shuffleIndices() {
         
         shuffledIndices.shuffle()
     }
@@ -220,6 +222,7 @@ class QuizViewController: UIViewController {
         if shuffledIndex >= shuffledIndices.count {
             if missedIndices.isEmpty {
                 initShuffledIndices()
+                clearStats( "Starting over" )
             }
             else {
                 shuffledIndices = missedIndices
@@ -227,6 +230,7 @@ class QuizViewController: UIViewController {
                 if wantsShuffle {
                     shuffleIndices()
                 }
+                clearStats( "Reviewing" )
             }
             shuffledIndex = 0
         }
@@ -278,6 +282,8 @@ class QuizViewController: UIViewController {
         uiFIllInTheBlankAnswers.text = ""
         
         uiButtonSubmit.setTitle( "Submit Answer", for: .normal )
+        
+        uiFillInTheBlankTextField.becomeFirstResponder()
         
         isShowingQuestion = true
     }
@@ -358,6 +364,8 @@ class QuizViewController: UIViewController {
     }
     func checkAnswerFillInTheBlank( _ qa: [String: String] ) {
         
+        uiFillInTheBlankTextField.resignFirstResponder()
+        
         let fillAnswers = assembleFillAnswers( qa )
         
         let userAnswer = uiFillInTheBlankTextField.text ?? ""
@@ -405,6 +413,13 @@ class QuizViewController: UIViewController {
         
         uiStatString.text = "\(numCorrect) / \(numQuestions) (\(pctString)%)"
     }
+    func clearStats( _ msg: String = "" ) {
+        
+        numQuestions = 0
+        numCorrect = 0
+        uiStatString.text = msg
+    }
+    
     func markAnswers( myAnswers:String, correctAnswers:String ) {
         
         for i in 0 ..< Int( questions[questionIndex]["numChoices"]! )! {
@@ -452,6 +467,7 @@ class QuizViewController: UIViewController {
 
 }
 
+/*
 extension MutableCollection {
     /// Shuffles the contents of this collection.
     mutating func shuffle() {
@@ -475,6 +491,7 @@ extension Sequence {
         return result
     }
 }
+*/
 
 // shuffle examples:
 //

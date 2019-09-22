@@ -1,5 +1,5 @@
 {
-   "set_name": "LX104",
+   "set_name": "LX0-104",
    "questions": [
 {
 	"question_number": 1
@@ -932,7 +932,7 @@
 }
 ,{
 	"question_number": 85
-	,"question": "Given the following routing table Kernel IP routing table Destination Gateway Genmask Flags Metric Ref Use Iface 192.168.178.0 0.0.0.0 255.255.255.0 U 9 0 0 wlan0 Why does the command route add default gw 192.168.1.1 fail?"
+	,"question": "Given the following routing table \n\nKernel IP routing table Destination Gateway Genmask Flags Metric Ref Use Iface \n192.168.178.0 0.0.0.0 255.255.255.0 U 9 0 0 wlan0 \n\nWhy does the command route add default gw 192.168.1.1 fail?"
 	,"choices": [
 		"Because there is no route to 192.168.1.1."
 		,"Because only one route can exist at a time."
@@ -1074,7 +1074,7 @@
 }
 ,{
 	"question_number": 98
-	,"question": "Given the following routing table: Kernel IP routing table Destination Gateway Genmask Flags Metric Ref Use Iface 0.0.0.0 192.168.178.1 0.0.0.0 UG 0 0 0 wlan0 192.168.1.0 0.0.0.0 255.255.255.0 U 0 0 0 eth0 192.168.2.0 192.168.1.1 255.255.255.0 U 0 0 0 eth0 192.168.178.0 0.0.0.0 255.255.255.0 U 9 0 0 wlan0 How would an outgoing packet to the destination 192.168.2.150 be handled?"
+	,"question": "Given the following routing table: \n\nKernel IP routing table Destination Gateway Genmask Flags Metric Ref Use Iface \n0.0.0.0 192.168.178.1 0.0.0.0 UG 0 0 0 wlan0 \n192.168.1.0 0.0.0.0 255.255.255.0 U 0 0 0 eth0 \n192.168.2.0 192.168.1.1 255.255.255.0 U 0 0 0 eth0 \n192.168.178.0 0.0.0.0 255.255.255.0 U 9 0 0 wlan0 \n\nHow would an outgoing packet to the destination 192.168.2.150 be handled?"
 	,"choices": [
 		"It would be passed to the default router 192.168.178.1 on wlan0."
 		,"It would be directly transmitted on the device eth0."
