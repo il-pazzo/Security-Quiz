@@ -25,5 +25,17 @@
       "hint": "Involves actually implementing disaster recovery plans.", 
       "question": "Which of the following is the most comprehensive and expensive form of disaster recovery exercise?", 
       "question_number": 2
+    },
+    {
+        "question_number": 3
+        ,"question": "Which SysV init configuration file should be modified to disable the ctrl-alt-delete key combination?"
+        ,"choices": [
+            "/etc/keys"
+            ,"/proc/keys"
+            ,"/etc/inittab"
+            ,"/proc/inittab"
+            ,"/etc/reboot"
+        ]
+        ,"correct_answers": "C"
     }
-]}
+  ]}

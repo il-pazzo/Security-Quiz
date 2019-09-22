@@ -1,0 +1,1323 @@
+{
+   "set_name": "LX104",
+   "questions": [
+{
+	"question_number": 1
+	,"question": "What is true regarding the statement beginning with #! that is found in the first line of a script?"
+	,"choices": [
+		"It prevents the script from being executed until the ! is removed."
+		,"It specifies the path and the arguments of the interpreter used to run the script."
+		,"It is a comment that is ignored by the script."
+		,"It specifies the character encoding of the script."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 2
+	,"question": "Which Bash option prevents a user from accidentally overwriting a file with a \">\"?"
+	,"choices": [
+		"set -o safe"
+		,"set -o noglob"
+		,"set -o noclobber"
+		,"set -o append"
+		,"set -o nooverwrite"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 3
+	,"question": "Which of the following commands prints the exit value of the most recently executed program in Bash?"
+	,"choices": [
+		"echo $?"
+		,"echo $#"
+		,"echo $exit"
+		,"echo $status"
+		,"echo $&"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 4
+	,"question": "What word will complete an if statement in bash such as the following: if [ -x \"$file\" ]; then echo $file _____ (Please provide the missing word only)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"fi"
+	]
+}
+,{
+	"question_number": 5
+	,"question": "What word is missing from the following SQL statement? update tablename ____ fieldname='value' where id=909; (Please specify the missing word using lower\\_case letters only.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"set"
+	]
+}
+,{
+	"question_number": 6
+	,"question": "Which of the following SQL statements will select the fields name and address from the contacts table?"
+	,"choices": [
+		"SELECT (name, address) FROM contacts;"
+		,"SELECT (name address) FROM contacts;"
+		,"SELECT name, address FROM contacts;"
+		,"SELECT name address FROM contacts;"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 7
+	,"question": "Which of the following configuration files should be modified to globally set shell variables for all users?"
+	,"choices": [
+		"/etc/bashrc"
+		,"/etc/profile"
+		,"~/.bash_profile"
+		,"/etc/.bashrc"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 8
+	,"question": "Which of the following commands are used to manage the environment and shell variables within a shell process? (Choose TWO correct answers.)"
+	,"choices": [
+		"export"
+		,"init"
+		,"reset"
+		,"set"
+		,"tset"
+	]
+	,"correct_answers": "AD"
+}
+,{
+	"question_number": 9
+	,"question": "Which of the following are operators used for comparisons by the test command? (Choose TWO correct answers.)"
+	,"choices": [
+		"equals"
+		,"="
+		,"-is"
+		,"-eq"
+		,"null"
+	]
+	,"correct_answers": "BD"
+}
+,{
+	"question_number": 10
+	,"question": "Which of the following commands creates a function in Bash that outputs the sum of two numbers?"
+	,"choices": [
+		"function sumitup { echo $(($1 + $2)) ; }"
+		,"command sumitup { echo $(($1 + $2)) ; }"
+		,"function sumitup { echo $1 + $2 ; }"
+		,"method sumitup { echo $1 + $2 ; }"
+		,"command sumitup { echo $1 + $2 ; }"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 11
+	,"question": "What output will the following command sequence produce? echo '1 2 3 4 5 6' | while read a b c; do echo result: $c $b $a; done"
+	,"choices": [
+		"result: 3 4 5 6 2 1"
+		,"result: 1 2 3 4 5 6"
+		,"result: 6 5 4"
+		,"result: 6 5 4 3 2 1"
+		,"result: 3 2 1"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 12
+	,"question": "When the command echo $? outputs 1, which of the following statements are true?"
+	,"choices": [
+		"It is the process ID of the echo command."
+		,"It is the process ID of the current shell."
+		,"It is the exit value of the command executed immediately before echo."
+		,"It is the exit value of the echo command."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 13
+	,"question": "What word is missing from the following SQL statement? insert into tablename ________(909, 'text'); (Please specify the missing word using lower-case letters only.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"VALUES"
+		,"values"
+	]
+}
+,{
+	"question_number": 14
+	,"question": "Which command makes the shell variable named VARIABLE visible to subshells?"
+	,"choices": [
+		"export $VARIABLE"
+		,"export VARIABLE"
+		,"set $VARIABLE"
+		,"set VARIABLE"
+		,"env VARIABLE"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 15
+	,"question": "What output will the command seq 10 produce?"
+	,"choices": [
+		"A continuous stream of numbers increasing in increments of 10 until stopped."
+		,"The numbers 1 through 10 with one number per line."
+		,"The numbers 0 through 9 with one number per line."
+		,"The number 10 to standard output."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 16
+	,"question": "By default, the contents of which directory will be copied to a new user's home directory when the account is created by passing the -m option to the useradd command? (Specify the full path to the directory.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"/etc/skel"
+		,"/etc/skel/"
+	]
+}
+,{
+	"question_number": 17
+	,"question": "What word is missing from the following SQL statement? __________ count(*) from tablename; (Please specify the missing word using lower-case letters only.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"select"
+	]
+}
+,{
+	"question_number": 18
+	,"question": "Which of the following files, when existing, affect the behavior of the Bash shell? (Choose TWO correct answers.)"
+	,"choices": [
+		"~/.bashconf"
+		,"~/.bashrc"
+		,"~/.bashdefaults"
+		,"~/.bash_etc"
+		,"~/.bash_profile"
+	]
+	,"correct_answers": "BE"
+}
+,{
+	"question_number": 19
+	,"question": "After issuing: function myfunction { echo $1 $2 ; } in Bash, which output does: myfunction A B C Produce?"
+	,"choices": [
+		"A B"
+		,"A B C"
+		,"A C"
+		,"B C"
+		,"C B A"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 20
+	,"question": "Which of the following commands puts the output of the command date into the shell variable mydate?"
+	,"choices": [
+		"mydate=\\\"$(date)\\\""
+		,"mydate=\\\"exec date\\\""
+		,"mydate=\\\"$((date))\\\""
+		,"mydate=\\\"date\\\""
+		,"mydate=\\\"${date}\\\""
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 21
+	,"question": "What is the purpose of the sticky keys feature in X?"
+	,"choices": [
+		"To assist users who have difficulty holding down multiple keys at once."
+		,"To prevent repeated input of a single character if the key is held down."
+		,"To ignore brief keystrokes according to a specified time limit."
+		,"To repeat the input of a single character."
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 22
+	,"question": "On a machine running several X servers, how are the different instances of the X11 server identified?"
+	,"choices": [
+		"By a fixed UUID that is defined in the X11 configuration file."
+		,"By a unique IPv6 address from the fe80::/64 subnet."
+		,"By the name of the user that runs the X server like x11:bob."
+		,"By a device name like /dev/X11/xservers/1."
+		,"By a display name like:1."
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 23
+	,"question": "What is the purpose of the xhost program?"
+	,"choices": [
+		"Grant or revoke access to a X11 session."
+		,"Install all packages and video drivers required to run X11 on a host."
+		,"Start the X11 server and announce its availability within the local network."
+		,"Send informational messages to all users logged into a host using X11."
+		,"Display the MOTD and other important information when a user logs in via X11."
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 24
+	,"question": "What of the following statements is true regarding a display manager?"
+	,"choices": [
+		"A display manager handles remote X11 logins only and has no purpose on a system that is not attached to a network."
+		,"The display manager is configured in the X11 configuration file xorg.conf."
+		,"There is only one display manager X11DM that must be started on all systems running X11."
+		,"After system startup, the display manager handles the login of a user."
+		,"Without a display manager, no graphical programs can be run."
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 25
+	,"question": "How is a display manager started?"
+	,"choices": [
+		"It is started by a user using the command startx."
+		,"It is started like any other system service by the init system."
+		,"It is started by inetd when a remote hosts connects to the X11 port."
+		,"It is started automatically when a X11 user logs in to the system console."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 26
+	,"question": "What is the default name of the configuration file for the Xorg X11 server? (Specify the file name only without any path.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"xorg.conf"
+	]
+}
+,{
+	"question_number": 27
+	,"question": "Which of the following commands shows the current color depth of the X Server?"
+	,"choices": [
+		"xcd"
+		,"xcdepth"
+		,"xwininfo"
+		,"xcolordepth"
+		,"cat /etc/X11"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 28
+	,"question": "For accessibility assistance, which of the following programs is an on-screen keyboard?"
+	,"choices": [
+		"xkb"
+		,"atkb"
+		,"GOK"
+		,"xOSK"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 29
+	,"question": "What is the name of the simple graphical login manager that comes with a vanilla X11 installation? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"xdm"
+	]
+}
+,{
+	"question_number": 30
+	,"question": "Which of the following are tasks handled by a display manager like XDM or KDM? (Choose TWO correct answers.)"
+	,"choices": [
+		"Start and prepare the desktop environment for the user."
+		,"Configure additional devices like new monitors or projectors when they are attached."
+		,"Handle the login of a user."
+		,"Lock the screen when the user was inactive for a configurable amount of time."
+		,"Create an X11 configuration file for the current graphic devices and monitors."
+	]
+	,"correct_answers": "AC"
+}
+,{
+	"question_number": 31
+	,"question": "Which of the following commands can modify or set the password expiration for a user? (Choose TWO correct answers.)"
+	,"choices": [
+		"chage"
+		,"chexpiration"
+		,"shadowconfig"
+		,"passwd"
+		,"userconf"
+	]
+	,"correct_answers": "AD"
+}
+,{
+	"question_number": 32
+	,"question": "Which of the following statements is true regarding the /etc/shadow file?"
+	,"choices": [
+		"/etc/shadow may not be readable or writable by user root."
+		,"Only root is allowed to read and write /etc/shadow."
+		,"All users have full read and write access to /etc/shadow."
+		,"All users have full read access to /etc/shadow."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 33
+	,"question": "Which of the following commands will convert files from one character encoding to another?"
+	,"choices": [
+		"convert"
+		,"enc2utf"
+		,"iconv"
+		,"transcode"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 34
+	,"question": "Which environment variable will override all LC_* variables?"
+	,"choices": [
+		"LANG"
+		,"LC_ALL"
+		,"LC_COLLATE"
+		,"LOCALE"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 35
+	,"question": "Which command will set the local machine's timezone to UTC?"
+	,"choices": [
+		"cat UTC > /etc/timezone"
+		,"ln -s /usr/share/zoneinfo/UTC /etc/localtime"
+		,"date --timezone=UTC"
+		,"mv /usr/timezone/UTC /etc"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 36
+	,"question": "Which of the following actions prevents a specific user from scheduling tasks using at or batch?"
+	,"choices": [
+		"Add the specific user to the /etc/at.allow file."
+		,"Add the specific user to the [deny] section in the /etc/atd.conf file."
+		,"Add the specific user to the /etc/at.deny file."
+		,"Add the specific user to the nojobs group."
+		,"Run atd --deny followed by the name of the specific user."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 37
+	,"question": "What is the main difference between the batch and at commands?"
+	,"choices": [
+		"The batch command will run multiple times. The at command will only run once."
+		,"The commands of a batch job run sequentially one after another while the commands in at jobs may run in parallel."
+		,"The at command reads commands from standard input. The batch command requires a command line argument."
+		,"The at command e-mails results to the user. The batch command logs results to syslog."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 38
+	,"question": "Why should a regular user edit his personal crontab by using the command crontab instead of just editing his crontab file manually?"
+	,"choices": [
+		"Because user specific crontab entries are stored in a common database and must be extracted before editing."
+		,"Because crontab starts the cron daemon in case it is not running due to no other crontab entries existing."
+		,"Because user specific crontab entries are stored in a special directory which is maintained by the cron daemon and not writable for regular users."
+		,"Because crontab collects information about all users crontabs and recommends similar commands used by other users of the system."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 39
+	,"question": "What is true about groups in a Linux system? (Choose TWO correct answers.)"
+	,"choices": [
+		"Each user may be a member of several groups. However, only one group is the user's primary group."
+		,"Groups may have a password that allows users to join that group temporarily."
+		,"Each user can only be a member of one group at a time."
+		,"Group memberships are optional such that there may be users that do not belong to any group."
+		,"Groups can be nested meaning that one group can be a member of another group."
+	]
+	,"correct_answers": "AB"
+}
+,{
+	"question_number": 40
+	,"question": "What is true about UIDs and GIDs?"
+	,"choices": [
+		"UIDs and GIDs share a common number space. Each time a new user or group is created, the next free ID is assigned."
+		,"The first four digits of each UID are the GID of the primary group of that user."
+		,"The GID of a group is always the sum of the UIDs of its members."
+		,"The number space is split up. UIDs usually reside in the range from 0 to 32767 while GIDs reside in the range from 32768 to 65535."
+		,"There are distinct number spaces for UIDs and GIDs, i.e. the same number may be used as both a UID and a GID."
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 41
+	,"question": "What happens if the password of a user in the /etc/shadow file is prepended with the ! character?"
+	,"choices": [
+		"When logging in, the user automatically gets root privileges in addition to his regular privileges."
+		,"The password is inverted which allows the user to log in with any password other than the current password."
+		,"The user is disabled and all login methods, including but not limited to password based logins, are disabled."
+		,"Upon the next log in, the user is forced to change his password."
+		,"The password becomes invalid which disables password based logins although other login methods remain usable."
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 42
+	,"question": "Which of the following details can be found in an entry of a user specific crontab? (Choose TWO correct answers.)"
+	,"choices": [
+		"The verbal description of the job."
+		,"The syslog facility to where the output of the job should be sent."
+		,"The time when the cron job should run."
+		,"The command that should be started by the cron job."
+		,"The name of the user which should run the job."
+	]
+	,"correct_answers": "CD"
+}
+,{
+	"question_number": 43
+	,"question": "Each entry in a crontab must end with what character?"
+	,"choices": [
+		"Tab"
+		,"Space"
+		,"Backslash"
+		,"Newline"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 44
+	,"question": "To prevent a specific user from scheduling tasks with at, what should the administrator do?"
+	,"choices": [
+		"Add the specific user to /etc/at.allow file."
+		,"Add the specific user to [deny] section in the /etc/atd.conf file."
+		,"Add the specific user to /etc/at.deny file."
+		,"Add the specific user to nojobs group."
+		,"Run the following: atd --deny [user]."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 45
+	,"question": "Which of the following crontab entries will execute myscript at 30 minutes past every hour on Sundays?"
+	,"choices": [
+		"0 * * * 30 myscript"
+		,"30 * * * 6 myscript"
+		,"30 0 * * 0 myscript"
+		,"30 0-23 * * 0 myscript"
+		,"0 0-23 * * 30 myscript"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 46
+	,"question": "Which of the following files assigns a user to its primary group?"
+	,"choices": [
+		"/etc/pgroup"
+		,"/etc/shadow"
+		,"/etc/group"
+		,"/etc/passwd"
+		,"/etc/gshadow"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 47
+	,"question": "Which of the following commands should be added to /etc/bash_profile in order to change the language of messages for an internationalized program to Portuguese (pt)?"
+	,"choices": [
+		"export LANGUAGE=\\\"pt\\\""
+		,"export MESSAGE=\\\"pt\\\""
+		,"export UI_MESSAGES=\\\"pt\\\""
+		,"export LC_MESSAGES=\\\"pt\\\""
+		,"export ALL_MESSAGES=\\\"pt\\\""
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 48
+	,"question": "In which file, if present, must all users be listed that are allowed to use the cron scheduling system? (Specify the full name of the file, including path.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"/etc/cron.allow"
+	]
+}
+,{
+	"question_number": 49
+	,"question": "Which commands can be used to change a user's account aging information? (Choose THREE correct answers.)"
+	,"choices": [
+		"usermod"
+		,"passwd"
+		,"chattr"
+		,"chage"
+		,"chsh"
+	]
+	,"correct_answers": "ABD"
+}
+,{
+	"question_number": 50
+	,"question": "Which command is used to add an empty group to the system? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"groupadd"
+		,"/usr/sbin/groupadd"
+	]
+}
+,{
+	"question_number": 51
+	,"question": "What is not contained in the locale setting of the operating system?"
+	,"choices": [
+		"currency symbol"
+		,"language"
+		,"timezone"
+		,"thousands separator"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 52
+	,"question": "What is true about the file /etc/localtime?"
+	,"choices": [
+		"It is a plain text file containing a string such as Europe/Berlin."
+		,"It is created and maintained by the NTP service based on the geolocation of the system's IP address."
+		,"It is a symlink to /sys/device/clock/ltime and always contains the current local time."
+		,"It is either a symlink to or a copy of a timezone information file such as /usr/share/zoneinfo/Europe/Berlin."
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 53
+	,"question": "What is true regarding the command userdel --force --remove bob? (Choose TWO correct answers.)"
+	,"choices": [
+		"The user bob is removed from the system's user database."
+		,"The user bob's home directory is removed."
+		,"The locate database is updated to drop files owned by bob."
+		,"All files owned by bob are remove from all mounted filesystems."
+		,"In case bob was the last member of a group, that group is deleted."
+	]
+	,"correct_answers": "AB"
+}
+,{
+	"question_number": 54
+	,"question": "Which of the following fields can be found in the /etc/group file? (Choose THREE correct answers.)"
+	,"choices": [
+		"The list of users that belong to the group."
+		,"The home directory of the group."
+		,"The name of the group."
+		,"The description of the group."
+		,"The password of the group."
+	]
+	,"correct_answers": "ACE"
+}
+,{
+	"question_number": 55
+	,"question": "Which file, when using Sendmail or a compatible MTA system, will allow a user to redirect all of their mail to another address and is configurable by the user themselves?"
+	,"choices": [
+		"/etc/alias"
+		,"/etc/mail/forwarders"
+		,"~/.alias"
+		,"~/.forward"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 56
+	,"question": "Which of the following commands pauses the CUPS printer LaserPrinter?"
+	,"choices": [
+		"cupsreject LaserPrinter"
+		,"cupsreject -d LaserPrinter"
+		,"cupsdisable -d LaserPrinter"
+		,"cupsdisable LaserPrinter"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 57
+	,"question": "Which of the following are commonly used Mail Transfer Agent (MTA) applications? (Choose THREE correct answers.)"
+	,"choices": [
+		"Postfix"
+		,"Procmail"
+		,"Sendmail"
+		,"Exim"
+		,"SMTPd"
+	]
+	,"correct_answers": "ACD"
+}
+,{
+	"question_number": 58
+	,"question": "Which of the following commands lists all queued print jobs?"
+	,"choices": [
+		"lpd"
+		,"lpr"
+		,"lp"
+		,"lpq"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 59
+	,"question": "What is NTP?"
+	,"choices": [
+		"A more secure protocol replacement for FTP."
+		,"A protocol for synchronizing time on computers."
+		,"A routing aid for finding next hops on a network."
+		,"A simple tunnelling protocol for computers behind firewalls."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 60
+	,"question": "What is true regarding the time in a Linux system?"
+	,"choices": [
+		"The BIOS clock of a computer always indicates the current local time and time zone."
+		,"Each application must convert the Unix time to the current time zone which is usually done by using standard libraries."
+		,"When the system is on the network, each query for the current time leads to a new network connection to a time server."
+		,"When the system time changes, running processes must be restarted in order to get the correct time."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 61
+	,"question": "Which of the following is true regarding the mail queue of a mail server? (Choose TWO correct answers.)"
+	,"choices": [
+		"The messages in the queue must be readable by all users as the queue may contain messages for several users."
+		,"According to the Filesystem Hierarchy Standard (FHS) the queue is located at /var/mail/spool."
+		,"There is exactly one mail queue per user which holds all new messages for that user before they are moved to other folders by the user's mail client."
+		,"The queue holds all messages that are processed by the mail server but have not yet been completely delivered."
+		,"The content of the mail queue can be queried by the command mailq."
+	]
+	,"correct_answers": "DE"
+}
+,{
+	"question_number": 62
+	,"question": "Why should an NTP client maintain connections to several NTP servers?"
+	,"choices": [
+		"To receive NTP information every second as each server transmits NTP pings every five seconds only."
+		,"To improve the precision of the time by comparing responses from several servers."
+		,"To not overload the remote server in case the local NTP time cache is not enabled."
+		,"To not lose contact with all NTP servers in case the client changes networks."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 63
+	,"question": "With syslog, what is a facility?"
+	,"choices": [
+		"Facilities are different connection interfaces to syslog. Each facility has its own device in /dev/syslog/."
+		,"From syslog's point of view, each Unix process that issues messages is a facility."
+		,"Facilities describe the severity of a log message such as emerg or info."
+		,"When using remote logging, the hostname of the server that generated a message is called facility."
+		,"Facilities describe categories or groups of messages such as mail or auth."
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 64
+	,"question": "Which of the following files holds the configuration for journald when running systemd?"
+	,"choices": [
+		"/etc/systemd/journalctl.conf"
+		,"/etc/systemd/journald.conf"
+		,"/etc/systemd/systemd-journald.conf"
+		,"/etc/systemd/systemd-journalctl.conf"
+		,"/usr/lib/systemd/journalctl.conf"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 65
+	,"question": "Which of the following are commonly used Mail Transfer Agent (MTA) applications? (Choose THREE correct answers.)"
+	,"choices": [
+		"Postfix"
+		,"Procmail"
+		,"Sendmail"
+		,"Exim"
+		,"SMTPd"
+	]
+	,"correct_answers": "ACD"
+}
+,{
+	"question_number": 66
+	,"question": "Which of the following is observed and corrected by a NTP client?"
+	,"choices": [
+		"The skew in time between the system clock and the hardware clock."
+		,"The skew in time between the system clock and the reference clock."
+		,"Changes in the time zone of the current computer's location."
+		,"Adjustments needed to support Daylight Saving Time."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 67
+	,"question": "Which command is used to sync the hardware clock to the system clock? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"hwclock"
+		,"/sbin/hwclock"
+		,"/usr/sbin/hwclock"
+	]
+}
+,{
+	"question_number": 68
+	,"question": "Which command, available with all MTAs, is used to list the contents of the MTA's mail queue? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"mailq"
+		,"/usr/bin/mailq"
+		,"sendmail -bp"
+		,"/usr/sbin/sendmail -bp"
+		,"/usr/lib/sendmail -bp"
+	]
+}
+,{
+	"question_number": 69
+	,"question": "Please specify the top directory containing the configuration files for the CUPS printing system. (Specify the full path to the directory.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"/etc/cups"
+		,"/etc/cups/"
+	]
+}
+,{
+	"question_number": 70
+	,"question": "Which of the following is a legacy program provided by CUPS for sending files to the printer queues on the command line?"
+	,"choices": [
+		"lpd"
+		,"lpp"
+		,"lpq"
+		,"lpr"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 71
+	,"question": "What entry can be added to the syslog.conf file to have all syslog messages generated by a system displayed on console 12?"
+	,"choices": [
+		"*.* /dev/tty12"
+		,"/var/log/messages | /dev/tty12"
+		,"| /dev/tty12"
+		,"syslog tty12"
+		,"mail.* /dev/tty12"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 72
+	,"question": "What is true about the ntpdate command?"
+	,"choices": [
+		"It is the primary management command for the NTP time server."
+		,"It updates the local system's date (i.e. day, month and year) but not the time (i.e. hours, minutes, seconds)."
+		,"It queries one or more NTP time servers and adjusts the system time accordingly."
+		,"It sends the local system time to one or many remote NTP time servers for redistribution."
+		,"It can be used by any user to set the user clock independently of the system clock."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 73
+	,"question": "What is true regarding the file ~/.forward?"
+	,"choices": [
+		"As it is owned by the MTA and not writable by the user, it must be edited using the editaliases command."
+		,"After editing ~/.forward the user must run newaliases to make the mail server aware of the changes."
+		,"Using ~/.forward, root may configure any email address whereas all other users may configure only their own addresses."
+		,"When configured correctly, ~/.forward can be used to forward each incoming mail to more than one other recipient."
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 74
+	,"question": "Which of the following commands is used to rotate, compress, and mail system logs?"
+	,"choices": [
+		"rotatelog"
+		,"striplog"
+		,"syslogd --rotate"
+		,"logrotate"
+		,"logger"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 75
+	,"question": "How many bits make up an IPv6 address?"
+	,"choices": [
+		"32"
+		,"48"
+		,"64"
+		,"128"
+		,"256"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 76
+	,"question": "Which command is used to manually assign an IP address to a network interface? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"ifconfig"
+		,"/sbin/ifconfig"
+		,"ip"
+		,"/sbin/ip"
+	]
+}
+,{
+	"question_number": 77
+	,"question": "Which of the following files is consulted when programs like netstat try to match port numbers to names?"
+	,"choices": [
+		"/etc/networks"
+		,"/etc/portmapper"
+		,"/etc/protocols"
+		,"/etc/resolv.conf"
+		,"/etc/services"
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 78
+	,"question": "Which of the following statements is valid in the file /etc/resolv.conf?"
+	,"choices": [
+		"order hosts,bind"
+		,"192.168.168.4 dns-server"
+		,"hosts: files,dns"
+		,"domain example.com"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 79
+	,"question": "Which of the following is a correct entry in the /etc/hosts file?"
+	,"choices": [
+		"localhost 127.0.0.1 localhost.localdomain"
+		,"localhost.localdomain localhost 127.0.0.1"
+		,"localhost localhost.localdomain 127.0.0.1"
+		,"127.0.0.1 localhost.localdomain localhost"
+		,"localhost.localdomain 127.0.0.1 localhost"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 80
+	,"question": "What is the assigned port number for the HTTP service? (Specify the port number using digits.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"80"
+	]
+}
+,{
+	"question_number": 81
+	,"question": "What is the purpose of the dig command?"
+	,"choices": [
+		"It can be used as a tool for querying DNS servers."
+		,"It can be used for searching through indexed file content."
+		,"It can be used to look for open ports on a system."
+		,"It can be used to ping all known hosts on the current subnet."
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 82
+	,"question": "Given the following line from /etc/nsswitch.conf: hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4 By default, which file will be queried first for hostname lookups? (Specify the full name of the file, including path.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"/etc/hosts"
+	]
+}
+,{
+	"question_number": 83
+	,"question": "When issuing the command ifconfig eth0 192.168.1.20/24 up, which of the following happens? (Choose TWO correct answers.)"
+	,"choices": [
+		"The address 192.168.1.20 is associated with the interface eth0."
+		,"A network route to 192.168.1.0 with the netmask 255.255.255.0 pointing directly to eth0 is created."
+		,"192.168.1.1 is probed for router functionality and, in case of success, it is added to the list of default routers."
+		,"The addresses from 192.168.1.20 to 192.168.1.24 are activated on the interface eth0."
+		,"If eth0 was configured with a previous IP address, it is retained in addition to adding the new address."
+	]
+	,"correct_answers": "AB"
+}
+,{
+	"question_number": 84
+	,"question": "What is the name of the file that defines the sources (like DNS or local configuration files) and the order in which they are consulted when resolving hostnames? (Specify the full name of the file, including path.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"/etc/nsswitch.conf"
+	]
+}
+,{
+	"question_number": 85
+	,"question": "Given the following routing table Kernel IP routing table Destination Gateway Genmask Flags Metric Ref Use Iface 192.168.178.0 0.0.0.0 255.255.255.0 U 9 0 0 wlan0 Why does the command route add default gw 192.168.1.1 fail?"
+	,"choices": [
+		"Because there is no route to 192.168.1.1."
+		,"Because only one route can exist at a time."
+		,"Because there is already a default route."
+		,"Because default routes can not be set manually."
+		,"Because default routes must be set with ifconfig."
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 86
+	,"question": "In order to discover the link layer address of the device that owns a specific IPv4 or IPv6 address, which mechanism is used?"
+	,"choices": [
+		"Both IPv4 and IPv6 use ARP."
+		,"Both IPv4 and IPv6 use Neighbor Discovery."
+		,"IPv4 uses ARP while IPv6 uses Neighbor Discovery."
+		,"IPv4 uses Neighbor Discovery while IPv6 uses ARP."
+		,"Both IPv4 and IPv6 can use either ARP or Neighbor Discovery depending on the network."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 87
+	,"question": "Which of the following are valid IPv4 network masks? (Choose TWO correct answers.)"
+	,"choices": [
+		"255.255.0.0"
+		,"255.255.255.65"
+		,"255.255.0.255"
+		,"0.0.0.1"
+		,"255.255.255.248"
+	]
+	,"correct_answers": "AE"
+}
+,{
+	"question_number": 88
+	,"question": "How does the ping command work by default?"
+	,"choices": [
+		"It sends a UDP packet to port 0 of the remote host and waits to receive a UDP error response in return."
+		,"It sends an ARP request to a remote host and waits to receive an ARP response in return."
+		,"It sends a TCP SYN packet to a remote host and waits to receive an TCP ACK response in return."
+		,"It sends a broadcast packet to all hosts on the net and waits to receive, among others, a response from the target system."
+		,"It sends an ICMP Echo Request to a remote host and waits to receive an ICMP Echo Response in return."
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 89
+	,"question": "How many IP-addresses can be used for unique hosts inside the IPv4 subnet 192.168.2.128/28? (Specify the number only without any additional information.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"14"
+	]
+}
+,{
+	"question_number": 90
+	,"question": "What is the lowest numbered unprivileged TCP port? (Specify the number in digits only.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"1024"
+	]
+}
+,{
+	"question_number": 91
+	,"question": "Which of the following statements is valid in the file /etc/nsswitch.conf?"
+	,"choices": [
+		"multi on"
+		,"192.168.168.4 dns-server"
+		,"hosts: files dns"
+		,"include /etc/nsswitch.d/"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 92
+	,"question": "Which command, depending on its options, can display the open network connections, the routing tables, as well as network interface statistics. (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"netstat"
+		,"/bin/netstat"
+		,"ss"
+		,"/usr/bin/ss"
+	]
+}
+,{
+	"question_number": 93
+	,"question": "Which port is the default server port for the HTTPS protocol? (Specify the port number using digits.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"443"
+	]
+}
+,{
+	"question_number": 94
+	,"question": "Which of the following IPv4 networks are reserved by IANA for private address assignment and private routing? (Choose THREE correct answers.)"
+	,"choices": [
+		"127.0.0.0/8"
+		,"10.0.0.0/8"
+		,"169.255.0.0/16"
+		,"172.16.0.0/12"
+		,"192.168.0.0/16"
+	]
+	,"correct_answers": "BDE"
+}
+,{
+	"question_number": 95
+	,"question": "Which of the following tools used for DNS debugging, reports not only the response from the name server but also details about the query?"
+	,"choices": [
+		"dnsq"
+		,"dig"
+		,"hostname"
+		,"dnslookup"
+		,"zoneinfo"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 96
+	,"question": "What of the following can be done by the command ifconfig? (Choose TWO correct answers.)"
+	,"choices": [
+		"Set a network interface active or inactive."
+		,"Specify the kernel module to be used with a network interface."
+		,"Allow regular users to change the network configuration of a network interface."
+		,"Change the netmask used on a network interface."
+		,"Specify which network services are available on a network interface."
+	]
+	,"correct_answers": "AD"
+}
+,{
+	"question_number": 97
+	,"question": "Which of the following programs can be used to determine the routing path to a given destination?"
+	,"choices": [
+		"dig"
+		,"netstat"
+		,"ping"
+		,"route"
+		,"traceroute"
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 98
+	,"question": "Given the following routing table: Kernel IP routing table Destination Gateway Genmask Flags Metric Ref Use Iface 0.0.0.0 192.168.178.1 0.0.0.0 UG 0 0 0 wlan0 192.168.1.0 0.0.0.0 255.255.255.0 U 0 0 0 eth0 192.168.2.0 192.168.1.1 255.255.255.0 U 0 0 0 eth0 192.168.178.0 0.0.0.0 255.255.255.0 U 9 0 0 wlan0 How would an outgoing packet to the destination 192.168.2.150 be handled?"
+	,"choices": [
+		"It would be passed to the default router 192.168.178.1 on wlan0."
+		,"It would be directly transmitted on the device eth0."
+		,"It would be passed to the default router 255.255.255.0 on eth0."
+		,"It would be directly transmitted on the device wlan0."
+		,"It would be passed to the router 192.168.1.1 on eth0."
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 99
+	,"question": "Which of the following is a valid IPv6 address?"
+	,"choices": [
+		"2001:db8:3241::1"
+		,"2001::db8:4581::1"
+		,"2001:db8:0g41::1"
+		,"2001%db8%9990%%1"
+		,"2001.db8.819f..1"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 100
+	,"question": "Which of the following keywords can be used in the file /etc/resolv.conf? (Choose TWO correct answers.)"
+	,"choices": [
+		"substitute"
+		,"nameserver"
+		,"search"
+		,"lookup"
+		,"method"
+	]
+	,"correct_answers": "BC"
+}
+,{
+	"question_number": 101
+	,"question": "On a regular users workstation the route command takes a long time before printing out the routing table. Which of the following errors does that indicate?"
+	,"choices": [
+		"The local routing information may be corrupted and must be re-validated using a routing protocol."
+		,"One of the routers in the routing table is not available which causes the automatic router failure detection mechanism (ARF-D) to wait for a timeout."
+		,"There may accidentally be more than one default router in which case a default router election has to be done on the network in order to choose one router as the default."
+		,"DNS resolution may not be working as route by default tries to resolve names of routers and destinations and may run into a timeout."
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 102
+	,"question": "Which keyword must be listed in the hosts option of the Name Service Switch configuration file in order to make host lookups consult the /etc/hosts file?"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"files"
+	]
+}
+,{
+	"question_number": 103
+	,"question": "In an xinetd configuration file, which attribute specifies the network address that will be used to provide the service?"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"bind"
+		,"interface"
+	]
+}
+,{
+	"question_number": 104
+	,"question": "What argument to the -type option of find will match files that are symbolic links? (Specify only the argument and no other options or words.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"l"
+	]
+}
+,{
+	"question_number": 105
+	,"question": "With X11 forwarding in ssh, what environment variable is automatically set in the remote host shell that is not set when X11 forwarding is not enabled? (Specify only the environment variable without any additional commands or values.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"DISPLAY"
+		,"$DISPLAY"
+	]
+}
+,{
+	"question_number": 106
+	,"question": "The presence of what file will temporarily prevent all users except root from logging into the system? (Specify the full name of the file, including path.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"/etc/nologin"
+	]
+}
+,{
+	"question_number": 107
+	,"question": "Which configuration file would be edited to change the default options for outbound SSH sessions?"
+	,"choices": [
+		"/etc/ssh/sshd_config"
+		,"/etc/ssh/ssh"
+		,"/etc/ssh/client"
+		,"/etc/ssh/ssh_config"
+		,"/etc/ssh/ssh_client"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 108
+	,"question": "Which of the following programs uses the hosts.allow file to perform its main task of checking for access control restrictions to system services?"
+	,"choices": [
+		"tcpd"
+		,"inetd"
+		,"fingerd"
+		,"mountd"
+		,"xinetd"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 109
+	,"question": "Which command is used to set restrictions on the size of a core file that is created for a user when a program crashes?"
+	,"choices": [
+		"core"
+		,"edquota"
+		,"ulimit"
+		,"quota"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 110
+	,"question": "When trying to unmount a device it is reported as being busy. Which of the following commands could be used to determine which process is causing this?"
+	,"choices": [
+		"debug"
+		,"lsof"
+		,"nessus"
+		,"strace"
+		,"traceroute"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 111
+	,"question": "Which configuration file would be edited to change default options for the OpenSSH server?"
+	,"choices": [
+		"/etc/ssh/sshd_config"
+		,"/etc/ssh/ssh"
+		,"/etc/ssh/server"
+		,"/etc/ssh/ssh_config"
+		,"/etc/ssh/ssh_server"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 112
+	,"question": "Which configuration file does sudo read when determining if a user is permitted to run applications with root privileges?"
+	,"choices": [
+		"/etc/security.conf"
+		,"/etc/supasswd"
+		,"/etc/sudoers"
+		,"/etc/sudo.conf"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 113
+	,"question": "Which of the following commands can be used to associate open TCP ports with the processes that opened the ports?"
+	,"choices": [
+		"ptrace"
+		,"strace"
+		,"debug"
+		,"nessus"
+		,"lsof"
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 114
+	,"question": "Instead of using specific host names or IP addresses, which string can be used in /etc/hosts.allow entries to cover any remote host no matter of its name or address? (Specify the relevant string only without any additional options or arguments.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"ALL"
+	]
+}
+,{
+	"question_number": 115
+	,"question": "Which of the following resources can be directly limited for a given user using ulimit? (Choose THREE correct answers.)"
+	,"choices": [
+		"Maximum seconds of CPU time spent."
+		,"Maximum number of open file descriptors."
+		,"Maximum number of processes available."
+		,"Maximum number of concurrent login sessions."
+		,"Maximum seconds of login duration per session."
+	]
+	,"correct_answers": "ABC"
+}
+,{
+	"question_number": 116
+	,"question": "Depending on the host's configuration, which of the following files can be used to turn on and off network services running on a host? (Choose TWO correct answers.)"
+	,"choices": [
+		"/etc/profile"
+		,"/etc/services"
+		,"/etc/inetd.conf"
+		,"/etc/xinetd.conf"
+		,"/etc/host.conf"
+	]
+	,"correct_answers": "CD"
+}
+,{
+	"question_number": 117
+	,"question": "How do shadow passwords improve the password security in comparison to standard passwd passwords?"
+	,"choices": [
+		"Shadow passwords are stored in plain text and can be checked for weak passwords."
+		,"Every shadow password is valid for 45 days and must be changed afterwards."
+		,"The system's host key is used to strongly encrypt all shadow passwords."
+		,"Shadow passwords are always combined with a public key that has to match the user's private key."
+		,"Regular users do not have access to the password hashes of shadow passwords."
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 118
+	,"question": "What is true regarding public and private SSH keys? (Choose TWO correct answers.)"
+	,"choices": [
+		"Several different public keys may be generated for the same private key."
+		,"The private key must never be revealed to anyone."
+		,"For each user account, there is exactly one key pair that can be used to log into that account."
+		,"To maintain the private key's confidentiality, the SSH key pair must be created by its owner."
+		,"To allow remote logins, the user's private key must be copied to the remote server."
+	]
+	,"correct_answers": "BD"
+}
+,{
+	"question_number": 119
+	,"question": "Which command is used to add OpenSSH private keys to a running ssh-agent instance? (Specify the file name only without any path.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"ssh-add"
+		,"/usr/bin/ssh-add"
+	]
+}
+,{
+	"question_number": 120
+	,"question": "Which of the following commands gets the GnuPG public key with the id 63B4835B from the keyserver example.com?"
+	,"choices": [
+		"gpg --keyserver hkp://example.com --recv-key 63B4835B"
+		,"gpg --search-key hkp://63B4835B@example.com"
+		,"gpg --keyserver gpg://example.com --get-key 63B4835B"
+		,"gpg --keyserver hkp://example.com --add-key 63B4835B"
+		,"gpg --keyserver gpg://example.com --key 63B4835B"
+	]
+	,"correct_answers": "A"
+}
+]}

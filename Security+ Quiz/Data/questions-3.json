@@ -1,0 +1,90 @@
+{
+    "set_name": "LX104",
+    "questions": [
+        {
+            "question_number": 1
+            ,"question": "What is true regarding the statement beginning with #! that is found in the first line of a script?"
+            ,"choices": [
+                "It prevents the script from being executed until the ! is removed."
+                ,"It specifies the path and the arguments of the interpreter used to run the script."
+                ,"It is a comment that is ignored by the script."
+                ,"It specifies the character encoding of the script."
+            ]
+            ,"correct_answers": "B"
+        }
+        ,{
+            "question_number": 2
+            ,"question": "Which Bash option prevents a user from accidentally overwriting a file with a \">\"?"
+            ,"choices": [
+                "set -o safe"
+                ,"set -o noglob"
+                ,"set -o noclobber"
+                ,"set -o append"
+                ,"set -o nooverwrite"
+            ]
+            ,"correct_answers": "C"
+        }
+        ,{
+            "question_number": 3
+            ,"question": "Which of the following commands prints the exit value of the most recently executed program in Bash?"
+            ,"choices": [
+                "echo $?"
+                ,"echo $#"
+                ,"echo $exit"
+                ,"echo $status"
+                ,"echo $&"
+            ]
+            ,"correct_answers": "A"
+        }
+        ,{
+            "question_number": 4
+            ,"question": "What word will complete an if statement in bash such as the following: if [ -x \"$file\" ]; then echo $file _____ (Please provide the missing word only)"
+            ,"is_fill_in_the_blank": true
+            ,"fill_answers": [
+                "fi"
+            ]
+        }
+        ,{
+            "question_number": 5
+            ,"question": "What word is missing from the following SQL statement? update tablename ____ fieldname='value' where id=909; (Please specify the missing word using lower_case letters only.)"
+            ,"is_fill_in_the_blank": true
+            ,"fill_answers": [
+                "set"
+            ]
+        }
+        ,{
+            "question_number": 6
+            ,"question": "Which signal is missing from the following command that is commonly used to instruct a daemon to reinitialize itself, including reading configuration files? \n\n killall -s _______ daemon"
+            ,"is_fill_in_the_blank": true
+            ,"fill_answers": [
+                "HUP"
+                ,"SIGHUP"
+                ,"1"
+            ]
+        }
+        ,{
+            "question_number": 7
+            ,"question": "A user accidentally created the subdirectory \\dir in his home directory. Which of the following commands will remove that directory?"
+            ,"choices": [
+                "rmdir '~/\\dir'"
+                ,"rmdir \\\"~/\\dir\\\""
+                ,"rmdir ~/'dir'"
+                ,"rmdir ~/\\dir"
+                ,"rmdir ~/\\\\dir"
+            ]
+            ,"correct_answers": "E"
+        }
+        ,{
+            "question_number": 48
+            ,"question": "A user accidentally created the subdirectory \dir in his home directory. Which of the following commands will remove that directory?"
+            ,"choices": [
+                "rmdir '~/\dir'"
+                ,"rmdir \"~/\dir\""
+                ,"rmdir ~/'dir'"
+                ,"rmdir ~/\dir"
+                ,"rmdir ~/\\dir"
+            ]
+            ,"correct_answers": "E"
+        }
+    ]}
+

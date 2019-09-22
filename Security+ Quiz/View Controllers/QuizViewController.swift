@@ -12,7 +12,7 @@ enum ReviewMode {
     case Study, Test
 }
 
-class ViewController: UIViewController {
+class QuizViewController: UIViewController {
     
     @IBOutlet weak var uiQuestionNumber : UILabel!
     @IBOutlet weak var uiQuestion       : UILabel!
@@ -20,12 +20,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var uiStatString     : UILabel!
     @IBOutlet weak var uiButtonSubmit   : UIButton!
     
+    @IBOutlet weak var uiAllSwitchAnswers: UIStackView!
+    @IBOutlet weak var uiAllFillInTheBlankAnswers: UIStackView!
+    
+    @IBOutlet weak var uiFillInTheBlankTextField: UITextField!
+    @IBOutlet weak var uiFIllInTheBlankAnswers  : UILabel!
+    
     @IBOutlet weak var uiAnswerMarkA: UILabel!
     @IBOutlet weak var uiAnswerMarkB: UILabel!
     @IBOutlet weak var uiAnswerMarkC: UILabel!
     @IBOutlet weak var uiAnswerMarkD: UILabel!
     @IBOutlet weak var uiAnswerMarkE: UILabel!
-    
     
     @IBOutlet weak var uiSwitchA: UISwitch!
     @IBOutlet weak var uiSwitchB: UISwitch!
@@ -47,21 +52,44 @@ class ViewController: UIViewController {
     let correctAnswerMark = "✅"
     let incorrectAnswerMark = "❌"
     
-
+    let correctTextColor = UIColor( red:CGFloat(0.0), green:CGFloat(0.563), blue:CGFloat(0.319), alpha:CGFloat(1.0) )
+    let incorrectTextColor = UIColor( red:CGFloat(1.0), green:CGFloat(0.0), blue:CGFloat(0.0), alpha:CGFloat(1.0) )
+    
+    var questionSetFile = "mmsy0501_exam_1"
+    var questionSetName = "sy0-501"
+    
     var questions = [ [String:String] ]()
     var questionIndex = -1      // index into the actual question being asked
     var shuffledIndices = [Int]()
+    var missedIndices = [Int]()
     var shuffledIndex = -1      // index into shuffledIndices, which names the questionIndex
     var reviewMode: ReviewMode = .Study
     var isShowingQuestion = true
+    var wantsShuffle = false
     
     var numQuestions = 0
     var numCorrect = 0
+    
+    enum BoolString: String
+    {
+        case YES = "Y"
+        case NO = "N"
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let quizToShow = AppDelegate.quizToShow {
+            questionSetName = quizToShow.quizTitle
+            questionSetFile = quizToShow.quizFile
+            print( "using name=\(questionSetName), file=\(questionSetFile)" )
+        }
+        else {
+            print( "no quiz passed; using defaults" )
+        }
+        configureNavigationBar()
         
         switchArray = [ uiSwitchA, uiSwitchB, uiSwitchC, uiSwitchD, uiSwitchE ]
         switchLabelArray = [ uiSwitchALabel, uiSwitchBLabel, uiSwitchCLabel, uiSwitchDLabel, uiSwitchELabel ]
@@ -81,6 +109,19 @@ class ViewController: UIViewController {
         }
     }
     
+    private func configureNavigationBar() {
+        
+        let mainMenuItem = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(mainMenu))
+        
+        navigationItem.leftBarButtonItems = [ mainMenuItem ]
+        
+        navigationItem.title = questionSetName
+    }
+    @objc private func mainMenu() {
+        
+        dismiss(animated: true, completion: nil)
+    }
+
     func initShuffledIndices() {
     
 //        for i in 0 ..< questions.count {
@@ -88,7 +129,9 @@ class ViewController: UIViewController {
 //        }
         shuffledIndices = Array( 0 ..< questions.count )
 
-        shuffleIndices()
+        if wantsShuffle {
+            shuffleIndices()
+        }
     }
     func shuffleIndices() {
         
@@ -97,20 +140,29 @@ class ViewController: UIViewController {
     
     func loadQuestionsFromJsonFile() {
         
-        if let jsonFilePath = Bundle.main.path(forResource: "mmsy0501_exam_1", ofType: "json" ) {
+        if let jsonFilePath = Bundle.main.path(forResource: questionSetFile, ofType: "json" ) {
             if let jsonData = try? String.init(contentsOfFile: jsonFilePath ) {
                 
                 let json = JSON( parseJSON: jsonData )
 //                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
                 
                     parse( json: json )
+                    print( "\(questions.count) questions read from \(questionSetFile)" )
                 
                     return
 //                }
             }
+            else {
+                print( "Cannot read data from '\(questionSetFile)'" )
+            }
+        }
+        else {
+            print( "Cannot load data from '\(questionSetFile)'" )
         }
     }
     func parse( json: JSON ) {
+        
+        questions.removeAll()
         
         for qa in json["questions"].arrayValue {
             
@@ -126,10 +178,23 @@ class ViewController: UIViewController {
             let choiceC             = choices.count > 2 ? choices[2] : ""
             let choiceD             = choices.count > 3 ? choices[3] : ""
             let choiceE             = choices.count > 4 ? choices[4] : ""
+            
+            let fillAnswers         = qa["fill_answers" ].arrayValue.map({ $0.stringValue })
+            let fillAnswerA         = fillAnswers.count > 0 ? fillAnswers[0] : ""
+            let fillAnswerB         = fillAnswers.count > 1 ? fillAnswers[1] : ""
+            let fillAnswerC         = fillAnswers.count > 2 ? fillAnswers[2] : ""
+            let fillAnswerD         = fillAnswers.count > 3 ? fillAnswers[3] : ""
+            let fillAnswerE         = fillAnswers.count > 4 ? fillAnswers[4] : ""
+
+            
+            let isFillInTheBlank    = qa["is_fill_in_the_blank"].bool ?? false
 
             let obj = [ "question"      :question,
                         "explanation"   :explanation,
                         "questionNumber":questionNumber,
+                        "isFillInTheBlank": isFillInTheBlank
+                            ? BoolString.YES.rawValue
+                            : BoolString.NO.rawValue,
                         "hint"          :hint,
                         "correctAnswers":correctAnswers,
                         "choiceA"       :choiceA,
@@ -137,7 +202,13 @@ class ViewController: UIViewController {
                         "choiceC"       :choiceC,
                         "choiceD"       :choiceD,
                         "choiceE"       :choiceE,
-                        "numChoices"    :String( choices.count )
+                        "numChoices"    :String( choices.count ),
+                        "fillAnswerA"   :fillAnswerA,
+                        "fillAnswerB"   :fillAnswerB,
+                        "fillAnswerC"   :fillAnswerC,
+                        "fillAnswerD"   :fillAnswerD,
+                        "fillAnswerE"   :fillAnswerE,
+                        "numFillAnswers":String( fillAnswers.count )
                         ]
             questions.append( obj )
         }
@@ -147,7 +218,16 @@ class ViewController: UIViewController {
         
         shuffledIndex += 1
         if shuffledIndex >= shuffledIndices.count {
-            shuffleIndices()
+            if missedIndices.isEmpty {
+                initShuffledIndices()
+            }
+            else {
+                shuffledIndices = missedIndices
+                missedIndices.removeAll()
+                if wantsShuffle {
+                    shuffleIndices()
+                }
+            }
             shuffledIndex = 0
         }
         
@@ -158,10 +238,19 @@ class ViewController: UIViewController {
         
         let qa = questions[ index ]
         
+        if qa["isFillInTheBlank"] == BoolString.YES.rawValue {
+            displayFillInTheBlankQuestion( qa )
+            return
+        }
+        
+        uiAllSwitchAnswers.isHidden = false
+        uiAllFillInTheBlankAnswers.isHidden = true
+
         resetChoicesUsing( numChoices: Int( qa["numChoices"]! )! )
         
         uiQuestionNumber.text   = "Question \(shuffledIndex + 1) (\(qa["questionNumber"]!))"
-        uiQuestion.text         = "\(qa["question"]!)"
+        let questionText        = qa["question"]!.replacingOccurrences(of: "\\n", with: "\n")
+        uiQuestion.text         = questionText
 //        uiExplanation.text      = "\(qa["explanation"]!)"
         uiExplanation.isHidden  = true
         
@@ -170,6 +259,23 @@ class ViewController: UIViewController {
         uiSwitchCLabel.text     = "C. \(qa["choiceC"]!)"
         uiSwitchDLabel.text     = "D. \(qa["choiceD"]!)"
         uiSwitchELabel.text     = "E. \(qa["choiceE"]!)"
+        
+        uiButtonSubmit.setTitle( "Submit Answer", for: .normal )
+        
+        isShowingQuestion = true
+    }
+    func displayFillInTheBlankQuestion( _ qa: [String: String] ) {
+        
+        uiAllFillInTheBlankAnswers.isHidden = false
+        uiAllSwitchAnswers.isHidden = true
+
+        uiQuestionNumber.text   = "Question \(shuffledIndex + 1) (\(qa["questionNumber"]!))"
+        let questionText        = qa["question"]!.replacingOccurrences(of: "\\n", with: "\n")
+        uiQuestion.text         = questionText
+        uiExplanation.isHidden  = true
+        
+        uiFillInTheBlankTextField.text = ""
+        uiFIllInTheBlankAnswers.text = ""
         
         uiButtonSubmit.setTitle( "Submit Answer", for: .normal )
         
@@ -228,22 +334,66 @@ class ViewController: UIViewController {
     }
     func checkAnswers() {
         
+        let qa = questions[ questionIndex ]
+        
+        if qa["isFillInTheBlank"] == BoolString.YES.rawValue {
+            checkAnswerFillInTheBlank( qa )
+            return
+        }
+
         let myAnswers = buildAnswers()
-        let correctAnswers = questions[questionIndex]["correctAnswers"]!
+        let correctAnswers = qa["correctAnswers"]!
         
-        if myAnswers == correctAnswers {
-            updateStats( correct: true )
-        }
-        else {
-            updateStats( correct: false )
+        updateStats(correct: myAnswers == correctAnswers)
+        if myAnswers != correctAnswers {
+            missedIndices.append( questionIndex )
         }
         
-        uiExplanation.text      = "\(questions[questionIndex]["explanation"]!)"
+        uiExplanation.text      = "\(qa["explanation"]!)"
         uiExplanation.isHidden  = false
         
         uiButtonSubmit.setTitle( "Next Question", for: .normal )
 
         markAnswers( myAnswers:myAnswers, correctAnswers:correctAnswers )
+    }
+    func checkAnswerFillInTheBlank( _ qa: [String: String] ) {
+        
+        let fillAnswers = assembleFillAnswers( qa )
+        
+        let userAnswer = uiFillInTheBlankTextField.text ?? ""
+        
+        var isCorrect = false
+        for answer in fillAnswers {
+            if answer == userAnswer {
+                isCorrect = true
+                break
+            }
+        }
+        
+        var answers = fillAnswers.joined(separator: "\n")
+        if answers.isEmpty { answers = "?" }
+        
+        uiFIllInTheBlankAnswers.textColor = isCorrect ? correctTextColor : incorrectTextColor
+        uiFIllInTheBlankAnswers.text = answers
+
+        updateStats(correct: isCorrect)
+        if !isCorrect {
+            missedIndices.append( questionIndex )
+        }
+
+        uiButtonSubmit.setTitle( "Next Question", for: .normal )
+    }
+    func assembleFillAnswers( _ qa: [String: String] ) -> [String] {
+        var fillAnswers = [String]()
+        
+        let numFillAnswers = Int( qa["numFillAnswers"] ?? "0" ) ?? 0
+        if numFillAnswers > 0 { fillAnswers.append( qa["fillAnswerA"] ?? "?" )}
+        if numFillAnswers > 1 { fillAnswers.append( qa["fillAnswerB"] ?? "?" )}
+        if numFillAnswers > 2 { fillAnswers.append( qa["fillAnswerC"] ?? "?" )}
+        if numFillAnswers > 3 { fillAnswers.append( qa["fillAnswerD"] ?? "?" )}
+        if numFillAnswers > 4 { fillAnswers.append( qa["fillAnswerE"] ?? "?" )}
+
+        return fillAnswers
     }
     func updateStats( correct: Bool ) {
         
@@ -285,13 +435,13 @@ class ViewController: UIViewController {
     }
     func buildAnswers() -> String {
         
-        var result = ""
+        var results = ""
         for i in 0 ..< Int( questions[questionIndex]["numChoices"]! )! {
             if switchArray[i].isOn {
-                result += choiceLetters[ i ]
+                results += choiceLetters[ i ]
             }
         }
-        return result
+        return results
     }
 
     override func didReceiveMemoryWarning() {

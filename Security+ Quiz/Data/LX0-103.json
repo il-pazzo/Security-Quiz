@@ -1,0 +1,1361 @@
+{
+   "set_name": "LX103",
+   "questions": [
+{
+	"question_number": 1
+	,"question": "Which SysV init configuration file should be modified to disable the ctrl-alt-delete key combination?"
+	,"choices": [
+		"/etc/keys"
+		,"/proc/keys"
+		,"/etc/inittab"
+		,"/proc/inittab"
+		,"/etc/reboot"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 2
+	,"question": "During a system boot cycle, what program is executed after the BIOS completes its tasks?"
+	,"choices": [
+		"The bootloader"
+		,"The inetd program"
+		,"The init program"
+		,"The kernel"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 3
+	,"question": "Which run levels should never be declared as the default run level when using SysV init? (Choose TWO correct answers.)"
+	,"choices": [
+		"0"
+		,"1"
+		,"3"
+		,"5"
+		,"6"
+	]
+	,"correct_answers": "AE"
+}
+,{
+	"question_number": 4
+	,"question": "Which of the following statements is correct when talking about /proc/?"
+	,"choices": [
+		"All changes to files in /proc/ are stored in /etc/proc.d/ and restored on reboot."
+		,"All files within /proc/ are read-only and their contents cannot be changed."
+		,"All changes to files in /proc/ are immediately recognized by the kernel."
+		,"All files within /proc/ are only readable by the root user."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 5
+	,"question": "What of the following statements are true regarding /dev/ when using udev? (Choose TWO correct answers.)"
+	,"choices": [
+		"Entries for all possible devices get created on boot even if those devices are not connected."
+		,"Additional rules for udev can be created by adding them to /etc/udev/rules.d/."
+		,"When using udev, it is not possible to create block or character devices in /dev/ using mknod."
+		,"The /dev/ directory is a filesystem of type tmpfs and is mounted by udev during system startup."
+		,"The content of /dev/ is stored in /etc/udev/dev and is restored during system startup."
+	]
+	,"correct_answers": "BD"
+}
+,{
+	"question_number": 6
+	,"question": "Which of the following information is stored within the BIOS? (Choose TWO correct answers.)"
+	,"choices": [
+		"Boot device order"
+		,"Linux kernel version"
+		,"Timezone"
+		,"Hardware configuration"
+		,"The system's hostname"
+	]
+	,"correct_answers": "AD"
+}
+,{
+	"question_number": 7
+	,"question": "Which of the following commands reboots the system when using SysV init? (Choose TWO correct answers.)"
+	,"choices": [
+		"shutdown -r now"
+		,"shutdown -r \\\"rebooting\\\""
+		,"telinit 6"
+		,"telinit 0"
+		,"shutdown -k now \\\"rebooting\\\""
+	]
+	,"correct_answers": "AC"
+}
+,{
+	"question_number": 8
+	,"question": "Which of the following are init systems used within Linux systems? (Choose THREE correct answers.)"
+	,"choices": [
+		"startd"
+		,"systemd"
+		,"Upstart"
+		,"SysInit"
+		,"SysV init"
+	]
+	,"correct_answers": "BCE"
+}
+,{
+	"question_number": 9
+	,"question": "Which file in the /proc filesystem lists parameters passed from the bootloader to the kernel? (Specify the file name only without any path.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"cmdline"
+		,"/proc/cmdline"
+	]
+}
+,{
+	"question_number": 10
+	,"question": "What information can the lspci command display about the system hardware? (Choose THREE correct answers.)"
+	,"choices": [
+		"Device IRQ settings"
+		,"PCI bus speed"
+		,"System battery type"
+		,"Device vendor identification"
+		,"Ethernet MAC address"
+	]
+	,"correct_answers": "ABD"
+}
+,{
+	"question_number": 11
+	,"question": "Which of the following commands brings a system running SysV init into a state in which it is safe to perform maintenance tasks? (Choose TWO correct answers.)"
+	,"choices": [
+		"shutdown -R 1 now"
+		,"shutdown -single now"
+		,"init 1"
+		,"telinit 1"
+		,"runlevel 1"
+	]
+	,"correct_answers": "CD"
+}
+,{
+	"question_number": 12
+	,"question": "What is the first program that is usually started, at boot time, by the Linux kernel when using SysV init?"
+	,"choices": [
+		"/lib/init.so"
+		,"/sbin/init"
+		,"/etc/rc.d/rcinit"
+		,"/proc/sys/kernel/init"
+		,"/boot/init"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 13
+	,"question": "Which command will display messages from the kernel that were output during the normal boot sequence?"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"dmesg"
+		,"/bin/dmesg"
+	]
+}
+,{
+	"question_number": 14
+	,"question": "Which of the following commands will write a message to the terminals of all logged in users?"
+	,"choices": [
+		"bcast"
+		,"mesg"
+		,"print"
+		,"wall"
+		,"yell"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 15
+	,"question": "Which of the following kernel parameters instructs the kernel to suppress most boot messages?"
+	,"choices": [
+		"silent"
+		,"verbose=0"
+		,"nomesg"
+		,"quiet"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 16
+	,"question": "Which of the following options for the kernel's command line changes the systemd boot target to rescue.target instead of the default target?"
+	,"choices": [
+		"systemd.target=rescue.target"
+		,"systemd.runlevel=rescue.target"
+		,"systemd.service=rescue.target"
+		,"systemd.default=rescue.target"
+		,"systemd.unit=rescue.target"
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 17
+	,"question": "After modifying GNU GRUB's configuration file, which command must be run for the changes to take effect?"
+	,"choices": [
+		"kill -HUP $(pidof grub)"
+		,"grub-install"
+		,"grub"
+		,"No action is required"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 18
+	,"question": "Which of the following commands is used to update the list of available packages when using dpkg based package management?"
+	,"choices": [
+		"apt-get update"
+		,"apt-get upgrade"
+		,"apt-cache update"
+		,"apt-get refresh"
+		,"apt-cache upgrade"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 19
+	,"question": "Which of the following commands lists the dependencies of a given dpkg package?"
+	,"choices": [
+		"apt-cache depends-on package"
+		,"apt-cache dependencies package"
+		,"apt-cache depends package"
+		,"apt-cache requires package"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 20
+	,"question": "Which of the following options is used in a GRUB Legacy configuration file to define the amount of time that the GRUB menu will be shown to the user?"
+	,"choices": [
+		"hidemenu"
+		,"splash"
+		,"timeout"
+		,"showmenu"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 21
+	,"question": "What can the Logical Volume Manager (LVM) be used for? (Choose THREE correct answers.)"
+	,"choices": [
+		"To create RAID 9 arrays."
+		,"To dynamically change the size of logical volumes."
+		,"To encrypt logical volumes."
+		,"To create snapshots."
+		,"To dynamically create or delete logical volumes."
+	]
+	,"correct_answers": "BDE"
+}
+,{
+	"question_number": 22
+	,"question": "Which of the following commands updates the linker cache of shared libraries?"
+	,"choices": [
+		"mkcache"
+		,"soconfig"
+		,"mkldconfig"
+		,"lddconfig"
+		,"ldconfig"
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 23
+	,"question": "Which of the following commands lists all currently installed packages when using RPM package management?"
+	,"choices": [
+		"yum --query --all"
+		,"yum --list --installed"
+		,"rpm --query --all"
+		,"rpm --list–installed"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 24
+	,"question": "Which of the following commands can be used to download the RPM package kernel without installing it?"
+	,"choices": [
+		"yum download --no-install kernel"
+		,"yumdownloader kernel"
+		,"rpm --download --package kernel"
+		,"rpmdownload kernel"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 25
+	,"question": "When using rpm --verify to check files created during the installation of RPM packages, which of the following information is taken into consideration? (Choose THREE correct answers.)"
+	,"choices": [
+		"Timestamps"
+		,"MD5 checksums"
+		,"Inodes"
+		,"File sizes"
+		,"GnuPG signatures"
+	]
+	,"correct_answers": "ABD"
+}
+,{
+	"question_number": 26
+	,"question": "Which of the following is correct when talking about mount points?"
+	,"choices": [
+		"Every existing directory can be used as a mount point."
+		,"Only empty directories can be used as a mount point."
+		,"Directories need to have the SetUID flag set to be used as a mount point."
+		,"Files within a directory are deleted when the directory is used as a mount point."
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 27
+	,"question": "Which function key is used to start Safe Mode in Windows NT?"
+	,"choices": [
+		"F10"
+		,"F8"
+		,"F6"
+		,"Windows NT does not support Safe Mode"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 28
+	,"question": "Which of the following environment variables overrides or extends the list of directories holding shared libraries?"
+	,"choices": [
+		"LD_LOAD_PATH"
+		,"LD_LIB_PATH"
+		,"LD_LIBRARY_PATH"
+		,"LD_SHARE_PATH"
+		,"LD_RUN_PATH"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 29
+	,"question": "Which world-writable directory should be placed on a separate partition in order to prevent users from being able to fill up the / filesystem? (Specify the full path to the directory.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"/tmp"
+		,"tmp"
+		,"/var/tmp"
+		,"/tmp/"
+		,"/var/tmp/"
+	]
+}
+,{
+	"question_number": 30
+	,"question": "Which RPM command will output the name of the package which supplied the file /etc/exports?"
+	,"choices": [
+		"rpm -F /etc/exports"
+		,"rpm -qf /etc/exports"
+		,"rpm -Kl /etc/exports"
+		,"rpm -qp /etc/exports"
+		,"rpm -qi /etc/exports"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 31
+	,"question": "In which directory must definition files be placed to add additional repositories to yum?"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"/etc/yum.repos.d"
+		,"/etc/yum.repos.d/"
+		,"yum.repos.d"
+		,"yum.repos.d/"
+	]
+}
+,{
+	"question_number": 32
+	,"question": "What is the name of the main configuration file for GNU GRUB? (Specify the file name only without any path.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"menu.lst"
+		,"grub.conf"
+		,"grub.cfg"
+	]
+}
+,{
+	"question_number": 33
+	,"question": "When removing a package, which of the following dpkg options will completely remove the files including configuration files?"
+	,"choices": [
+		"--clean"
+		,"--delete"
+		,"--purge"
+		,"–remove"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 34
+	,"question": "Which file should be edited to select the network locations from which Debian installation package files are loaded?"
+	,"choices": [
+		"/etc/dpkg/dpkg.cfg"
+		,"/etc/apt/apt.conf"
+		,"/etc/apt/apt.conf.d"
+		,"/etc/apt/sources.list"
+		,"/etc/dpkg/dselect.cfg"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 35
+	,"question": "Which option to the yum command will update the entire system? (Specify ONLY the option name without any additional parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"update"
+		,"upgrade"
+	]
+}
+,{
+	"question_number": 36
+	,"question": "Which command will disable swapping on a device? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"swapoff"
+		,"/sbin/swapoff"
+	]
+}
+,{
+	"question_number": 37
+	,"question": "Which Debian package management tool asks the configuration questions for a specific already installed package just as if the package were being installed for the first time? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"dpkg-reconfigure"
+	]
+}
+,{
+	"question_number": 38
+	,"question": "Which of the following commands overwrites the bootloader located on /dev/sda without overwriting the partition table or any data following it?"
+	,"choices": [
+		"dd if=/dev/zero of=/dev/sda bs=512"
+		,"dd if=/dev/zero of=/dev/sda bs=512 count=1"
+		,"dd if=/dev/zero of=/dev/sda bs=440 count=1"
+		,"dd if=/dev/zero of=/dev/sda bs=440"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 39
+	,"question": "Which of the following commands can be used to create a USB storage media from a disk image?"
+	,"choices": [
+		"gdisk"
+		,"dd"
+		,"cc"
+		,"fdisk"
+		,"mount"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 40
+	,"question": "In Bash, inserting 1>&2 after a command redirects"
+	,"choices": [
+		"standard error to standard input."
+		,"standard input to standard error."
+		,"standard output to standard error."
+		,"standard error to standard output."
+		,"standard output to standard input."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 41
+	,"question": "What command will generate a list of user names from /etc/passwd along with their login shell?"
+	,"choices": [
+		"column -s : 1,7 /etc/passwd"
+		,"chop -c 1,7 /etc/passwd"
+		,"colrm 1,7 /etc/passwd"
+		,"cut -d: -f1,7 /etc/passwd"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 42
+	,"question": "In a nested directory structure, which find command line option would be used to restrict the command to searching down a particular number of subdirectories?"
+	,"choices": [
+		"-dirmax"
+		,"-maxdepth"
+		,"-maxlevels"
+		,"-n"
+		,"-s"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 43
+	,"question": "Which of the following statements is correct regarding the command foo 1> bar?"
+	,"choices": [
+		"The stdout from the command foo is appended to the file bar."
+		,"The stdout from the command foo overwrites the file bar."
+		,"The command foo receives its stdin from the file bar."
+		,"The command foo receives its stdin from the stdout of the command bar."
+		,"The stderr from the command foo is saved to the file bar."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 44
+	,"question": "Which of the following commands kills the process with the PID 123 but allows the process to \"clean up\" before exiting?"
+	,"choices": [
+		"kill -PIPE 123"
+		,"kill -KILL 123"
+		,"kill -STOP 123"
+		,"kill -TERM 123"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 45
+	,"question": "Which signal is missing from the following command that is commonly used to instruct a daemon to reinitialize itself, including reading configuration files? \\n\\n killall -s _______ daemon"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"HUP"
+		,"SIGHUP"
+		,"1"
+	]
+}
+,{
+	"question_number": 46
+	,"question": "What is the maximum niceness value that a regular user can assign to a process with the nice command when executing a new process?"
+	,"choices": [
+		"9"
+		,"19"
+		,"49"
+		,"99"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 47
+	,"question": "Immediately after deleting 3 lines of text in vi and moving the cursor to a different line, which single character command will insert the deleted content below the current line?"
+	,"choices": [
+		"i (lowercase)"
+		,"P (uppercase)"
+		,"p (lowercase)"
+		,"U (uppercase)"
+		,"u (lowercase)"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 48
+	,"question": "A user accidentally created the subdirectory \\dir in his home directory. Which of the following commands will remove that directory?"
+	,"choices": [
+		"rmdir '~/\\dir'"
+		,"rmdir \\\"~/\\dir\\\""
+		,"rmdir ~/'dir'"
+		,"rmdir ~/\\dir"
+		,"rmdir ~/\\\\dir"
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 49
+	,"question": "In compliance with the FHS, in which of the directories are man pages found?"
+	,"choices": [
+		"/usr/share/man"
+		,"/opt/man"
+		,"/usr/doc/"
+		,"/var/pkg/man"
+		,"/var/man"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 50
+	,"question": "Which of the following commands will send output from the program myapp to both standard output (stdout) and the file file1.log?"
+	,"choices": [
+		"cat < myapp | cat > file1.log"
+		,"myapp 0>&1 | cat > file1.log"
+		,"myapp | cat > file1.log"
+		,"myapp | tee file1.log"
+		,"tee myapp file1.log"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 51
+	,"question": "What is the purpose of the Bash built-in export command?"
+	,"choices": [
+		"It allows disks to be mounted remotely."
+		,"It runs a command as a process in a subshell."
+		,"It makes the command history available to subshells."
+		,"It sets up environment variables for applications."
+		,"It shares NFS partitions for use by other systems on the network."
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 52
+	,"question": "What is the output of the following command? echo \"Hello World\" | tr -d aieou"
+	,"choices": [
+		"Hello World"
+		,"eoo"
+		,"Hll Wrld"
+		,"eoo Hll Wrld"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 53
+	,"question": "Which of the following characters can be combined with a separator string in order to read from the current input source until the separator string, which is on a separate line and without any trailing spaces, is reached?"
+	,"choices": [
+		"<<"
+		,"<|"
+		,"!<"
+		,"&<"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 54
+	,"question": "Which of the following commands will NOT update the modify timestamp on the file /tmp/myfile.txt?"
+	,"choices": [
+		"file /tmp/myfile.txt"
+		,"echo \\\"Hello\\\" >/tmp/myfile.txt"
+		,"sed -ie \\\"s/1/2/\\\" /tmp/myfile.txt"
+		,"echo -n \\\"Hello\\\" >>/tmp/myfile.txt"
+		,"touch /tmp/myfile.txt"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 55
+	,"question": "What is the default nice level when a process is started using the nice command?"
+	,"choices": [
+		"-10"
+		,"10"
+		,"20"
+		,"0"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 56
+	,"question": "What is the default action of the split command on an input file?"
+	,"choices": [
+		"It will break the file into new files of 1,024 byte pieces each."
+		,"It will break the file into new files of 1,000 line pieces each."
+		,"It will break the file into new files of 1,024 kilobyte pieces each."
+		,"It will break the file into new files that are no more than 5% of the size of the original file."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 57
+	,"question": "What is the difference between the i and a commands of the vi editor?"
+	,"choices": [
+		"i (interactive) requires the user to explicitly switch between vi modes whereas a (automatic) switches modes automatically."
+		,"i (insert) inserts text before the current cursor position whereas a (append) inserts text after the cursor."
+		,"i (independent rows) starts every new line at the first character whereas a (aligned rows) keeps the indentation of the previous line."
+		,"i (interrupt) temporarily suspends editing of a file to the background whereas a (abort) terminates editing."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 58
+	,"question": "Which command displays a list of all background tasks running in the current shell? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"jobs"
+	]
+}
+,{
+	"question_number": 59
+	,"question": "Which of the following commands moves and resumes in the background the last stopped shell job?"
+	,"choices": [
+		"run"
+		,"bg"
+		,"fg"
+		,"back"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 60
+	,"question": "What is the effect of the egrep command when the -v option is used?"
+	,"choices": [
+		"It enables color to highlight matching parts."
+		,"It only outputs non-matching lines."
+		,"It shows the command's version information."
+		,"It changes the output order showing the last matching line first."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 61
+	,"question": "What does the ? symbol within regular expressions represent?"
+	,"choices": [
+		"Match the preceding qualifier one or more times."
+		,"Match the preceding qualifier zero or more times."
+		,"Match the preceding qualifier zero or one times."
+		,"Match a literal ? character."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 62
+	,"question": "In the vi editor, how can commands such as moving the cursor or copying lines into the buffer be issued multiple times or applied to multiple rows?"
+	,"choices": [
+		"By using the command :repeat followed by the number and the command."
+		,"By specifying the number right in front of a command such as 4l or 2yj."
+		,"By selecting all affected lines using the shift and cursor keys before applying the command."
+		,"By issuing a command such as :set repetition=4 which repeats every subsequent command 4 times."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 63
+	,"question": "Which of the following files, located in the user home directory, is used to store the Bash history?"
+	,"choices": [
+		".bash_history"
+		,".bash_histfile"
+		,".history"
+		,".bashrc_history"
+		,".history_bash"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 64
+	,"question": "Which Bash environment variable defines in which file the user history is stored when exiting a Bash process? (Specify ONLY the variable name.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"HISTFILE"
+	]
+}
+,{
+	"question_number": 65
+	,"question": "Which of the following commands displays the contents of a gzip compressed tar archive?"
+	,"choices": [
+		"gzip archive.tgz | tar xvf"
+		,"tar ztf archive.tgz"
+		,"gzip -d archive.tgz | tar tvf"
+		,"tar cf archive.tgz"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 66
+	,"question": "Which grep command will print only the lines that do not end with a / in the file foo?"
+	,"choices": [
+		"grep '/$' foo"
+		,"grep '/#' foo"
+		,"grep -v '/$' foo"
+		,"grep -v '/#' foo"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 67
+	,"question": "Which of the following commands is used to change options and positional parameters for a running Bash?"
+	,"choices": [
+		"history"
+		,"set"
+		,"bashconf"
+		,"setsh"
+		,"envsetup"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 68
+	,"question": "Which of the following commands replaces each occurrence of 'bob' in the file letter with 'Bob' and writes the result to the file newletter?"
+	,"choices": [
+		"sed '/bob/Bob' letter > newletter"
+		,"sed s/bob/Bob/ letter < newletter"
+		,"sed 's/bob/Bob' letter > newletter"
+		,"sed 's/bob/Bob/g' letter > newletter"
+		,"sed 's/bob, Bob/' letter > newletter"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 69
+	,"question": "From a Bash shell, which of the following commands directly executes the instruction from the file /usr/local/bin/runme.sh without starting a subshell? (Please select TWO answers.)"
+	,"choices": [
+		"source /usr/local/bin/runme.sh"
+		,". /usr/local/bin/runme.sh"
+		,"/bin/bash /usr/local/bin/runme.sh"
+		,"/usr/local/bin/runme.sh"
+		,"run /usr/local/bin/runme.sh"
+	]
+	,"correct_answers": "AB"
+}
+,{
+	"question_number": 70
+	,"question": "Regarding the command: nice -5 /usr/bin/prog Which of the following statements is correct?"
+	,"choices": [
+		"/usr/bin/prog is executed with a nice level of -5."
+		,"/usr/bin/prog is executed with a nice level of 5."
+		,"/usr/bin/prog is executed with a priority of -5."
+		,"/usr/bin/prog is executed with a priority of 5."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 71
+	,"question": "Which shell command is used to continue background execution of a suspended command?"
+	,"choices": [
+		"&"
+		,"bg"
+		,"cont"
+		,"exec"
+		,":&"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 72
+	,"question": "Which of the following shell redirections will write standard output and standard error output to a file named filename?"
+	,"choices": [
+		"2>&1 >filename"
+		,">filename 2>&1"
+		,"1>&2>filename"
+		,">>filename"
+		,"1&2>filename"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 73
+	,"question": "In the vi editor, which of the following commands will copy the current line into the vi buffer?"
+	,"choices": [
+		"c"
+		,"cc"
+		,"1c"
+		,"yy"
+		,"1y"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 74
+	,"question": "Which of the following sequences in the vi editor saves the opened document and exits the editor? (Choose TWO correct answers.)"
+	,"choices": [
+		"esc ZZ"
+		,"ctrl :w!"
+		,"esc zz"
+		,"esc :wq!"
+		,"ctrl XX"
+	]
+	,"correct_answers": "AD"
+}
+,{
+	"question_number": 75
+	,"question": "When starting a program with the nice command without any additional parameters, which nice level is set for the resulting process?"
+	,"choices": [
+		"-10"
+		,"0"
+		,"10"
+		,"20"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 76
+	,"question": "Which of the following commands will reduce all consecutive spaces down to a single space?"
+	,"choices": [
+		"tr '\\s' ' ' < a.txt > b.txt"
+		,"tr -c ' ' < a.txt > b.txt"
+		,"tr -d ' ' < a.txt > b.txt"
+		,"tr -r ' ' '\\n' < a.txt > b.txt"
+		,"tr -s ' ' < a.txt > b.txt"
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 77
+	,"question": "Which character, added to the end of a command, runs that command in the background as a child process of the current shell?"
+	,"choices": [
+		"!"
+		,"+"
+		,"&"
+		,"%"
+		,"#"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 78
+	,"question": "Which of the following commands will print the last 10 lines of a text file to the standard output?"
+	,"choices": [
+		"cat -n 10 filename"
+		,"dump -n 10 filename"
+		,"head -n 10 filename"
+		,"tail -n 10 filename"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 79
+	,"question": "Which of the following commands prints a list of usernames (first column) and their primary group (fourth column) from the /etc/passwd file?"
+	,"choices": [
+		"fmt -f 1,4 /etc/passwd"
+		,"split -c 1,4 /etc/passwd"
+		,"cut -d : -f 1,4 /etc/passwd"
+		,"paste -f 1,4 /etc/passwd"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 80
+	,"question": "Which of the following signals is sent to a process when the key combination CTRL+C is pressed on the keyboard?"
+	,"choices": [
+		"SIGTERM"
+		,"SIGINT"
+		,"SIGSTOP"
+		,"SIGKILL"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 81
+	,"question": "What happens after issuing the command vi without any additional parameters?"
+	,"choices": [
+		"vi starts and loads the last file used and moves the cursor to the position where vi was when it last exited."
+		,"vi starts and requires the user to explicitly either create a new or load an existing file."
+		,"vi exits with an error message as it cannot be invoked without a file name to operate on."
+		,"vi starts in command mode and opens a new empty file."
+		,"vi starts and opens a new file which is filled with the content of the vi buffer if the buffer contains text."
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 82
+	,"question": "Which of the following command sets the Bash variable named TEST with the content FOO?"
+	,"choices": [
+		"set TEST=\\\"FOO\\\""
+		,"TEST = \\\"FOO\\\""
+		,"var TEST=\\\"FOO\\\""
+		,"TEST=\\\"FOO\\\""
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 83
+	,"question": "Which variable defines the directories in which a Bash shell searches for executable commands?"
+	,"choices": [
+		"BASHEXEC"
+		,"BASHRC"
+		,"PATH"
+		,"EXECPATH"
+		,"PATHRC"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 84
+	,"question": "Which of the following commands determines the type of a file by using a definition database file which contains information about all common file types?"
+	,"choices": [
+		"magic"
+		,"type"
+		,"file"
+		,"pmagic"
+		,"hash"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 85
+	,"question": "Which command is used in a Linux environment to create a new directory? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"mkdir"
+		,"/usr/bin/mkdir"
+	]
+}
+,{
+	"question_number": 86
+	,"question": "Which of the following commands prints all files and directories within the /tmp directory or its subdirectories which are also owned by the user root? (Choose TWO correct answers.)"
+	,"choices": [
+		"find /tmp -uid root -print"
+		,"find -path /tmp -uid root"
+		,"find /tmp -user root -print"
+		,"find /tmp -user root"
+		,"find -path /tmp -user root–print"
+	]
+	,"correct_answers": "CD"
+}
+,{
+	"question_number": 87
+	,"question": "When running the command sed -e \"s/a/b/\" /tmp/file >/tmp/file While /tmp/file contains data, why is /tmp/file empty afterwards?"
+	,"choices": [
+		"The file order is incorrect. The destination file must be mentioned before the command to ensure redirection."
+		,"The command sed did not match anything in that file therefore the output is empty."
+		,"When the shell establishes the redirection it overwrites the target file before the redirected command starts and opens it for reading."
+		,"Redirection for shell commands do not work using the > character. It only works using the | character instead."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 88
+	,"question": "When given the following command line. echo \"foo bar\" | tee bar | cat Which of the following output is created?"
+	,"choices": [
+		"cat"
+		,"foo bar"
+		,"tee bar"
+		,"bar"
+		,"foo"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 89
+	,"question": "Which of the following commands can be used to determine how long the system has been running? (Choose TWO correct answers.)"
+	,"choices": [
+		"uptime"
+		,"up"
+		,"top"
+		,"uname -u"
+		,"time–up"
+	]
+	,"correct_answers": "AC"
+}
+,{
+	"question_number": 90
+	,"question": "Which of the following are valid stream redirection operators within Bash? (Choose THREE correct answers.)"
+	,"choices": [
+		"<"
+		,"<<<"
+		,">"
+		,">>>"
+		,"%>"
+	]
+	,"correct_answers": "ABC"
+}
+,{
+	"question_number": 91
+	,"question": "After successfully creating a hard link called bar to the ordinary file foo, foo is deleted from the filesystem. Which of the following describes the resulting situation?"
+	,"choices": [
+		"foo and bar would both be removed."
+		,"foo would be removed while bar would remain accessible."
+		,"foo would be removed. bar would still exist but would be unusable."
+		,"Both foo and bar would remain accessible."
+		,"The user is prompted whether bar should be removed, too."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 92
+	,"question": "After moving data to a new filesystem, how can the former path of the data be kept intact in order to avoid reconfiguration of existing applications? (Choose TWO correct answers.)"
+	,"choices": [
+		"By creating an ACL redirection from the old to the new path of the data."
+		,"By creating a hard link from the old to the new path of the data."
+		,"By creating a symbolic link from the old to the new path of the data."
+		,"By running the command touch on the old path."
+		,"By mounting the new filesystem on the original path of the data."
+	]
+	,"correct_answers": "CE"
+}
+,{
+	"question_number": 93
+	,"question": "Which of the following commands changes the ownership of file.txt to the user dan and the group staff?"
+	,"choices": [
+		"chown dan/staff file.txt"
+		,"chown dan:staff file.txt"
+		,"chown -u dan -g staff file.txt"
+		,"chown dan -g staff file.txt"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 94
+	,"question": "Which of the following commands makes /bin/foo executable by everyone but writable only by its owner?"
+	,"choices": [
+		"chmod u=rwx,go=rx /bin/foo"
+		,"chmod o+rwx,a+rx /bin/foo"
+		,"chmod 577 /bin/foo"
+		,"chmod 775 /bin/foo"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 95
+	,"question": "Which of the following commands can be used to search for the executable file foo when it has been placed in a directory not included in $PATH?"
+	,"choices": [
+		"apropos"
+		,"which"
+		,"find"
+		,"query"
+		,"whereis"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 96
+	,"question": "What does the command mount -a do?"
+	,"choices": [
+		"It ensures that all file systems listed with the option noauto in /etc/fstab are mounted."
+		,"It shows all mounted file systems that have been automatically mounted."
+		,"It opens an editor with root privileges and loads /etc/fstab for editing."
+		,"It ensures that all file systems listed with the option auto in /etc/fstab are mounted."
+		,"It ensures that all file systems listed in /etc/fstab are mounted regardless of their options."
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 97
+	,"question": "Which of the following settings for umask ensures that new files have the default permissions -rwr----- ?"
+	,"choices": [
+		"0017"
+		,"0640"
+		,"0038"
+		,"0027"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 98
+	,"question": "Which of the following is the device file name for the second partition on the only SCSI drive?"
+	,"choices": [
+		"/dev/hda1"
+		,"/dev/sda2"
+		,"/dev/sd0a2"
+		,"/dev/sd1p2"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 99
+	,"question": "In order to display all currently mounted filesystems, which of the following commands could be used? (Choose TWO correct answers.)"
+	,"choices": [
+		"cat /proc/self/mounts"
+		,"free"
+		,"mount"
+		,"lsmounts"
+		,"cat /proc/filesystems"
+	]
+	,"correct_answers": "AC"
+}
+,{
+	"question_number": 100
+	,"question": "Which of the following commands can be used to locate programs and their corresponding man pages and configuration files?"
+	,"choices": [
+		"dirname"
+		,"which"
+		,"basename"
+		,"query"
+		,"whereis"
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 101
+	,"question": "Which of the following commands changes the number of days before the ext3 filesystem on /dev/sda1 has to run through a full filesystem check while booting?"
+	,"choices": [
+		"tune2fs -d 200 /dev/sda1"
+		,"tune2fs -c 200 /dev/sda1"
+		,"tune2fs -i 200 /dev/sda1"
+		,"tune2fs -n 200 /dev/sda1"
+		,"tune2fs --days 200 /dev/sda1"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 102
+	,"question": "Which type of filesystem is created by mkfs when it is executed with the block device name only and without any additional parameters?"
+	,"choices": [
+		"ext2"
+		,"ext3"
+		,"ext4"
+		,"XFS"
+		,"VFAT"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 103
+	,"question": "How many fields are in a syntactically correct line of /etc/fstab?"
+	,"choices": [
+		"3"
+		,"4"
+		,"5"
+		,"6"
+		,"7"
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 104
+	,"question": "Which command is used to create and initialize the files used to store quota information? (Specify ONLY the command without any path or parameters.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"quotacheck"
+	]
+}
+,{
+	"question_number": 105
+	,"question": "Which of the following file permissions belong to a symbolic link?"
+	,"choices": [
+		"-rwxrwxrwx"
+		,"+rwxrwxrwx"
+		,"lrwxrwxrwx"
+		,"srwxrwxrwx"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 106
+	,"question": "Creating a hard link to an ordinary file returns an error. What could be the reason for this?"
+	,"choices": [
+		"The source file is hidden."
+		,"The source file is read-only."
+		,"The source file is a shell script."
+		,"The source file is already a hard link."
+		,"The source and the target are on different filesystems."
+	]
+	,"correct_answers": "E"
+}
+,{
+	"question_number": 107
+	,"question": "Which of the following commands creates an ext3 filesystem on /dev/sdb1? (Choose TWO correct answers.)"
+	,"choices": [
+		"/sbin/mke2fs -j /dev/sdb1"
+		,"/sbin/mkfs -t ext3 /dev/sdb1"
+		,"/sbin/mkfs -c ext3 /dev/sdb1"
+		,"/sbin/mke3fs -j /dev/sdb1"
+	]
+	,"correct_answers": "AB"
+}
+,{
+	"question_number": 108
+	,"question": "Which of the following commands will change the quota for a specific user?"
+	,"choices": [
+		"edquota"
+		,"repquota"
+		,"quota -e"
+		,"quota"
+	]
+	,"correct_answers": "A"
+}
+,{
+	"question_number": 109
+	,"question": "Which utility would be used to change how often a filesystem check is performed on an ext2 filesystem without losing any data stored on that filesystem?"
+	,"choices": [
+		"mod2fs"
+		,"fsck"
+		,"tune2fs"
+		,"mke2fs"
+		,"fixe2fs"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 110
+	,"question": "Which of the following Linux filesystems preallocates a fixed number of inodes at the filesystem's make/creation time and does NOT generate them as needed? (Choose TWO correct answers.)"
+	,"choices": [
+		"ext3"
+		,"JFS"
+		,"ext2"
+		,"XFS"
+		,"procfs"
+	]
+	,"correct_answers": "AC"
+}
+,{
+	"question_number": 111
+	,"question": "What is the purpose of the Filesystem Hierarchy Standard?"
+	,"choices": [
+		"It is a security model used to ensure files are organized according to their permissions and accessibility."
+		,"It provides unified tools to create, maintain and manage multiple filesystems in a common way."
+		,"It defines a common internal structure of inodes for all compliant filesystems."
+		,"It is a distribution neutral description of locations of files and directories."
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 112
+	,"question": "Which umask value will result in the default access permissions of 600 (rw-------) for files and 700 (rwx------) for directories? (Specify only the numerical umask value.)"
+	,"is_fill_in_the_blank": true
+	,"fill_answers": [
+		"0077"
+		,"077"
+	]
+}
+,{
+	"question_number": 113
+	,"question": "Instead of supplying an explicit device in /etc/fstab for mounting, what other options may be used to identify the intended partition? (Choose TWO correct answers.)"
+	,"choices": [
+		"FIND"
+		,"ID"
+		,"LABEL"
+		,"NAME"
+		,"UUID"
+	]
+	,"correct_answers": "CE"
+}
+,{
+	"question_number": 114
+	,"question": "After running the command umount /mnt, the following error message is displayed: umount: /mnt: device is busy. What is a common reason for this message?"
+	,"choices": [
+		"The kernel has not finished flushing disk writes to the mounted device."
+		,"A user has a file open in the /mnt directory."
+		,"Another file system still contains a symlink to a file inside /mnt."
+		,"The files in /mnt have been scanned and added to the locate database."
+		,"The kernel thinks that a process is about to open a file in /mnt for reading."
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 115
+	,"question": "What does the command mount -a do?"
+	,"choices": [
+		"It mounts all available filesystems onto the current directory."
+		,"It shows all mounted filesystems."
+		,"It mounts all user mountable filesystems for the current user."
+		,"It mounts all filesystems listed in /etc/fstab which have the option auto set."
+		,"It mounts all filesystems listed in /etc/fstab which have the option noauto set."
+	]
+	,"correct_answers": "D"
+}
+,{
+	"question_number": 116
+	,"question": "Which of the following commands set the sticky bit for the directory /tmp? (Choose TWO correct answers.)"
+	,"choices": [
+		"chmod +s /tmp"
+		,"chmod +t /tmp"
+		,"chmod 1775 /tmp"
+		,"chmod 4775 /tmp"
+		,"chmod 2775 /tmp"
+	]
+	,"correct_answers": "BC"
+}
+,{
+	"question_number": 117
+	,"question": "Which of the following commands can be used to display the inode number of a given file?"
+	,"choices": [
+		"inode"
+		,"ls"
+		,"ln"
+		,"cp"
+	]
+	,"correct_answers": "B"
+}
+,{
+	"question_number": 118
+	,"question": "Which of the following commands shows the definition of a given shell command?"
+	,"choices": [
+		"where"
+		,"stat"
+		,"type"
+		,"case"
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 119
+	,"question": "What do the permissions -rwSr-xr-x mean for a binary file when it is executed as a command?"
+	,"choices": [
+		"The command is SetUID and it will be executed with the effective rights of the owner."
+		,"The command will be executed with the effective rights of the group instead of the owner."
+		,"The execute flag is not set for the owner. Therefore the SetUID flag is ignored."
+		,"The command will be executed with the effective rights of the owner and group."
+	]
+	,"correct_answers": "C"
+}
+,{
+	"question_number": 120
+	,"question": "Which of the following pieces of information of an existing file is changed when a hard link pointing to that file is created?"
+	,"choices": [
+		"File size"
+		,"Modify timestamp"
+		,"Link count"
+		,"Inode number"
+		,"Permissions"
+	]
+	,"correct_answers": "C"
+}
+]}
