@@ -23,8 +23,10 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var uiAllSwitchAnswers: UIStackView!
     @IBOutlet weak var uiAllFillInTheBlankAnswers: UIStackView!
     
+    @IBOutlet weak var uiFillInTheBlankMark     : UILabel!
     @IBOutlet weak var uiFillInTheBlankTextField: UITextField!
-    @IBOutlet weak var uiFIllInTheBlankAnswers  : UILabel!
+    @IBOutlet weak var uiFillInTheBlankAnswers  : UILabel!
+    @IBOutlet weak var uiFillInTheBlankSpacer   : UILabel!
     
     @IBOutlet weak var uiAnswerMarkA: UILabel!
     @IBOutlet weak var uiAnswerMarkB: UILabel!
@@ -60,13 +62,19 @@ class QuizViewController: UIViewController {
     
     var questions = [ [String:String] ]()
     var questionIndex = -1      // index into the actual question being asked
-    var shuffledIndices = [Int]()
-    var missedIndices = [Int]()
+
+    var shuffledIndices = [Int]()   // shuffled indices into questions[]
+    var missedIndices = [Int]()     // which (unshuffled) indices were answered incorrectly?
     var shuffledIndex = -1      // index into shuffledIndices, which names the questionIndex
+    var mixedIndices: [Int]!    // for ANSWER randomization
     var reviewMode: ReviewMode = .Study
     var isShowingQuestion = true
+
+    // user preferences
     var wantsShuffle = true
+    var wantsAnswersRandomized = true
     
+    // statistics
     var numQuestions = 0
     var numCorrect = 0
     
@@ -97,6 +105,7 @@ class QuizViewController: UIViewController {
         initShuffledIndices()
         
         uiStatString.text = ""
+        uiFillInTheBlankSpacer.text = ""
 
         if questions.count > 0 {
             showNextQuestion()
@@ -250,7 +259,8 @@ class QuizViewController: UIViewController {
         uiAllSwitchAnswers.isHidden = false
         uiAllFillInTheBlankAnswers.isHidden = true
 
-        resetChoicesUsing( numChoices: Int( qa["numChoices"]! )! )
+        let numChoices = Int( qa["numChoices"]! )!
+        resetChoicesUsing( numChoices: numChoices )
         
         uiQuestionNumber.text   = "Question \(shuffledIndex + 1) (\(qa["questionNumber"]!))"
         let questionText        = qa["question"]!.replacingOccurrences(of: "\\n", with: "\n")
@@ -258,11 +268,25 @@ class QuizViewController: UIViewController {
 //        uiExplanation.text      = "\(qa["explanation"]!)"
         uiExplanation.isHidden  = true
         
-        uiSwitchALabel.text     = "A. \(qa["choiceA"]!)"
-        uiSwitchBLabel.text     = "B. \(qa["choiceB"]!)"
-        uiSwitchCLabel.text     = "C. \(qa["choiceC"]!)"
-        uiSwitchDLabel.text     = "D. \(qa["choiceD"]!)"
-        uiSwitchELabel.text     = "E. \(qa["choiceE"]!)"
+        let choiceArray = [
+            qa["choiceA"]!,
+            qa["choiceB"]!,
+            qa["choiceC"]!,
+            qa["choiceD"]!,
+            qa["choiceE"]!,
+        ]
+        
+        let answerIndices = Array(0 ..< numChoices)
+        mixedIndices = wantsAnswersRandomized ? answerIndices.shuffled() : answerIndices
+        
+        for (i, ch) in choiceLetters.enumerated() {
+            if choiceArray[i] == "" {
+                switchLabelArray[i].text = ""
+            }
+            else {
+                switchLabelArray[i].text = "\(ch). \(choiceArray[ mixedIndices[i] ])"
+            }
+        }
         
         uiButtonSubmit.setTitle( "Submit Answer", for: .normal )
         
@@ -279,7 +303,8 @@ class QuizViewController: UIViewController {
         uiExplanation.isHidden  = true
         
         uiFillInTheBlankTextField.text = ""
-        uiFIllInTheBlankAnswers.text = ""
+        uiFillInTheBlankAnswers.text = ""
+        uiFillInTheBlankMark.text = ""
         
         uiButtonSubmit.setTitle( "Submit Answer", for: .normal )
         
@@ -348,7 +373,10 @@ class QuizViewController: UIViewController {
         }
 
         let myAnswers = buildAnswers()
-        let correctAnswers = qa["correctAnswers"]!
+        let correctAnswersOriginal = qa["correctAnswers"]!
+        let correctAnswers = wantsAnswersRandomized
+            ? adjustAnswersForRandomization(correctAnswersOriginal)
+            : correctAnswersOriginal
         
         updateStats(correct: myAnswers == correctAnswers)
         if myAnswers != correctAnswers {
@@ -362,6 +390,19 @@ class QuizViewController: UIViewController {
 
         markAnswers( myAnswers:myAnswers, correctAnswers:correctAnswers )
     }
+    func adjustAnswersForRandomization( _ answers: String ) -> String {
+        
+        var mixedAnswers = ""
+        choiceLetters.enumerated().forEach { (tuple) in
+            if answers.contains( tuple.element ) {
+                let newOffset = mixedIndices.firstIndex(of: tuple.offset)!
+                mixedAnswers.append( choiceLetters[newOffset])
+            }
+        }
+        
+        return String(mixedAnswers.sorted())
+    }
+    
     func checkAnswerFillInTheBlank( _ qa: [String: String] ) {
         
         uiFillInTheBlankTextField.resignFirstResponder()
@@ -381,8 +422,9 @@ class QuizViewController: UIViewController {
         var answers = fillAnswers.joined(separator: "\n")
         if answers.isEmpty { answers = "?" }
         
-        uiFIllInTheBlankAnswers.textColor = isCorrect ? correctTextColor : incorrectTextColor
-        uiFIllInTheBlankAnswers.text = answers
+        uiFillInTheBlankMark.text           = isCorrect ? correctAnswerMark : incorrectAnswerMark
+        uiFillInTheBlankAnswers.textColor   = isCorrect ? correctTextColor : incorrectTextColor
+        uiFillInTheBlankAnswers.text        = answers
 
         updateStats(correct: isCorrect)
         if !isCorrect {
