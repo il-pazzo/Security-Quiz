@@ -99,6 +99,7 @@ class QuizViewController: UIViewController {
         }
         
         configureNavigationBar()
+        uiFillInTheBlankTextField.delegate = self
         
         loadMultipleChoiceUIComponentsIntoArrays()
         loadQuestionsFromJsonFile()
@@ -359,8 +360,12 @@ class QuizViewController: UIViewController {
             showNextQuestion()
             return
         }
-
         isShowingQuestion = false
+        
+        if uiFillInTheBlankTextField.isFirstResponder {
+            uiFillInTheBlankTextField.resignFirstResponder()
+        }
+        
         checkAnswers()
     }
     func checkAnswers() {
@@ -405,7 +410,7 @@ class QuizViewController: UIViewController {
     
     func checkAnswerFillInTheBlank( _ qa: [String: String] ) {
         
-        uiFillInTheBlankTextField.resignFirstResponder()
+//        uiFillInTheBlankTextField.resignFirstResponder()
         
         let fillAnswers = assembleFillAnswers( qa )
         
@@ -505,8 +510,16 @@ class QuizViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
-
+extension QuizViewController: UITextFieldDelegate
+{
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        processAnswer( uiButtonSubmit )
+        return true
+    }
 }
 
 /*
