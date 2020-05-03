@@ -57,8 +57,8 @@ class QuizViewController: UIViewController {
     let correctTextColor = UIColor( red:CGFloat(0.0), green:CGFloat(0.563), blue:CGFloat(0.319), alpha:CGFloat(1.0) )
     let incorrectTextColor = UIColor( red:CGFloat(1.0), green:CGFloat(0.0), blue:CGFloat(0.0), alpha:CGFloat(1.0) )
     
-    var questionSetFile = "mmsy0501_exam_1"
-    var questionSetName = "sy0-501"
+    var questionSetFilename = "mmsy0501_exam_1"
+    var questionSetTitle = "sy0-501"
     
     var questions = [ [String:String] ]()
     var questionIndex = -1      // index into the actual question being asked
@@ -89,20 +89,26 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if let quizToShow = AppDelegate.quizToShow {
-            questionSetName = quizToShow.quizTitle
-            questionSetFile = quizToShow.quizFile
-            print( "using name=\(questionSetName), file=\(questionSetFile)" )
+        guard let quizToShow = AppDelegate.quizToShow else {
+            print( "No quiz selected; returning to menu" )
+            return
         }
-        else {
-            print( "no quiz passed; using defaults" )
-        }
+        
+        questionSetTitle = quizToShow.quizTitle
+        questionSetFilename = quizToShow.quizFilename
+        print( "showing quiz name=\(questionSetTitle), file=\(questionSetFilename)" )
         
         configureNavigationBar()
         uiFillInTheBlankTextField.delegate = self
         
         loadMultipleChoiceUIComponentsIntoArrays()
         loadQuestionsFromJsonFile()
+        
+        guard questions.count > 0 else {
+            print( "Quiz is empty! Returning to menu" )
+            return
+        }
+        
         initShuffledIndices()
         
         uiStatString.text = ""
@@ -119,7 +125,7 @@ class QuizViewController: UIViewController {
         
         navigationItem.leftBarButtonItems = [ mainMenuItem ]
         
-        navigationItem.title = questionSetName
+        navigationItem.title = questionSetTitle
     }
     private func loadMultipleChoiceUIComponentsIntoArrays() {
         
@@ -152,24 +158,24 @@ class QuizViewController: UIViewController {
     
     func loadQuestionsFromJsonFile() {
         
-        if let jsonFilePath = Bundle.main.path(forResource: questionSetFile, ofType: "json" ) {
+        if let jsonFilePath = Bundle.main.path(forResource: questionSetFilename, ofType: "json" ) {
             if let jsonData = try? String.init(contentsOfFile: jsonFilePath ) {
                 
                 let json = JSON( parseJSON: jsonData )
 //                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
                 
                     parse( json: json )
-                    print( "\(questions.count) questions read from \(questionSetFile)" )
+                    print( "\(questions.count) questions read from \(questionSetFilename)" )
                 
                     return
 //                }
             }
             else {
-                print( "Cannot read data from '\(questionSetFile)'" )
+                print( "Cannot read data from '\(questionSetFilename)'" )
             }
         }
         else {
-            print( "Cannot load data from '\(questionSetFile)'" )
+            print( "Cannot load data from '\(questionSetFilename)'" )
         }
     }
     func parse( json: JSON ) {

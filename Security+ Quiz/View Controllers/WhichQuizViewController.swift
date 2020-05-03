@@ -10,7 +10,7 @@ import UIKit
 
 class WhichQuizViewController: UIViewController {
     
-    let quizSets: [ (String, String) ] = [
+    let quizSets: [ QuizToShow ] = [
         ("SY0-501", "mmsy0501_exam_1"),
         ("LX0-103", "LX0-103"),
         ("LX0-104", "LX0-104"),
@@ -48,14 +48,14 @@ extension WhichQuizViewController: UITableViewDelegate, UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "WhichQuizCell")!
         
-        cell.textLabel?.text = quizSets[ indexPath.row ].0
+        cell.textLabel?.text = quizSets[ indexPath.row ].quizTitle
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        let quizSet = quizSets[ indexPath.row ].1
+//        let quizSet = quizSets[ indexPath.row ].quizFilename
         
 //        quizIndexToShow = indexPath.row
         AppDelegate.quizToShow = quizSets[ indexPath.row ]

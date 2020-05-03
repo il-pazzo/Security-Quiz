@@ -8,11 +8,13 @@
 
 import UIKit
 
+typealias QuizToShow = (quizTitle: String, quizFilename: String)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    static var quizToShow: (quizTitle:String, quizFile:String)?
+    static var quizToShow: QuizToShow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
