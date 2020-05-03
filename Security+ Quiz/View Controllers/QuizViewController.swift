@@ -72,7 +72,7 @@ class QuizViewController: UIViewController {
 
     // user preferences
     var wantsShuffle = true
-    var wantsAnswersRandomized = true
+    var wantsAnswersRandomized = false
     
     // statistics
     var numQuestions = 0
