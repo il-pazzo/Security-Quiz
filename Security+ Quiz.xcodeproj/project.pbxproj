@@ -20,6 +20,7 @@
 		BB51A5D02330B9AE001BA76F /* LX0-104.json in Resources */ = {isa = PBXBuildFile; fileRef = BB51A5CE2330B9AE001BA76F /* LX0-104.json */; };
 		BB51A5D22332ACE0001BA76F /* WhichQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51A5D12332ACE0001BA76F /* WhichQuizViewController.swift */; };
 		BB51A5D42336C3D9001BA76F /* questions-3.json in Resources */ = {isa = PBXBuildFile; fileRef = BB51A5D32336C3D9001BA76F /* questions-3.json */; };
+		BBD70B2D245F5CD4006DDEE7 /* QuizStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD70B2C245F5CD4006DDEE7 /* QuizStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BB51A5CE2330B9AE001BA76F /* LX0-104.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "LX0-104.json"; sourceTree = "<group>"; };
 		BB51A5D12332ACE0001BA76F /* WhichQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichQuizViewController.swift; sourceTree = "<group>"; };
 		BB51A5D32336C3D9001BA76F /* questions-3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "questions-3.json"; sourceTree = "<group>"; };
+		BBD70B2C245F5CD4006DDEE7 /* QuizStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				BB51A5D12332ACE0001BA76F /* WhichQuizViewController.swift */,
 				BB0E94412070DC1B00B4E961 /* QuizViewController.swift */,
 				BB0E94772071CEFD00B4E961 /* StatisticsViewController.swift */,
+				BBD70B2C245F5CD4006DDEE7 /* QuizStore.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD70B2D245F5CD4006DDEE7 /* QuizStore.swift in Sources */,
 				BB0E94522070DC6E00B4E961 /* SwiftyJSON.swift in Sources */,
 				BB0E94422070DC1B00B4E961 /* QuizViewController.swift in Sources */,
 				BB0E94402070DC1B00B4E961 /* AppDelegate.swift in Sources */,

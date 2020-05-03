@@ -10,18 +10,14 @@ import UIKit
 
 class WhichQuizViewController: UIViewController {
     
-    let quizSets: [ QuizToShow ] = [
-        ("SY0-501", "mmsy0501_exam_1"),
-        ("LX0-103", "LX0-103"),
-        ("LX0-104", "LX0-104"),
-        ("test2", "questions_2"),
-        ("test3", "questions-3"),
-    ]
+    let quizStore: QuizData = QuizStore()
+    var quizSets: [QuizInfo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        quizSets = quizStore.quizInfo
     }
 }
 
