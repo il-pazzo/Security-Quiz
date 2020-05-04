@@ -8,11 +8,6 @@
 
 import UIKit
 
-struct QuizMeta {
-    let quizTitle: String
-    let quizFilename: String
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
