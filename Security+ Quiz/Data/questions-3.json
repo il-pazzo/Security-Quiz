@@ -74,17 +74,5 @@
             ]
             ,"correct_answers": "E"
         }
-        ,{
-            "question_number": 48
-            ,"question": "A user accidentally created the subdirectory \dir in his home directory. Which of the following commands will remove that directory?"
-            ,"choices": [
-                "rmdir '~/\dir'"
-                ,"rmdir \"~/\dir\""
-                ,"rmdir ~/'dir'"
-                ,"rmdir ~/\dir"
-                ,"rmdir ~/\\dir"
-            ]
-            ,"correct_answers": "E"
-        }
     ]}
 

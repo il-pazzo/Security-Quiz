@@ -67,18 +67,16 @@ class QuizViewController: UIViewController {
     
     var quiz = Quiz()
     var question: Question?
+    var questionSelector: QuestionSelector?
     
     var questionIndex = -1      // index into the actual question being asked
+    var numQuestionsShown = 0
 
-    var shuffledIndices = [Int]()   // shuffled indices into questions[]
-    var missedIndices = [Int]()     // which (unshuffled) indices were answered incorrectly?
-    var shuffledIndex = -1      // index into shuffledIndices, which names the questionIndex
     var mixedIndices: [Int]!    // for ANSWER randomization
     var reviewMode: ReviewMode = .Study
     var isShowingQuestion = true
 
     // user preferences
-    var wantsShuffle = true
     var wantsAnswersRandomized = false
     
     // statistics
@@ -109,15 +107,17 @@ class QuizViewController: UIViewController {
         uiFillInTheBlankSpacer.text = ""
 
         loadMultipleChoiceUIComponentsIntoArrays()
-        loadQuestions( for: quizToShow.quizTitle )
-//        loadQuestionsFromJsonFile()
         
+        quiz.loadQuestions(for: quizToShow.quizTitle)
         guard quiz.numQuestions > 0 else {
             print( "Quiz is empty! Returning to menu" )
             return
         }
         
-        initShuffledIndices()
+        questionSelector = QuestionSelector( quiz: quiz )
+        guard let questionSelector = questionSelector else { return }
+        
+        questionSelector.initShuffledIndices()
         
         showNextQuestion()
     }
@@ -132,12 +132,29 @@ class QuizViewController: UIViewController {
     }
     private func loadMultipleChoiceUIComponentsIntoArrays() {
         
-        switchArray = [ uiSwitchA, uiSwitchB, uiSwitchC, uiSwitchD, uiSwitchE ]
-        switchLabelArray = [ uiSwitchALabel, uiSwitchBLabel, uiSwitchCLabel, uiSwitchDLabel, uiSwitchELabel ]
-        answerMarkArray  = [ uiAnswerMarkA, uiAnswerMarkB, uiAnswerMarkC, uiAnswerMarkD, uiAnswerMarkE ]
+        switchArray = [ uiSwitchA,
+                        uiSwitchB,
+                        uiSwitchC,
+                        uiSwitchD,
+                        uiSwitchE ]
+        
+        switchLabelArray = [ uiSwitchALabel,
+                             uiSwitchBLabel,
+                             uiSwitchCLabel,
+                             uiSwitchDLabel,
+                             uiSwitchELabel ]
+        
+        answerMarkArray  = [ uiAnswerMarkA,
+                             uiAnswerMarkB,
+                             uiAnswerMarkC,
+                             uiAnswerMarkD,
+                             uiAnswerMarkE ]
         
         for switchControl in switchArray {
-            switchControl.addTarget( self, action: #selector(switchToggled), for: .valueChanged )
+            
+            switchControl.addTarget( self,
+                                     action: #selector(switchToggled),
+                                     for: .valueChanged )
         }
     }
     
@@ -146,49 +163,24 @@ class QuizViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    func initShuffledIndices() {
-    
-        shuffledIndices = Array( 0 ..< quiz.numQuestions )
-
-        if wantsShuffle {
-            shuffleIndices()
-        }
-    }
-    private func shuffleIndices() {
-        
-        shuffledIndices.shuffle()
-    }
-    
-    func loadQuestions(for title: String ) {
-        quiz.loadQuestions(for: title)
-    }
-    
     func showNextQuestion() {
         
-        shuffledIndex += 1
-        if shuffledIndex >= shuffledIndices.count {
-            if missedIndices.isEmpty {
-                initShuffledIndices()
-                clearStats( "Starting over" )
-            }
+        guard let questionSelector = questionSelector,
+              let question = questionSelector.nextQuestion()
             else {
-                shuffledIndices = missedIndices
-                missedIndices.removeAll()
-                if wantsShuffle {
-                    shuffleIndices()
-                }
-                clearStats( "Reviewing" )
-            }
-            shuffledIndex = 0
+                self.question = nil
+                return                
         }
         
-        questionIndex = shuffledIndices[ shuffledIndex ]
-        displayQuestionAt( index: questionIndex )
+        self.question = question
+        numQuestionsShown += 1
+        displayQuestion( question )
     }
-    func displayQuestionAt( index: Int ) {
+    
+    func displayQuestion( _ question: Question ) {
         
-        question = quiz.question( at: index )
-        guard let question = question else { return }
+        displayCommonFields(question: question,
+                            isFillInTheBlank: question.isFillInTheBlank)
         
         if question.isFillInTheBlank {
             displayFillInTheBlankQuestion( question )
@@ -198,18 +190,19 @@ class QuizViewController: UIViewController {
         }
     }
 
-    func displayMultipleChoiceQuestion( _ qa: Question ) {
-        
-        uiAllSwitchAnswers.isHidden = false
-        uiAllFillInTheBlankAnswers.isHidden = true
+    func displayCommonFields( question qa: Question, isFillInTheBlank: Bool ) {
 
-        resetChoicesUsing( numChoices: qa.numChoices )
-        
-        uiQuestionNumber.text   = "Question \(shuffledIndex + 1) (\(qa.questionNumber))"
-        let questionText        = qa.question
-        uiQuestion.text         = questionText
-//        uiExplanation.text      = "\(qa["explanation"]!)"
+        uiAllSwitchAnswers.isHidden = isFillInTheBlank
+        uiAllFillInTheBlankAnswers.isHidden = !isFillInTheBlank
+
+        uiQuestionNumber.text   = "Question \(numQuestionsShown) (\(qa.questionNumber))"
+        uiQuestion.text         = qa.question
         uiExplanation.isHidden  = true
+    }
+    
+    func displayMultipleChoiceQuestion( _ qa: Question ) {
+
+        resetChoicesUsing( numChoicesThisQuestion: qa.numChoices )
         
         let choiceArray = [
             qa.choiceA,
@@ -237,14 +230,6 @@ class QuizViewController: UIViewController {
     }
     func displayFillInTheBlankQuestion( _ qa: Question ) {
         
-        uiAllFillInTheBlankAnswers.isHidden = false
-        uiAllSwitchAnswers.isHidden = true
-
-        uiQuestionNumber.text   = "Question \(shuffledIndex + 1) (\(qa.questionNumber))"
-        let questionText        = qa.question
-        uiQuestion.text         = questionText
-        uiExplanation.isHidden  = true
-        
         uiFillInTheBlankTextField.text = ""
         uiFillInTheBlankAnswers.text = ""
         uiFillInTheBlankMark.text = ""
@@ -255,11 +240,12 @@ class QuizViewController: UIViewController {
         
         isShowingQuestion = true
     }
-    func resetChoicesUsing( numChoices: Int ) {
+    
+    func resetChoicesUsing( numChoicesThisQuestion: Int ) {
 
         for i in 0 ..< switchArray.count {
             
-            if i < numChoices {
+            if i < numChoicesThisQuestion {
                 switchArray[i].isHidden = false
                 switchArray[i].isEnabled = true
                 switchArray[i].setOn( false, animated:false )
@@ -271,6 +257,7 @@ class QuizViewController: UIViewController {
             }
             else {
                 switchArray[i].isHidden = true
+                switchArray[i].isEnabled = false
                 switchLabelArray[i].isHidden = true
                 answerMarkArray[i].isHidden = true
             }
@@ -287,10 +274,9 @@ class QuizViewController: UIViewController {
     }
     func ensureAllSwitchesOffExcept( tag: Int ) {
         
-        for i in 0 ..< switchArray.count {
-            
-            if switchArray[i].isOn  &&  switchArray[i].tag != tag {
-                switchArray[i].setOn( false, animated: true )
+        switchArray.forEach { uiSwitch in
+            if uiSwitch.isOn  &&  uiSwitch.tag != tag {
+                uiSwitch.setOn( false, animated: true )
             }
         }
     }
@@ -302,6 +288,7 @@ class QuizViewController: UIViewController {
             showNextQuestion()
             return
         }
+        
         isShowingQuestion = false
         
         if uiFillInTheBlankTextField.isFirstResponder {
@@ -312,7 +299,10 @@ class QuizViewController: UIViewController {
     }
     func checkAnswers() {
         
-        guard let question = question else { return }
+        guard let question = question else {
+            print( "question not set" )
+            return
+        }
         
         if question.isFillInTheBlank {
             checkAnswerFillInTheBlank( question )
@@ -324,7 +314,7 @@ class QuizViewController: UIViewController {
     
     func checkAnswerMultipleChoice( _ qa: Question ) {
         
-        let myAnswers = buildAnswers()
+        let myAnswers = buildAnswers( forNumChoices: qa.numChoices )
         let correctAnswersOriginal = qa.correctAnswers
         let correctAnswers = wantsAnswersRandomized
             ? adjustAnswersForRandomization(correctAnswersOriginal)
@@ -332,7 +322,9 @@ class QuizViewController: UIViewController {
         
         updateStats(correct: myAnswers == correctAnswers)
         if myAnswers != correctAnswers {
-            missedIndices.append( questionIndex )
+            if let questionSelector = questionSelector {
+                questionSelector.noteMissedQuestion()
+            }
         }
         
         uiExplanation.text      = "\(qa.explanation)"
@@ -357,8 +349,6 @@ class QuizViewController: UIViewController {
     
     func checkAnswerFillInTheBlank( _ qa: Question ) {
         
-//        uiFillInTheBlankTextField.resignFirstResponder()
-        
         let fillAnswers = assembleFillAnswers( qa )
         
         let userAnswer = uiFillInTheBlankTextField.text ?? ""
@@ -374,13 +364,19 @@ class QuizViewController: UIViewController {
         var answers = fillAnswers.joined(separator: "\n")
         if answers.isEmpty { answers = "?" }
         
-        uiFillInTheBlankMark.text           = isCorrect ? correctAnswerMark : incorrectAnswerMark
-        uiFillInTheBlankAnswers.textColor   = isCorrect ? correctTextColor : incorrectTextColor
+        uiFillInTheBlankMark.text           = isCorrect
+                                                ? correctAnswerMark
+                                                : incorrectAnswerMark
+        uiFillInTheBlankAnswers.textColor   = isCorrect
+                                                ? correctTextColor
+                                                : incorrectTextColor
         uiFillInTheBlankAnswers.text        = answers
 
         updateStats(correct: isCorrect)
         if !isCorrect {
-            missedIndices.append( questionIndex )
+            if let questionSelector = questionSelector {
+                questionSelector.noteMissedQuestion()
+            }
         }
 
         uiButtonSubmit.setTitle( "Next Question", for: .normal )
@@ -388,12 +384,24 @@ class QuizViewController: UIViewController {
     func assembleFillAnswers( _ qa: Question ) -> [String] {
         var fillAnswers = [String]()
         
+        let qaFillAnswers = [ qa.fillAnswerA,
+                              qa.fillAnswerB,
+                              qa.fillAnswerC,
+                              qa.fillAnswerD,
+                              qa.fillAnswerE ]
+        
         let numFillAnswers = qa.numFillAnswers
-        if numFillAnswers > 0 { fillAnswers.append( qa.fillAnswerA )}
-        if numFillAnswers > 1 { fillAnswers.append( qa.fillAnswerB )}
-        if numFillAnswers > 2 { fillAnswers.append( qa.fillAnswerC )}
-        if numFillAnswers > 3 { fillAnswers.append( qa.fillAnswerD )}
-        if numFillAnswers > 4 { fillAnswers.append( qa.fillAnswerE )}
+        
+        qaFillAnswers.enumerated().forEach { (ndx, fillAnswer) in
+            if numFillAnswers > ndx {
+                fillAnswers.append( fillAnswer )
+            }
+        }
+//        if numFillAnswers > 0 { fillAnswers.append( qa.fillAnswerA )}
+//        if numFillAnswers > 1 { fillAnswers.append( qa.fillAnswerB )}
+//        if numFillAnswers > 2 { fillAnswers.append( qa.fillAnswerC )}
+//        if numFillAnswers > 3 { fillAnswers.append( qa.fillAnswerD )}
+//        if numFillAnswers > 4 { fillAnswers.append( qa.fillAnswerE )}
 
         return fillAnswers
     }
@@ -444,12 +452,10 @@ class QuizViewController: UIViewController {
             }
         }
     }
-    func buildAnswers() -> String {
-        
-        guard let question = question else { return "?" }
+    func buildAnswers( forNumChoices numChoices: Int ) -> String {
         
         var results = ""
-        for i in 0 ..< question.numChoices {
+        for i in 0 ..< numChoices {
             if switchArray[i].isOn {
                 results += choiceLetters[ i ]
             }

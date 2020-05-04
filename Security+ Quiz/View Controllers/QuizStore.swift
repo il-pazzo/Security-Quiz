@@ -27,7 +27,7 @@ class QuizStore: QuizData {
     
     var quizInfo: [QuizMeta] { quizSets }
     
-    func getQuizDetail( for title: String ) -> [Question]? {
+    func quizDetail( for title: String ) -> [Question]? {
         
         let firstMatch = quizSets.first { $0.quizTitle == title }
         guard let filename = firstMatch?.quizFilename else {

@@ -21,7 +21,7 @@ struct Quiz {
     
     mutating func loadQuestions( for title: String ) {
         
-        questions = QuizStore.shared.getQuizDetail(for: title)
+        questions = QuizStore.shared.quizDetail(for: title)
     }
     
     func question( at index: Int ) -> Question? {

@@ -20,6 +20,7 @@
 		BB51A5D02330B9AE001BA76F /* LX0-104.json in Resources */ = {isa = PBXBuildFile; fileRef = BB51A5CE2330B9AE001BA76F /* LX0-104.json */; };
 		BB51A5D22332ACE0001BA76F /* WhichQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51A5D12332ACE0001BA76F /* WhichQuizViewController.swift */; };
 		BB51A5D42336C3D9001BA76F /* questions-3.json in Resources */ = {isa = PBXBuildFile; fileRef = BB51A5D32336C3D9001BA76F /* questions-3.json */; };
+		BB9FD3C7245F994900E0510D /* QuestionSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9FD3C6245F994900E0510D /* QuestionSelector.swift */; };
 		BBD70B2D245F5CD4006DDEE7 /* QuizStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD70B2C245F5CD4006DDEE7 /* QuizStore.swift */; };
 		BBD70B2F245F66EF006DDEE7 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD70B2E245F66EF006DDEE7 /* Quiz.swift */; };
 		BBD70B31245F81A5006DDEE7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD70B30245F81A5006DDEE7 /* Question.swift */; };
@@ -41,6 +42,7 @@
 		BB51A5CE2330B9AE001BA76F /* LX0-104.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "LX0-104.json"; sourceTree = "<group>"; };
 		BB51A5D12332ACE0001BA76F /* WhichQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichQuizViewController.swift; sourceTree = "<group>"; };
 		BB51A5D32336C3D9001BA76F /* questions-3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "questions-3.json"; sourceTree = "<group>"; };
+		BB9FD3C6245F994900E0510D /* QuestionSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSelector.swift; sourceTree = "<group>"; };
 		BBD70B2C245F5CD4006DDEE7 /* QuizStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStore.swift; sourceTree = "<group>"; };
 		BBD70B2E245F66EF006DDEE7 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		BBD70B30245F81A5006DDEE7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				BBD70B2C245F5CD4006DDEE7 /* QuizStore.swift */,
 				BBD70B2E245F66EF006DDEE7 /* Quiz.swift */,
 				BBD70B30245F81A5006DDEE7 /* Question.swift */,
+				BB9FD3C6245F994900E0510D /* QuestionSelector.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBD70B2D245F5CD4006DDEE7 /* QuizStore.swift in Sources */,
+				BB9FD3C7245F994900E0510D /* QuestionSelector.swift in Sources */,
 				BB0E94522070DC6E00B4E961 /* SwiftyJSON.swift in Sources */,
 				BBD70B2F245F66EF006DDEE7 /* Quiz.swift in Sources */,
 				BB0E94422070DC1B00B4E961 /* QuizViewController.swift in Sources */,
@@ -371,7 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.software-al-dente.Security--Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -387,7 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.software-al-dente.Security--Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
