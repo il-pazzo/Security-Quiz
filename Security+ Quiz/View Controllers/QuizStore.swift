@@ -70,7 +70,9 @@ class QuizStore: QuizData {
     private func parseOneQuestion( json qa: JSON ) -> Question {
         
         let questionNumber      = qa["question_number"].intValue
-        let question            = qa["question"     ].stringValue
+        let question            = qa["question"     ]
+            .stringValue
+            .replacingOccurrences(of: "\\n", with: "\n")
         let hint                = qa["hint"         ].stringValue
         let explanation         = qa["explanation"  ].stringValue
         let correctAnswers      = qa["correct_answers"].stringValue

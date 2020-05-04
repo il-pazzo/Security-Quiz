@@ -206,7 +206,7 @@ class QuizViewController: UIViewController {
         resetChoicesUsing( numChoices: qa.numChoices )
         
         uiQuestionNumber.text   = "Question \(shuffledIndex + 1) (\(qa.questionNumber))"
-        let questionText        = qa.question.replacingOccurrences(of: "\\n", with: "\n")
+        let questionText        = qa.question
         uiQuestion.text         = questionText
 //        uiExplanation.text      = "\(qa["explanation"]!)"
         uiExplanation.isHidden  = true
@@ -241,7 +241,7 @@ class QuizViewController: UIViewController {
         uiAllSwitchAnswers.isHidden = true
 
         uiQuestionNumber.text   = "Question \(shuffledIndex + 1) (\(qa.questionNumber))"
-        let questionText        = qa.question.replacingOccurrences(of: "\\n", with: "\n")
+        let questionText        = qa.question
         uiQuestion.text         = questionText
         uiExplanation.isHidden  = true
         
