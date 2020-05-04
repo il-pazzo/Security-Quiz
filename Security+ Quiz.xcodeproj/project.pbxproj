@@ -21,6 +21,8 @@
 		BB51A5D22332ACE0001BA76F /* WhichQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51A5D12332ACE0001BA76F /* WhichQuizViewController.swift */; };
 		BB51A5D42336C3D9001BA76F /* questions-3.json in Resources */ = {isa = PBXBuildFile; fileRef = BB51A5D32336C3D9001BA76F /* questions-3.json */; };
 		BBD70B2D245F5CD4006DDEE7 /* QuizStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD70B2C245F5CD4006DDEE7 /* QuizStore.swift */; };
+		BBD70B2F245F66EF006DDEE7 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD70B2E245F66EF006DDEE7 /* Quiz.swift */; };
+		BBD70B31245F81A5006DDEE7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD70B30245F81A5006DDEE7 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		BB51A5D12332ACE0001BA76F /* WhichQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichQuizViewController.swift; sourceTree = "<group>"; };
 		BB51A5D32336C3D9001BA76F /* questions-3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "questions-3.json"; sourceTree = "<group>"; };
 		BBD70B2C245F5CD4006DDEE7 /* QuizStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStore.swift; sourceTree = "<group>"; };
+		BBD70B2E245F66EF006DDEE7 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		BBD70B30245F81A5006DDEE7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				BB0E94412070DC1B00B4E961 /* QuizViewController.swift */,
 				BB0E94772071CEFD00B4E961 /* StatisticsViewController.swift */,
 				BBD70B2C245F5CD4006DDEE7 /* QuizStore.swift */,
+				BBD70B2E245F66EF006DDEE7 /* Quiz.swift */,
+				BBD70B30245F81A5006DDEE7 /* Question.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -211,10 +217,12 @@
 			files = (
 				BBD70B2D245F5CD4006DDEE7 /* QuizStore.swift in Sources */,
 				BB0E94522070DC6E00B4E961 /* SwiftyJSON.swift in Sources */,
+				BBD70B2F245F66EF006DDEE7 /* Quiz.swift in Sources */,
 				BB0E94422070DC1B00B4E961 /* QuizViewController.swift in Sources */,
 				BB0E94402070DC1B00B4E961 /* AppDelegate.swift in Sources */,
 				BB51A5D22332ACE0001BA76F /* WhichQuizViewController.swift in Sources */,
 				BB0E94782071CEFD00B4E961 /* StatisticsViewController.swift in Sources */,
+				BBD70B31245F81A5006DDEE7 /* Question.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

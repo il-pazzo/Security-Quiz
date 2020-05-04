@@ -10,8 +10,8 @@ import UIKit
 
 class WhichQuizViewController: UIViewController {
     
-    let quizStore: QuizData = QuizStore()
-    var quizSets: [QuizInfo] = []
+    let quizStore: QuizData = QuizStore.shared
+    var quizSets: [QuizMeta] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

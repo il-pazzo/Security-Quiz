@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct QuizInfo {
+struct QuizMeta {
     let quizTitle: String
     let quizFilename: String
 }
@@ -17,7 +17,7 @@ struct QuizInfo {
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    static var quizToShow: QuizInfo?
+    static var quizToShow: QuizMeta?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
